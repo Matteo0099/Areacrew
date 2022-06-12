@@ -1,0 +1,47 @@
+* html {
+    width: auto;
+    height: 100%;
+    margin: 0 auto;
+    font: 300;
+    text-align: center;
+    padding: 1% 1% 1% 1%;
+    background-color: #f5f1ed;
+}
+
+body {
+    background-color: #f5f1ed;
+    background-repeat: infinite;
+    background-size: 100% 100%;  
+    text-align: center;
+    font-style: normal;
+    margin: 0;
+    padding: 4%;
+}
+
+h1 {
+    margin-top: 4%;
+    font: 900;
+    font-size: 28px;
+}
+
+p {
+    margin-top: 3%;
+    font: 300;
+    font-size: 16px;
+    word-spacing: 1px;
+}
+
+.corpoPr {
+    margin: 10px 30px 15px 30px;
+    margin-bottom: 10%;
+}
+
+#testImmagine{
+    margin: auto;
+    align-self: center;
+    object-fit: cover;
+    border-radius: 50%;
+    height: 170px;
+    width: 170px;
+}
+

@@ -45,6 +45,10 @@ a:hover {
 }
 #header h1	{
     color:#fff;
+    font-family:'Palanquin', sans-serif;
+    font: 800;
+    -moz-box-align: center;
+    font-size: 26px;
 }
             
 /*** Nav ***/	

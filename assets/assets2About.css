@@ -1,4 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Palanquin&display=swap');
+
 * html {
+    font-family: 'Palanquin', sans-serif;
     width: auto;
     height: 100%;
     margin: 0 auto;

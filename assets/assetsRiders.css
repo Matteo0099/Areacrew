@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Palanquin&display=swap');
+@import url(https://use.fontawesome.com/releases/v5.0.6/css/all.css);   /*icons*/
+
+* html {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+html, body {
+    font-family: 'Palanquin', sans-serif;
+    text-align: center;
+}
+
+body {
+    background-color: #f5f1ed;
+}
+
+table {
+    text-align: left;
+    position: relative;
+    border-collapse: collapse; 
+    background-color: #f5f1ed;
+  }
+  /* Spacing */
+  td, th {
+    border: 1px solid #444;
+    border-radius: 9px;
+    padding: 24px;
+  }
+
+  th {
+    background: #f3f3f3;
+    color: white;
+    border-radius: 0;
+    position: sticky;
+    top: 0;
+    padding: 10px;
+  }
+
+  .primary{
+    background-color: #f3f3f3;
+    font-size: 22px;
+    font: 900;
+  }
+  
+  tfoot > tr  {
+    background: black;
+    color: white;
+  }
+  tbody > tr:hover {
+    opacity: 0.95;
+    cursor:text;
+  }

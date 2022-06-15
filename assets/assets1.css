@@ -1,9 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Palanquin&display=swap');
 @import url(https://use.fontawesome.com/releases/v5.0.6/css/all.css);   /*icons*/
  
-*,
-*:before,
-*:after {
+*, *:before, *:after {
     box-sizing: border-box;
 }
  
@@ -42,6 +40,20 @@ h1 {
     min-height: 30px;
     margin-left: 3.5%;
 }
+
+@media screen and (max-width: 600px) {
+    .darkMode {
+        display: none;
+        cursor: pointer;
+    }
+}
+
+#DarkModetext {
+    font-size: 15px;
+    text-align: center;
+    text-transform:uppercase;
+}
+
 .DarkBtn {
     background-color: #fdfafa;
     color: #fdfafa;
@@ -68,6 +80,108 @@ h1 {
     cursor:pointer;
 }
 /********************/
+
+
+
+/*GLOBAL STYLE*/
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-size: 18px;
+    font: 400;
+  }
+  
+  .header {
+    text-align: center;
+    padding: 32px;
+  }
+  
+  .row {
+    display: -ms-flexbox; /* IE 10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE 10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create two equal columns that sits next to each other */
+  .column {
+    -ms-flex: 50%; /* IE 10 */
+    flex: 50%;
+    padding: 0 4px;
+  }
+  
+  .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+  }
+  
+  /* Style the buttons */
+  .btn {
+    padding: 10px 16px;
+    background-color: #f1f1f1;
+    color: #000;
+    cursor: pointer;
+    font-size: 18px;
+    border: 1px;
+    border-radius: 5px;
+    padding-left: 1.333%;
+    padding-right: 1.333%;
+  }
+  
+  .btn:hover {
+    opacity: 0.6;
+    transition: 0.45s;
+  }
+
+  .btn:before {
+    opacity: 1;
+  }
+  
+  .btn.active {
+    background-color: #777777;
+    color: white;
+  }
+  /* Responsive layout - makes a two column-layout instead of four columns */
+  @media screen and (max-width: 800px) {
+      .column {
+          -ms-flex: 50%;
+          flex: 50%;
+          max-width: 50%;
+      }
+  }
+
+  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+      .column {
+          -ms-flex: 75%;
+          flex: 75%;
+          max-width: 75%;
+      }
+  }
+
+  /*IPHONE*/
+  @media screen and (max-width: 400px) {
+      .column {
+          -ms-flex: 100%;
+          flex: 100%;
+          max-width: 100%;
+      }
+  }
+
+.social1 {
+    font: icon;
+    font-size: 20px;
+    margin-top: 2%;
+}
+
+p fa-youtube:hover {
+    transition: 0.63s;
+    opacity: 0.65;
+}
 
 .container {
     margin: 0 auto;
@@ -106,18 +220,25 @@ nav input {
  
 /*** LABEL ***/
 nav label {
-    cursor: pointer;
     display: block;
     font: 2em/1 'Palanquin', sans-serif;
     padding: 0.38em;
     padding-left: 0;
 }
 
-@media screen and (max-width: 800px) {   /*******/
+@media screen and (max-width: 600px) {   /*******/
     nav label {
-        -ms-flex: 55.3%;
-        flex: 55.3%;
-        max-width: 55.3%;
+        -ms-flex: 87.3%;
+        flex: 87.3%;
+        max-width: 87.3%;
+    }
+}
+
+@media screen and (max-width: 600px) {   /*******/
+    .Logo   {
+        -ms-flex: 87.3%;
+        flex: 87.3%;
+        max-width: 87.3%;
     }
 }
  
@@ -126,17 +247,23 @@ nav label {
 #menu-icon:before,
 #menu-icon:after {
     background: #1d1f20;
-    border-radius: 0.08em;
-    height: 0.195em;
-    transition: all 75ms ease-in-out;
+    border-radius: 0.09em;
+    height: 0.1933em;
+    transition: all 100ms ease-in-out;
     width: 100%;
 }
- 
+
+.IconaMenu {
+    cursor: pointer;
+}
+
 #menu-icon {
     display: inline-block;
-    margin: 0.4em 0;
+    margin: 0.6em 0;
     max-width: 1em;
     position: relative;
+    cursor: pointer;
+    align-self: middle;
 }
  
 nav label #menu-icon {
@@ -202,7 +329,7 @@ nav ul {
 }
  
 nav input:checked ~ ul {
-    margin: 1em;
+    margin: 1.733em;
     max-height: inherit;
     opacity: 1;
 }
@@ -218,6 +345,8 @@ nav ul a {
  
 nav ul a:hover {
     text-decoration: underline;
+    transition: 0.5s;
+    opacity: 0.5;
 }
  
 /* Social Media */
@@ -237,6 +366,6 @@ nav ul#social-media > li {
     bottom: 0;
     left: 0;
     background-color: transparent;
-    margin-top: 2%;
+    margin-top: 4%;
     min-height: auto;
 }

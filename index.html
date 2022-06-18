@@ -16,19 +16,19 @@
 
     <body>
     <nav>
-        <div class="darkMode">
-            <h3 id="DarkModetext">Dark Mode is OFF</h3>
-            <button onclick="darkMode()" class="DarkBtn"><img src = "./img/night-mode.png"></button>
-            <button onclick="lightMode()" class="LightBtn"><img src = "./img/brightness.png"></button>
-        </div>
- 
         <div class="container">
             <input id="responsive-menu" type="checkbox">
             <label for="responsive-menu" class="Logo"><img src="./img/AreaCrewImgLogo2.png" height="60" width="135" style="margin-left: 2%;">
                 <span id="menu-icon" class="IconaMenu"></span>
             </label>
+      
             <div id="overlay"></div>
             <ul>
+              <div class="darkMode" align="center">
+                <h3 id="DarkModetext">DARK MODE: OFF</h3>
+                <button onclick="darkMode()" class="DarkBtn"><img src = "./img/night-mode.png"></button>
+                <button onclick="lightMode()" class="LightBtn"><img src = "./img/brightness.png"></button>
+              </div> <br>
                 <li><a href="./About-us.html">Chi siamo</a></li>
                 <li><a href="./AreaPark.html">AreaCrew-Park</a></li>
                 <li><a href="./RegolamentoPark.html">Regolamento-Park</a></li>

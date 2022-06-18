@@ -33,15 +33,11 @@ h1 {
     color: black;
 }
 .darkMode {
-    position:relative;
-    float: right;
-    padding-top: 0.25%;
-    min-width: 70px;
+    min-width: 06px;
     min-height: 30px;
-    margin-left: 3.5%;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 900px) {
     .darkMode {
         display: none;
         cursor: pointer;
@@ -59,8 +55,8 @@ h1 {
     color: #fdfafa;
     border-color: #777777; 
     border-radius: 6px;
-    height: 30px;
-    width: 70px;
+    height: 32px;
+    width: 60px;
     padding-right: 5px;
 }
 .DarkBtn:hover {
@@ -71,8 +67,8 @@ h1 {
     background-color: #fdfafa;
     border-color: #777777;
     border-radius: 6px;
-    height: 30px;
-    width: 70px;
+    height: 32px;
+    width: 60px;
     padding-right: 5px;
 }
 .LightBtn:hover {
@@ -261,7 +257,7 @@ nav label {
     display: inline-block;
     margin: 0.6em 0;
     max-width: 1em;
-    position: relative;
+    position:relative;
     cursor: pointer;
     align-self: middle;
 }

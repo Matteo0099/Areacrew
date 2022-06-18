@@ -8,17 +8,22 @@
     font-family: 'Palanquin', sans-serif;
 }
 
-h1 {
-    font-size: 28px/1.24;
+.titolo {
+    margin-top: 1%;
+    font-size: 30px;
     text-align: center;
     font: 900;
     font-family: 'Palanquin', sans-serif;
+    text-shadow: #f0ebeb 1px 1px;
 }
 
 .box {
-    padding: 2% 2% 2% 2%;
+    padding: 2% 3% 3% 3%;
     padding-top: 2%;
     background-color: #fefefe;
+    color: rgb(130, 130, 130);
+    font-family: 'Palanquin', sans-serif;
+    font: 400;
 }
 
 p {
@@ -26,4 +31,14 @@ p {
     font-size: 18px;
     margin: 0 auto;
     color: #333333;
+}
+
+.grid {
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+.container {
+    text-align: left;
+    color: #333;
 }

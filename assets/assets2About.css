@@ -46,8 +46,9 @@ p {
     align-self: center;
     object-fit: cover;
     border-radius: 50%;
-    height: 170px;
-    width: 170px;
+    height: 180px;
+    width: 180px;
+    margin-top: 4%;
 }
 
 .footer {

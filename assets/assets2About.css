@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Palanquin&display=swap');
 
+:root {
+    --normal: #333;
+    --muted: #888;
+}
+
 * html {
     font-family: 'Palanquin', sans-serif;
     width: auto;
@@ -17,8 +22,6 @@ body {
     background-size: 100% 100%;  
     text-align: center;
     font-style: normal;
-    margin: 0;
-    padding: 4%;
 }
 
 h1 {
@@ -31,7 +34,6 @@ p {
     margin-top: 3%;
     font: 300;
     font-size: 16px;
-    word-spacing: 1px;
 }
 
 .corpoPr {
@@ -48,3 +50,15 @@ p {
     width: 170px;
 }
 
+.footer {
+    min-height: auto;
+    min-height: 100%;
+    background-color: transparent;
+    position: absolute;
+}
+
+#textFooter {
+    color: var(--muted);
+    font: 400;
+    font-size: 15px;
+}

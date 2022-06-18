@@ -1,11 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Palanquin&display=swap');
 @import url(https://use.fontawesome.com/releases/v5.0.6/css/all.css);   /*icons*/
  
+/*colori per i testi, con variabili*/
+:root {
+    --normal:#333;
+    --muted:#888;
+}
+
 *, *:before, *:after {
     box-sizing: border-box;
 }
  
 html, body {
+    -webkit-transform-origin-z: 0%;
     height: 100%;
     margin: 0;
     padding: 0;
@@ -45,7 +52,8 @@ h1 {
 }
 
 #DarkModetext {
-    font-size: 15px;
+    font-size: 14px;
+    color: var(--muted);
     text-align: center;
     text-transform:uppercase;
 }
@@ -314,7 +322,8 @@ nav input:checked ~ #overlay {
 /* List */
 nav ul {
     margin-top: 6%;
-    font-size: 26px;
+    font-size: 28px;
+    color: var(--normal);
     list-style: none;
     margin: 0;
     max-height: 0;

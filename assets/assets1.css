@@ -31,11 +31,15 @@ h1 {
 
 
 /*dark mode & white mode*/
-.dark-mode {
+.dark-mode{
     background-color: black;
     color: white;
 }
-.light-mode {
+.dark-mode:active + body {
+    background-color: black;
+}
+
+.light-mode{
     background-color: white;
     color: black;
 }
@@ -86,7 +90,6 @@ h1 {
 /********************/
 
 
-
 /*GLOBAL STYLE*/
 * {
     box-sizing: border-box;
@@ -112,8 +115,14 @@ h1 {
   }
   
   /* Create two equal columns that sits next to each other */
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+  }
+  
+  /* Create two equal columns that sits next to each other */
   .column {
-    -ms-flex: 50%; /* IE 10 */
     flex: 50%;
     padding: 0 4px;
   }
@@ -135,20 +144,86 @@ h1 {
     padding-left: 1.333%;
     padding-right: 1.333%;
   }
+
+  btn::selection {
+    background-color: #777777;
+    color: white;
+  }
   
   .btn:hover {
     opacity: 0.6;
     transition: 0.45s;
+    background-color: #777777;
+    color: white;
   }
 
   .btn:before {
     opacity: 1;
   }
   
-  .btn.active {
-    background-color: #777777;
-    color: white;
+  .view {
+    text-align: center;
+    color: inherit;
+    animation: infinite;
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+    -webkit-animation-duration: 1.65s;
+    animation-duration: 1.65s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    scroll-margin-bottom: smooth;
   }
+  
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.08); }
+    100% { transform: scale(1); }
+ }
+
+ .view:hover {
+    transition: 115ms;
+    animation: none;
+    user-select: none;
+ }
+
+ /*js button*/
+    #myBtn {
+        position: fixed;
+        bottom: 2px;
+        float: right;
+        left: 95%;
+        bottom: 15%;
+        max-width: 44.5px;
+        height: 45px;
+        text-align: center;
+        width: 100%;
+        border-color: rgba(85, 85, 85, 0.2);
+        background-color: rgb(100,100,100);
+        border-radius: 22px;
+    }
+    /*On Hover Color Change*/
+    #myBtn:hover {
+        background-color: #7dbbf1;
+        cursor: pointer;
+    }
+
+    @media screen and (max-width: 1012px) {
+        #myBtn {
+            left: 91.5%
+        }
+    }
+
+    @media screen and (max-width: 800px) {
+        #myBtn {
+            left: 90%
+        }
+    }
+    @media screen and (max-width: 600px) {
+        #myBtn {
+            left: 80%
+        }
+    }
+
   /* Responsive layout - makes a two column-layout instead of four columns */
   @media screen and (max-width: 800px) {
       .column {
@@ -190,6 +265,7 @@ p fa-youtube:hover {
 .container {
     margin: 0 auto;
     max-width: 80em;
+    letter-spacing: 0.04em;
 }
  
 main .container {
@@ -232,17 +308,17 @@ nav label {
 
 @media screen and (max-width: 600px) {   /*******/
     nav label {
-        -ms-flex: 87.3%;
-        flex: 87.3%;
-        max-width: 87.3%;
+        -ms-flex: 90.3%;
+        flex: 90.3%;
+        max-width: 90.3%;
     }
 }
 
 @media screen and (max-width: 600px) {   /*******/
     .Logo   {
-        -ms-flex: 87.3%;
-        flex: 87.3%;
-        max-width: 87.3%;
+        -ms-flex: 90.3%;
+        flex: 90.3%;
+        max-width: 90.3%;
     }
 }
  
@@ -362,15 +438,8 @@ nav ul#social-media > li {
 }
 
 .footer {
-    display: block;
-    position: absolute;
-    display: block;
-    align-items: center;
-    height: 4rem;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: transparent;
-    margin-top: 4%;
+    margin: auto;
+    max-width: auto;
     min-height: auto;
+    width: 100%;   
 }

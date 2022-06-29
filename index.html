@@ -1,80 +1,79 @@
 <!DOCTYPE html>
 <html lang = it>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!--ASSETS STYLE-->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-        <link rel="stylesheet" href="./assets/assets1.css">
-        <title>AreaCrew</title>
-        <link rel="icon" href="./img/areaCrewLogo.png">
-        <!--fontss-->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Palanquin&display=swap" rel="stylesheet"> 
-    </head>
+  <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!--ASSETS STYLE-->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+      <link rel="stylesheet" href="./assets/assets1.css">
+      <title>AreaCrew</title>
+      <link rel="icon" href="./img/areaCrewLogo.png">
+      <!--fontss-->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Palanquin&display=swap" rel="stylesheet"> 
+      <!--Js button backtotop-->
+      <script src="./src/backtoTop.js"></script>
+  </head>
 
-    <body>
-    <nav>
-        <div class="container">
-            <input id="responsive-menu" type="checkbox">
-            <label for="responsive-menu" class="Logo"><img src="./img/AreaCrewImgLogo2.png" height="60" width="135" style="margin-left: 2%;">
-                <span id="menu-icon" class="IconaMenu"></span>
-            </label>
-      
-            <div id="overlay"></div>
-            <ul>
-              <div class="darkMode" align="center">
-                <h3 id="DarkModetext">DARK MODE: OFF</h3>
-                <button onclick="darkMode()" class="DarkBtn"><img src = "./img/night-mode.png"></button>
-                <button onclick="lightMode()" class="LightBtn"><img src = "./img/brightness.png"></button>
-              </div> <br>
-                <li><a href="./About-us.html">Chi siamo</a></li>
-                <li><a href="./AreaPark.html">AreaCrew-Park</a></li>
-                <li><a href="./RegolamentoPark.html">Regolamento-Park</a></li>
-                <li><a href="mailto:matteomania09@gmail.com">Contattaci!</a></li>
-            </ul>
-            <ul id="social-media">
-                <li>
-                    <a href="https://www.instagram.com/areaycrew/" target="_blank">
-                        <i class="fab fa-instagram"></i>
-                        <span class="screen-reader-text">Instagram</span>
-                    </a>
-                    <p class="social1">Instagram</p>
-                </li>
-                <li>
-                  <a href="https://www.youtube.com/AREACREWBMX/video" target="_blank">
-                    <i class="fab fa-youtube"></i>
-                    <span class="screen-reader-text">Youtube</span>
+  <body>
+  <nav>
+      <div class="container">
+          <input id="responsive-menu" type="checkbox">
+          <label for="responsive-menu" class="Logo"><img src="./img/AreaCrewImgLogo2.png" height="60" width="135" style="margin-left: 2%;">
+              <span id="menu-icon" class="IconaMenu"></span>
+          </label>
+    
+          <div id="overlay"></div>
+          <ul>
+            <div class="darkMode" align="center">
+              <h3 id="DarkModetext">DARK MODE is OFF</h3>
+              <button onclick="darkMode()" class="DarkBtn"><img src = "./img/night-mode.png"></button>
+              <button onclick="lightMode()" class="LightBtn"><img src = "./img/brightness.png"></button>
+            </div> <br>
+              <li><a href="./About-us.html">Chi siamo</a></li>
+              <li><a href="./AreaPark.html">AreaCrew-Park</a></li>
+              <li><a href="./RegolamentoPark.html">Regolamento-Park</a></li>
+              <li><a href="mailto:matteomania09@gmail.com">Contattaci!</a></li>
+          </ul>
+          <ul id="social-media">
+              <li>
+                  <a href="https://www.instagram.com/areaycrew/" target="_blank">
+                      <i class="fab fa-instagram"></i>
+                      <span class="screen-reader-text">Instagram</span>
                   </a>
-                  <p class="social1">Youtube</p>
-                </li>
-            </ul>
-        </div>
-    </nav>
- 
-    <main>
-        <div class="container" style="font-size: 26px" align="center">
-            <h1><div class="box">
-                <strong>INFORMAZIONI / EVENTI / ORARI</strong>
-                </div>
-            </h1>
-        </div>
-    </main>
+                  <p class="social1">Instagram</p>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/AREACREWBMX/video" target="_blank">
+                  <i class="fab fa-youtube"></i>
+                  <span class="screen-reader-text">Youtube</span>
+                </a>
+                <p class="social1">Youtube</p>
+              </li>
+          </ul>
+      </div>
+  </nav>
 
-    <p align="center" style="margin-top: 4.5%; font-size: 20px; font: 700;"><strong>GALLERIA SKATEPARK-PHOTO</strong></p>
+  <main>
+      <div class="container" style="font-size: 26px" align="center" href="#top">
+          <h1><div class="box">
+              <strong>INFORMAZIONI / EVENTI / ORARI</strong>
+              </div>
+          </h1>
+      </div>
+  </main>
 
-    <!-- Header -->
-    <style>
-      
-    </style>
-<div class="header" id="myHeader">
-    <h1 style="margin-bottom: 1.833%; margin-top: 1%; color: #777;">(click to change view grid)</h1>
-    <button class="btn" onclick="one()">normal</button>
-    <button class="btn active" onclick="two()">collage</button>
+  <p align="center" style="margin-top: 5.5%; font-size: 20px; font: 700;"><strong>GALLERIA SKATEPARK-PHOTO</strong></p>
+
+  <div class="header" id="myHeader">
+    <h1 style="margin-bottom: 3px; margin-top: 0%; color: #777;" class="view pulse">(click to change view grid)</h1>
+    <button onclick="one()" class="btn">100%</button>
+    <button onclick="two()" class="btn">50%</button>
+    <button onclick="four()" class="btn">25%</button>
   </div>
   
-  <!-- Photo Grid -->
+  <!--Griglia per le foto... FOTO TOTALI: 28-->
   <div class="row" align="center"> 
     <div class="column">
       <img src="." style="width:100%">
@@ -114,72 +113,64 @@
     </div>
   </div>
 
+  <button id="myBtn">
+    <a href="#top" style="color: white" align="middle">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="32" align="middle" fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+      </svg>
+    </a>
+  </button>
+
+  <footer class="footer" style="margin-top: 4%; background-color: #f5f1ed;">
+    <div class="content has-text-centered">
+      <p>
+        <strong>AreaCrew</strong> by <a href="https://www.zippo107.tk">zippo107</a>
+        all rights reserved.
+      </p>
+    </div>
+  </footer>
+
+<script>
+  // Get the elements with class="column"
+  var elements = document.getElementsByClassName("column");
+
+  // Declare a "loop" variable
+  var i;
+
+  // Full-width images
+  function one() {
+    for (i = 0; i < elements.length; i++) {
+      elements[i].style.flex = "100%";
+    }
+  }
+
+  // Two images side by side
+  function two() {
+    for (i = 0; i < elements.length; i++) {
+      elements[i].style.flex = "50%";
+    }
+  }
+
+  // Four images side by side
+  function four() {
+    for (i = 0; i < elements.length; i++) {
+      elements[i].style.flex = "25%";
+    }
+  }
+  </script> 
   <script>
-    // Get the elements with class="column"
-    var elements = document.getElementsByClassName("column");
-    
-    // Declare a loop variable
-    var i;
-    
-    // Full-width images
-    function one() {
-        for (i = 0; i < elements.length; i++) {
-        elements[i].style.msFlex = "100%";  // IE10
-        elements[i].style.flex = "100%";
+      function darkMode() {
+        var element = document.body;
+        var content = document.getElementById("DarkModetext");
+        element.className = "dark-mode";
+        content.innerText = "Dark Mode is ON";
       }
-    }
-    
-    // Two images side by side
-    function two() {
-      for (i = 0; i < elements.length; i++) {
-        elements[i].style.msFlex = "25%";  // IE10
-        elements[i].style.flex = "25%";
+      function lightMode() {
+        var element = document.body;
+        var content = document.getElementById("DarkModetext");
+        element.className = "light-mode";
+        content.innerText = "Dark Mode is OFF";
       }
-    }
-    
-    // Four images side by side
-    /*function four() {
-      for (i = 0; i < elements.length; i++) {
-        elements[i].style.msFlex = "50%";  // IE10
-        elements[i].style.flex = "50%";
-      }
-    }
-    */
-    // Add active class to the current button (highlight it)
-    var header = document.getElementById("myHeader");
-    var btns = header.getElementsByClassName("btn");
-    for (var i = 0; i < btns.length; i++) {
-      btns[i].addEventListener("click", function() {
-        var current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
-        this.className += " active";
-      });
-    }
-    </script>
-
-    <script>
-        function darkMode() {
-            var element = document.body;
-            var content = document.getElementById("DarkModetext");
-            element.className = "dark-mode";
-            content.innerText = "Dark Mode: ON";
-        }
-        function lightMode() {
-            var element = document.body;
-            var content = document.getElementById("DarkModetext");
-            element.className = "light-mode";
-            content.innerText = "Dark Mode: OFF";
-        }
-    </script>
-
-    </body>
-
-    <footer class="footer">
-        <div class="content has-text-centered">
-          <p>
-            <strong>AreaCrew</strong> by <a href="https://www.zippo107.tk">zippo107</a>
-            all rights reserved.
-          </p>
-        </div>
-    </footer>
+  </script>
+  </body>
 </html>

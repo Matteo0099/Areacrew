@@ -138,6 +138,7 @@ h1 {
     vertical-align: middle;
     content-visibility: auto;
     image-rendering: optimizeSpeed;
+    image-resolution: auto;
   }
   
   /* Style the buttons */

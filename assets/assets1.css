@@ -10,6 +10,12 @@
 *, *:before, *:after {
     box-sizing: border-box;
 }
+
+@supports (font-size-adjust: 1) {
+    article {
+        font-size-adjust: 0.5;
+    }
+}
  
 html, body {
     -webkit-transform-origin-z: 0%;
@@ -130,6 +136,8 @@ h1 {
   .column img {
     margin-top: 8px;
     vertical-align: middle;
+    content-visibility: auto;
+    image-rendering: optimizeSpeed;
   }
   
   /* Style the buttons */

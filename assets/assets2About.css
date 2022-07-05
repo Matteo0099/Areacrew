@@ -5,6 +5,12 @@
     --muted: #888;
 }
 
+@supports (font-size-adjust: 1) {
+    article {
+        font-size-adjust: 0.5;
+    }
+}
+
 * html {
     font-family: 'Palanquin', sans-serif;
     width: auto;
@@ -14,6 +20,7 @@
     text-align: center;
     padding: 1% 1% 1% 1%;
     background-color: #f5f1ed;
+    text-rendering: optimizeLegibility;
 }
 
 body {

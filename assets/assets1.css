@@ -145,10 +145,14 @@ h1 {
     image-resolution: auto;
   }
   
+  .containerz, .containerz1 {
+    background-color: #fdfafa;
+  }
+
   /* Style the buttons */
   .btn {
     padding: 10px 16px;
-    background-color: #eae4dfdd;
+    background-color: #ebe8e8;
     color: #000;
     cursor: pointer;
     font-size: 18px;

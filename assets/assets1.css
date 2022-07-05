@@ -25,7 +25,7 @@ html, body {
 }
  
 body {
-    background-color: #fdfafa; 
+    background-color: #f3f3f3; 
     color: #333;
     font: 18px/1.5 'Palanquin', sans-serif;
 }
@@ -37,17 +37,21 @@ h1 {
 
 
 /*dark mode & white mode*/
-.dark-mode{
-    background-color: black;
-    color: white;
-}
-.dark-mode:active + body {
-    background-color: black;
-}
-
 .light-mode{
     background-color: white;
     color: black;
+}
+.dark-mode{
+    background-color: #333;
+    color: white;
+}
+.dark-mode:active body html .containerz .containerz1{
+    background-color: #333;
+    background-repeat: repeat;
+    color: white;
+}
+.dark-mode:active p, h1, h2, h3, h4, h5, title, .header{
+    color: white;
 }
 .darkMode {
     min-width: 06px;
@@ -144,7 +148,7 @@ h1 {
   /* Style the buttons */
   .btn {
     padding: 10px 16px;
-    background-color: #f1f1f1;
+    background-color: #eae4dfdd;
     color: #000;
     cursor: pointer;
     font-size: 18px;
@@ -291,7 +295,7 @@ main .container {
 }
  
 nav { 
-    background: #f5f1ed; 
+    background: #eae4df; 
     color: #1d1f20;
     left: 0;
     position: relative;
@@ -393,7 +397,7 @@ nav input[type=checkbox]:checked + label #menu-icon:after {
 /*** MENU ***/
 /* Overlay */
 nav input:checked ~ #overlay {
-    background: #f5f1ed;
+    background: #eae4df;
     bottom: 0;
     left: 0;
     height: 100vh;

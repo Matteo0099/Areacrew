@@ -1,86 +1,117 @@
 <!DOCTYPE html>
 <html lang="it">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!--ASSETS STYLE-->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-        <link rel="stylesheet" href="./assets/assets1.css">
-        <title>AreaCrew</title>
-        <link rel="icon" href="./img/areaCrewLogo.png">
-        <!--fontss-->
-        <link href="//db.onlinewebfonts.com/c/e4d72152270de367c8c31af7b727eb0b?family=Miller+Text" rel="stylesheet" type="text/css"/>
-        <!--bootstrap-->
-        <!-- CSS only -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-        <!-- JavaScript Bundle with Popper -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
-      </head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--ASSETS STYLE-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/assets1.css">
+    <title>AreaCrew</title>
+    <link rel="icon" href="./img/areaCrewLogo.png">
+    <!--fontss-->
+    <link href="//db.onlinewebfonts.com/c/e4d72152270de367c8c31af7b727eb0b?family=Miller+Text" rel="stylesheet" type="text/css"/>
+    <!--bootstrap-->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </head>
 
     <body>
-      <style>
-        @font-face {font-family: "Miller Text"; src: url("//db.onlinewebfonts.com/t/e4d72152270de367c8c31af7b727eb0b.eot"); src: url("//db.onlinewebfonts.com/t/e4d72152270de367c8c31af7b727eb0b.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/e4d72152270de367c8c31af7b727eb0b.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/e4d72152270de367c8c31af7b727eb0b.woff") format("woff"), url("//db.onlinewebfonts.com/t/e4d72152270de367c8c31af7b727eb0b.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/e4d72152270de367c8c31af7b727eb0b.svg#Miller Text") format("svg"); } 
-        @import url(db.onlinewebfonts.com/c/e4d72152270de367c8c31af7b727eb0b?family=Miller+Text);
+      <style>     
+        @font-face {
+          font-family: 'Product Sans Regular';
+          font-style: normal;
+          font-weight: normal;
+          src: local('Product Sans Regular'), url('ProductSans-Regular.woff') format('woff');
+        }
+        *, html {
+          font-family: 'Product Sans Regular';
+          font: 600;
+          text-align: center;
+        }
+        html, body {
+          background-color: #faf6f6;
+        }
+        h1, h2, h3, p {
+          font-family: inherit;
+        }
+
+        table {
+          border-collapse: collapse;
+          width: 80%;
+        }
+
+        table, th, td, tr {
+          border: 1px solid black;
+          border-collapse: collapse;
+          border-radius: 5px;
+        } 
+        table {
+          border-collapse: separate;
+          border-spacing: 0;
+        }
+
+        td {
+          border-style: none solid solid none;
+          padding: 10px;
+        }
+
+        tr:first-child td:first-child { border-top-left-radius: 10px; }
+        tr:first-child td:last-child { border-top-right-radius: 10px; }
+
+        tr:last-child td:first-child { border-bottom-left-radius: 10px; }
+        tr:last-child td:last-child { border-bottom-right-radius: 10px; }
+
+        tr:first-child td { border-top-style: solid; }
+        tr td:first-child { border-left-style: solid; }
         
-          *, html {
-            font-family: Miller Text, sans-serif;
-            font: bold-italic;
-            text-align: center;
-          }
-          html, body {
-            background-color: #faf6f6;
-          }
-          h1, h2, h3, p {
-            font-family: inherit;
-          }
+        th, td {
+          padding: 8px;
+          text-align: left;
+        }
+        
+        tr:hover {
+          opacity: 0.92;
+          background-color: beige;
+        }
 
-          table {
-            border-collapse: collapse;
-            width: 80%;
-          }
+        tr, td {
+          color: black;
+          opacity: 1;
+          font-family: inherit;
+          font: 700;
+          font-size: 28px;
+          text-rendering: optimizeLegibility;
+        }
 
-          table, th, td, tr {
-            border: 1px solid black;
-            border-collapse: collapse;
-            border-radius: 5px;
-          } 
-          table {
-            border-collapse: separate;
-            border-spacing: 0;
-          }
+        * {box-sizing: border-box;}
+        
+        .tabella {
+          align-items: center;
+          align-self: center;
+          width: 90%;
+        }
 
-          td {
-            border-style: none solid solid none;
-            padding: 10px;
-          }
+        .send {
+          background-color: #999;
+          border: 2px rgb(201, 194, 194);
+          border-radius: 6px;
+          width: 90px;
+        }
+        .send:hover {
+          background-color: rgba(218, 217, 217, 0.678);
+          border-radius: 8px;
+          opacity: 0.96;
+          cursor: pointer;
+        }
 
-          tr:first-child td:first-child { border-top-left-radius: 10px; }
-          tr:first-child td:last-child { border-top-right-radius: 10px; }
-
-          tr:last-child td:first-child { border-bottom-left-radius: 10px; }
-          tr:last-child td:last-child { border-bottom-right-radius: 10px; }
-
-          tr:first-child td { border-top-style: solid; }
-          tr td:first-child { border-left-style: solid; }
-          
-          th, td {
-            padding: 8px;
-            text-align: left;
-          }
-          
-          tr:hover {
-            opacity: 0.9;
-            background-color: beige;
-          }
-
-          tr, td {
-            color: black;
-            opacity: 1;
-            font-family: inherit;
-            font: 600;
-            font-size: 24px;
-            text-rendering: optimizeLegibility;
-          }
+        /* Add a background color and some padding around the form */
+        .container {
+          border-radius: 5px;
+          background-color: #f2f2f2;
+          padding: 20px;
+        } 
       </style>
     
       <h1 style="margin-top:4%; font-size: 28px; text-decoration: underline;"><strong>Tabella Orari / Apertura Park</strong></h1>
@@ -124,6 +155,57 @@
           <td>23.00</td>
         </tr>
       </table>
-      <a href="./index.html" class="btn btn-primary" align="center" style="font-family: inherit; font-size: 16px; text-align: center; margin-top: 3%; margin-bottom: 2%;">Torna alla Home</a>
+      
+      <a href="./index.html" class="btn btn-primary is-hovered" align="center" style="font-family: inherit; font-size: 16px; text-align: center; margin-top: 6.5%; margin-bottom: 2%;">Torna alla Home</a>
+      
+      <h4 style="text-align: center; font-family:inherit; font-size: 16px; margin-top: 8.5%; margin-bottom: 5%;">Any questions / Qualche dubbio? </h4>
+
+      <table class="tabella" align="center">
+        <form method="post" name="modulo">
+        <tr>
+        <td colspan="2" align="center"><b>Inviaci un mail!</td>
+        </tr>
+        <tr><td><b>Nome</b></td><td><input type="text" name="nome"></td></tr>
+        <tr><td><b>Cognome</b></td><td><input type="text" name="cognome"></td></tr>
+        <tr><td><b>Telefono (senza spazi nè simboli)</b><b style="color:#999; font-size: 16px;">*non è obbligatorio*</b></td><td><input type="text" name="telefono"></td></tr>
+        <tr><td><b>Email</b></td><td><input type="text" name="email"></td></tr>
+        <tr><td colspan="2" align="right">
+          <input type="button" value="Invia" onClick="Modulo()" name="submit">
+        </td></tr>
+        </form>
+        </table> 
+      <br>
+
+      <script>
+        function Modulo() {
+          // Variabili associate ai campi del modulo
+          var nome = document.modulo.nome.value;
+          var cognome = document.modulo.cognome.value;
+          var email = document.modulo.email.value;
+
+          // Espressione regolare dell'email
+          var email_reg_exp = /^([a-zA-Z0-9_.-])+@(([a-zA-Z0-9-]{2,})+.)+([a-zA-Z0-9]{2,})+$/;
+
+          //Effettua il controllo sul campo NOME
+          if ((nome == "") || (nome == "undefined")) {
+          alert("Il campo Nome è obbligatorio.");
+          document.modulo.nome.focus();
+          return false;
+          }
+
+          //Effettua il controllo sul campo COGNOME
+          else if ((cognome == "") || (cognome == "undefined")) {
+          alert("Il campo Cognome è obbligatorio.");
+          document.modulo.cognome.focus();
+          return false;
+          }
+          
+          //INVIA IL MODULO
+          else {
+          document.modulo.action = open('mailto:matteomania09@gmail.com');
+          document.modulo.submit();
+          }
+        }
+      </script>
     </body>
 </html>

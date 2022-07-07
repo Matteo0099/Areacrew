@@ -37,6 +37,7 @@ h1 {
 
 
 /*dark mode & white mode*/
+/*
 .light-mode{
     background-color: white;
     color: black;
@@ -57,6 +58,7 @@ h1 {
     min-width: 06px;
     min-height: 30px;
 }
+
 
 @media screen and (max-width: 900px) {
     .darkMode {
@@ -97,8 +99,32 @@ h1 {
     background-color: #999999;
     cursor:pointer;
 }
+*/
 /********************/
 
+.Yout {
+    align-self: right;
+    margin-top: 0;
+    margin-right: 4%;
+}
+
+.ButtonY {
+    background-color: #7dbbf1; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+}
+
+.ButtonY:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    cursor: pointer;
+}
 
 /*GLOBAL STYLE*/
 * {

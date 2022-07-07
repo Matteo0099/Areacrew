@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Palanquin&display=swap');
+@import url(https://use.fontawesome.com/releases/v5.0.6/css/all.css);   /*icons*/
+
+/*colori per i testi, con variabili*/
+:root {
+    --normal:#333;
+    --muted:#888;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+@supports (font-size-adjust: 1) {
+    article {
+        font-size-adjust: 0.5;
+    }
+}
+
+.footer {
+    margin: auto;
+    max-width: auto;
+    min-height: auto;
+    width: 100%;   
+}
+
+#Box {
+    font: 600;
+    font-size: 28px;
+    margin-top: 2%;
+    text-align: center;
+    font-family:Palaquin, sans-serif;
+}
+
+@font-face{font-family: YoutubeSans; src: url('../fonts/Youtube-Sans-font-1/youtube-sans-light.ttf');}
+#Box:hover {
+    font-size: 30px;
+    color: red;
+    transition: 0.45s;
+    font-family:"Google Sans Text", Roboto, Arial, sans-serif;
+    font: 900;
+}
+
+.layer {
+    image-rendering: optimizeQuality;
+}
+
+@media  screen and (max-width:763.33px) {
+    iframe {
+        width: 90%;
+    }
+}

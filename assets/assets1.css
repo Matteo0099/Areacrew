@@ -486,3 +486,82 @@ nav ul#social-media > li {
     min-height: auto;
     width: 100%;   
 }
+
+#titolo-monfy {
+    font-family: inherit;
+    font-weight: bold;
+    font-size: 42px;
+    text-align: center;
+}
+
+#sottotitolo {
+    color: #999;
+    font-size: 24px;
+    text-decoration: underline;
+}
+
+#maps-title {
+    padding-top: 35px;
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/*align center*/
+#vcontainer {
+    display: table;
+    height: 100%;
+    width: 100%;
+}
+#hcontainer {
+    padding: 1.5em;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+#content {
+    display: inline-block;
+    border: lightGray 1px solid;
+    background-color: lightBlue;
+    text-align: left;
+}
+
+.maps {
+    width: 775px !important;
+    height: 525px !important;
+}
+
+@media screen and (max-width: 850px) {
+    .maps {
+        width: 550px !important;
+        height: 500px !important;
+    }
+}
+
+@media screen and (max-width: 675px) {
+    .maps {
+        width: 450px !important;
+        height: 420px !important;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .maps {
+        width: 410px !important;
+        height: 375px !important;
+    }
+}
+
+@media screen and (max-width: 476px) {
+    .maps {
+        width: 325px !important;
+        height: 300px !important;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    .maps {
+        width: 290px !important;
+        height: 260px !important;
+    }
+}

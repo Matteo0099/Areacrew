@@ -35,6 +35,15 @@ h1 {
     text-align: center;
 }
 
+.img {
+    border: 1px transparent;
+    border-radius: 50%;
+    margin-left: 35px !important;
+    padding: 0.001em;
+    width: 95px !important;
+    height: 85px !important;
+}
+
 
 /*dark mode & white mode*/
 /*
@@ -382,7 +391,7 @@ nav label {
 
 #menu-icon {
     display: inline-block;
-    margin: 0.6em 0;
+    margin: 1.1em .8em;
     max-width: 1em;
     position:relative;
     cursor: pointer;
@@ -495,7 +504,7 @@ nav ul#social-media > li {
 }
 
 #titolo-monfy {
-    transition: .75s all ease-in-out;
+    transition: .35s all ease-in-out;
     font-family: inherit;
     font-weight: bold;
     font-size: clamp(34px, 75vh, 44px) !important;
@@ -547,8 +556,8 @@ h1#titolo-monfy:hover {
 }
 
 .maps {
-    width: 845px !important;
-    height: 600px !important;
+    width: 855px !important;
+    height: 615px !important;
 }
 
 @media screen and (max-width: 850px) {
@@ -585,3 +594,4 @@ h1#titolo-monfy:hover {
         height: 260px !important;
     }
 }
+

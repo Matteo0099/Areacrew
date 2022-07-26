@@ -5,6 +5,8 @@
 :root {
     --normal:#333;
     --muted:#888;
+    --bg-dark: #1d1f20;
+    --bg-white: #eae4df;
 }
 
 *, *:before, *:after {
@@ -338,8 +340,8 @@ main .container {
 }
  
 nav { 
-    background: #eae4df; 
-    color: #1d1f20;
+    background:var(--bg-dark); 
+    color:  var(--bg-white);
     left: 0;
     position: relative;
     top: 0;
@@ -382,7 +384,7 @@ nav label {
 #menu-icon,
 #menu-icon:before,
 #menu-icon:after {
-    background: #1d1f20;
+    background: var(--bg-white);
     border-radius: 0.1em;
     height: 0.1933em;
     transition: all 125ms ease-in-out;
@@ -441,7 +443,7 @@ nav input[type=checkbox]:checked + label #menu-icon:after {
 /*** MENU ***/
 /* Overlay */
 nav input:checked ~ #overlay {
-    background: #eae4df;
+    background: var(--bg-dark);
     bottom: 0;
     left: 0;
     height: 100vh;
@@ -456,7 +458,7 @@ nav input:checked ~ #overlay {
 nav ul {
     margin-top: 6%;
     font-size: 29px;
-    color: var(--normal);
+    color: var(--bg-white);
     list-style: none;
     margin: 0;
     max-height: 0;
@@ -467,6 +469,7 @@ nav ul {
 }
  
 nav input:checked ~ ul {
+    color: var(--bg-white);
     margin: 1.733em;
     max-height: inherit;
     opacity: 1;
@@ -477,7 +480,7 @@ nav ul > li {
 }
  
 nav ul a {
-    color: #1d1f20!important;
+    color: var(--bg-white) !important;
     text-decoration: none;
 }
  

@@ -24,6 +24,13 @@
     color: rgb(130, 130, 130);
     font-family: 'Palanquin', sans-serif;
     font: 400;
+    height: auto;
+}
+
+nav {
+    height: auto;
+    overflow: hidden; /*magic*/
+    text-rendering: optimizeLegibility;
 }
 
 p {

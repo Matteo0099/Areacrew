@@ -24,6 +24,11 @@
     width: 100%;   
 }
 
+nav {
+    height: auto;
+    overflow: hidden;
+}
+
 #Box {
     font: 600;
     font-size: 28px;

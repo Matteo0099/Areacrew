@@ -39,78 +39,78 @@ h1 {
     border: 1px transparent;
     border-radius: 50%;
     margin-left: 35px !important;
-    padding: 0.001em;
+    margin: 10px auto;
     width: 95px !important;
-    height: 85px !important;
+    height: 95px !important;
 }
 
 
-/*dark mode & white mode*/
-/*
-.light-mode{
-    background-color: white;
-    color: black;
-}
-.dark-mode{
-    background-color: #333;
-    color: white;
-}
-.dark-mode:active body html .containerz .containerz1{
-    background-color: #333;
-    background-repeat: repeat;
-    color: white;
-}
-.dark-mode:active p, h1, h2, h3, h4, h5, title, .header{
-    color: white;
-}
-.darkMode {
-    min-width: 06px;
-    min-height: 30px;
+/*scrollbar*/
+html::-webkit-scrollbar {
+    width: 20px; 
+ }
+
+html::-webkit-scrollbar-track {
+  background-color: black;
 }
 
-
-@media screen and (max-width: 900px) {
-    .darkMode {
-        display: none;
-        cursor: pointer;
-    }
+html::-webkit-scrollbar-thumb {
+  background: #4e4e4e;
+  border-radius: 25px;
+}
+  
+html::-webkit-scrollbar {
+    width: 20px;
 }
 
-#DarkModetext {
-    font-size: 14px;
-    color: var(--muted);
-    text-align: center;
-    text-transform:uppercase;
+html::-webkit-scrollbar-track {
+    background: rgb(179, 177, 177);
+    border-radius: 20px;
 }
 
-.DarkBtn {
-    background-color: #fdfafa;
-    color: #fdfafa;
-    border-color: #777777; 
-    border-radius: 6px;
-    height: 32px;
-    width: 60px;
-    padding-right: 5px;
+html::-webkit-scrollbar-thumb {
+    background: rgb(136, 136, 136);
+    border-radius: 20px;
 }
-.DarkBtn:hover {
-    background-color: #999999;
-    cursor:pointer;
-}
-.LightBtn {
-    background-color: #fdfafa;
-    border-color: #777777;
-    border-radius: 6px;
-    height: 32px;
-    width: 60px;
-    padding-right: 5px;
-}
-.LightBtn:hover {
-    background-color: #999999;
-    cursor:pointer;
-}
-*/
-/********************/
 
+html::-webkit-scrollbar-thumb:hover {
+    background: rgb(100, 100, 100);
+    border-radius: 20px;
+}
+
+html::-webkit-scrollbar-thumb:active {
+    background: rgb(68, 68, 68);
+    border-radius: 20px;
+}
+
+html::-webkit-scrollbar {
+    width: 20px;
+}
+html::-webkit-scrollbar-track {
+    background-image: repeating-linear-gradient(45deg, red 0, red 1px, transparent 0, transparent 50%);
+    background-size: 10px 10px;
+}
+html::-webkit-scrollbar-thumb {
+    background: transparent;
+    border-radius: 5px;
+    border: 2px solid black;
+    box-shadow: inset 1px 1px 5px black;
+}
+
+html::-webkit-scrollbar {
+    width: 20px; 
+}
+  
+html::-webkit-scrollbar-track {
+    background:  linear-gradient(0deg, rgba(255, 0, 0, 1) 0%, rgba(7, 0, 211, 1) 100%);
+}
+
+html::-webkit-scrollbar-thumb {
+    background: transparent;
+    box-shadow: 0px 0px 0px 100vh black;
+}
+/***end scrollbar***/
+  
 .Yout {
     align-self: right;
     margin-top: 0;
@@ -243,7 +243,7 @@ h1 {
         position: fixed;
         bottom: 2px;
         float: right;
-        left: 95%;
+        left: 90%;
         bottom: 15%;
         max-width: 44.5px;
         height: 45px;
@@ -252,16 +252,18 @@ h1 {
         border-color: rgba(85, 85, 85, 0.2);
         background-color: rgb(100,100,100);
         border-radius: 22px;
+        transition: all .8s ease-in-out;
     }
     /*On Hover Color Change*/
     #myBtn:hover {
+        transition: all .8s ease-in-out;
         background-color: #7dbbf1;
         cursor: pointer;
     }
 
     @media screen and (max-width: 1012px) {
         #myBtn {
-            left: 91.5%
+            left: 92.5%
         }
     }
 
@@ -272,7 +274,7 @@ h1 {
     }
     @media screen and (max-width: 600px) {
         #myBtn {
-            left: 80%
+            left: 90%
         }
     }
 
@@ -321,7 +323,9 @@ p fa-youtube:hover {
 }
  
 main .container {
-    padding: 1em;
+    padding: 2em;
+    text-rendering: optimizeSpeed;
+    z-index: 999;
 }
  
 .screen-reader-text {
@@ -379,19 +383,20 @@ nav label {
 #menu-icon:before,
 #menu-icon:after {
     background: #1d1f20;
-    border-radius: 0.09em;
+    border-radius: 0.1em;
     height: 0.1933em;
-    transition: all 100ms ease-in-out;
+    transition: all 125ms ease-in-out;
     width: 100%;
 }
 
 .IconaMenu {
     cursor: pointer;
+    pointer-events: all;
 }
 
 #menu-icon {
     display: inline-block;
-    margin: 1.1em .8em;
+    margin: 50px auto;
     max-width: 1em;
     position:relative;
     cursor: pointer;
@@ -497,6 +502,7 @@ nav ul#social-media > li {
 }
 
 .footer {
+    overflow: hidden;
     margin: auto;
     max-width: auto;
     min-height: auto;
@@ -538,6 +544,7 @@ h1#titolo-monfy:hover {
 
 /*align center*/
 #vcontainer {
+    padding: 1.5em;
     display: table;
     height: 100%;
     width: 100%;
@@ -556,6 +563,7 @@ h1#titolo-monfy:hover {
 }
 
 .maps {
+    margin: 0 auto;
     width: 855px !important;
     height: 615px !important;
 }
@@ -595,3 +603,42 @@ h1#titolo-monfy:hover {
     }
 }
 
+#titleh1 {
+    margin: 8em 0 0 0;
+    font-size: 32px;
+}
+
+.articolo1 {
+    height: 13vh;
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 4em;
+}
+
+.articolo2 {
+    text-align: center;
+    margin: 0 auto;
+    padding: 8em 1em;
+    word-wrap: break-word;
+    height: 100vh;
+    font-family: inherit;
+    font-size: 28px;
+    margin-bottom: 4em;
+}
+
+.articolo .section {
+    margin: 1em;
+    padding: 3em;
+}
+
+.subtitle {
+    margin-top: 2em !important;
+}
+
+#section-image {
+    margin: 0 auto;
+    padding: 1em; 
+    max-height: 65vh;
+    max-width: 100%;
+    overflow: hidden;
+}

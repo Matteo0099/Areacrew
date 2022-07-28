@@ -40,7 +40,7 @@
 
         .Table1, .Table1 th,.Table1 td,.Table1 tr {
           border-collapse: collapse;
-          border-radius: 25px;
+          border-radius: 5px;
           text-align: middle;
         } 
         table {
@@ -63,7 +63,7 @@
           border-style: none solid solid none;
           padding: 10px;
         }
-
+        /*
         tr:first-child td:first-child { border-top-left-radius: 10px; }
         tr:first-child td:last-child { border-top-right-radius: 10px; }
 
@@ -72,7 +72,7 @@
 
         tr:first-child td { border-top-style: solid; }
         tr td:first-child { border-left-style: solid; }
-        
+        */
         th, td {
           padding: 8px;
           text-align: left;
@@ -99,7 +99,7 @@
         * {box-sizing: border-box;}
         
         .tabella {
-          width: 90%;
+          width: 80%;
           font: 500;
           font-family: inherit;
           font-size: 22px;
@@ -108,7 +108,7 @@
           text-align: left;
           padding-left: 3%;
           border: 7px #333; 
-          border-radius: 25px;
+          border-radius: 4px;
           border-collapse: collapse;
         }
 
@@ -199,6 +199,86 @@
           transition: 0.6s;
           background-color: #00fc7e;
         }
+        #spacer {
+          height: 6vh;
+          margin: 1em 0;
+        }
+        @media screen and (max-width: 470px) {
+          .tabella {
+            width: 30%;
+            -ms-flex: 30%;
+            flex: 30%;
+            font-size: 16px !important;
+            padding: 0%;
+          }
+          .form-control {
+            height: 45px;
+            width: 258px;
+            font-size: 17px !important;
+          }
+          .logindata {
+            margin-top: 14px;
+            height: 45px;
+            width: 260px;
+          }
+        }
+        @media screen and (max-width: 435px) {
+          .tabella {
+            width: 20%;
+            -ms-flex: 20%;
+            flex: 20%;
+            font-size: 12px !important;
+            padding: 0%;
+          }
+          .form-control {
+            height: 35px;
+            width: 228px;
+            font-size: 14px !important;
+          }
+          .logindata {
+            margin-top: 12px;
+            height: 35px;
+            width: 225px;
+          }
+        }
+        @media screen and (max-width: 405.1px) {
+          .tabella {
+            width: 15%;
+            -ms-flex: 15%;
+            flex: 15%;
+            font-size: 11px !important;
+            padding: 0%;
+          }
+          .form-control {
+            height: 30px;
+            width: 210px;
+            font-size: 12px !important;
+          }
+          .logindata {
+            margin-top: 11px;
+            height: 30px;
+            width: 210px;
+          }
+        }
+        @media screen and (max-width: 380px) {
+          .tabella {
+            width: 10%;
+            -ms-flex: 10%;
+            flex: 10%;
+            font-size: 10px !important;
+            padding: 0%;
+          }
+          .form-control {
+            height: 29px;
+            width: 206px;
+            font-size: 11px !important;
+          }
+          .logindata {
+            margin-top: 11px;
+            height: 29px;
+            width: 206px;
+          }
+        }
       </style>
 
       <nav>
@@ -282,12 +362,14 @@
       <div class="box">
       <h1 style="margin-top:4%; font-size: 32px; text-decoration: underline;"><strong>Tabella Orari / Apertura Park</strong></h1>
       </div>
+      
+      <section id="spacer"></section>
 
       <p style="margin-top: 3%; bottom: 0.2;">*gli orari sono puramente indicativi*</p>
       
       <table align="center" style="text-rendering: optimizeLegibility;" class="Table1">
         <tr>
-          <td>Lunedì (può variare)</td>
+          <td>Lunedì </td>
           <td>≃10.00</td>
           <td>≃18-19</td>
         </tr>
@@ -324,7 +406,9 @@
       </table>
       
       <!--<a href="./index.html" class="btn btn-primary is-hovered" align="center" style="font-family: inherit; font-size: 16px; text-align: center; margin-top: 6.5%; margin-bottom: 2%;">Torna alla Home</a>-->
-      
+
+      <section id="spacer"></section>
+
       <div class="box" style="margin-top: 8%; margin-bottom: 8%;">
       <h4 style="text-align: center; margin-top: 4.5%; margin-bottom: 5%;" class="title is-4 mgt-medium">Any questions / Qualche dubbio? </h4>
       </div>
@@ -347,6 +431,8 @@
       <br><br>
       
       <button class="button is-rounded is-hovered large is-medium mg-large" style="margin-top:3%"><a href="./index.html">Torna alla home</a></button>
+
+      <section id="spacer"></section>
 
     <footer class="footer" style="margin-top: 3%">
       <div class="content has-text-centered">

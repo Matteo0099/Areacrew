@@ -27,8 +27,8 @@ html, body {
 }
  
 body {
-    background-color: #f3f3f3; 
-    color: #333;
+    background-color: var(--bg-white); 
+    color: var(--bg-dark);
     font: 18px/1.5 'Palanquin', sans-serif;
 }
  
@@ -449,7 +449,7 @@ nav ul#social-media > li {
     transition: .35s all ease-in-out;
     font-family: inherit;
     font-weight: bold;
-    font-size: clamp(34px, 75vh, 44px) !important;
+    font-size: clamp(32px, 80%, 40px) !important;
     text-align: center;
 }
 
@@ -460,20 +460,22 @@ h1#titolo-monfy:hover {
 }
 
 #sottotitolo {
-    color: #999;
+    color: var(--muted);
     font-size: 24px;
     text-decoration: underline;
+    margin-top: 1%;
 }
 
 #sottotitolo:hover {
-    color: var(--normal);
+    color: var(--bg-dark);
     opacity:.9;
     font-style: italic;
+    transition: 300ms all ease;
 }
 
 #maps-title {
     padding-top: 35px;
-    font-size: 30px;
+    font-size: 28px;
     text-align: center;
     font-weight: bold;
 }
@@ -539,6 +541,13 @@ h1#titolo-monfy:hover {
     }
 }
 
+@media screen and (max-width: 381px) {
+    .maps {
+        width: 230px !important;
+        height: 250px !important;
+    }
+}
+
 #titleh1 {
     margin: 8em 0 0 0;
     font-size: 32px;
@@ -564,7 +573,7 @@ h1#titolo-monfy:hover {
 
 .articolo .section {
     margin: 1em;
-    padding: 3em;
+    padding: 2em;
 }
 
 .subtitle {
@@ -573,7 +582,7 @@ h1#titolo-monfy:hover {
 
 #section-image {
     margin: 0 auto;
-    padding: 1em; 
+    padding: .5em; 
     max-height: 65vh;
     max-width: 100%;
     overflow: hidden;

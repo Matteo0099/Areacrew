@@ -33,8 +33,10 @@
         }
         html, body {
           background-color: #f5f1ed;  /*fdfafa*/
+          color: #14213D !important;
         }
         h1, h2, h3, p {
+          color: #14213D !important;
           font-family: inherit;
         }
 
@@ -49,14 +51,14 @@
           font: 500;
           font-family: inherit;
           font-size: 4px;
-          background-color:#0d1117;
+          background-color:#0d1117 !important;
           text-align: middle;
           border-collapse: collapse;
           width: 80%;
         }
 
         tbody, td {
-          color: #f2f2f2;
+          color: #f6f6f6;
         }
 
         td {
@@ -279,6 +281,21 @@
             width: 206px;
           }
         }
+
+        .Title-tab-1 , .Title-tab-2 {
+          margin-top: 50px;
+          font-size: 34px;
+          font-weight: bold;
+          font-style: normal;
+          padding: .4em;
+          text-align: center;
+          word-wrap: break-word;
+        }
+
+        .Title-tab-1:hover , .Title-tab-2:hover, #titolo:hover, #questions:hover {
+          color: #FCA311 !important;
+        }
+
       </style>
 
       <nav>
@@ -360,48 +377,89 @@
       </nav>  
     
       <div class="box">
-      <h1 style="margin-top:4%; font-size: 32px; text-decoration: underline;"><strong>Tabella Orari / Apertura Park</strong></h1>
+      <h1 style="margin-top:4%; font-size: 38px; text-decoration: underline; font-weight: 900;" id="titolo">Tabella Orari / Apertura Park</h1>
       </div>
       
       <section id="spacer"></section>
 
-      <p style="margin-top: 3%; bottom: 0.2;">*gli orari sono puramente indicativi*</p>
+      <p style="margin-top: 1%;">*gli orari sono puramente indicativi*</p>
       
+      <h1 class="Title-tab-1">Orario Estivo</h1>
       <table align="center" style="text-rendering: optimizeLegibility;" class="Table1">
         <tr>
           <td>Lunedì </td>
-          <td>≃10.00</td>
-          <td>≃18-19</td>
+          <td>≃9.00</td>
+          <td>≃21.00</td>
         </tr>
         <tr>
           <td>Martedì</td>
-          <td>8.00 -</td>
-          <td>20.30</td>
+          <td>9.00 -</td>
+          <td>21.00</td>
         </tr>
         <tr>
           <td>Mercoledì</td>
-          <td>8.00 -</td>
-          <td>19.00</td>
+          <td>9.00 -</td>
+          <td>21.00</td>
         </tr>
         <tr>
           <td>Giovedì</td>
-          <td>8.00 -</td>
+          <td>9.00 -</td>
           <td>21.00</td>
         </tr>
         <tr>
           <td>Venerdì</td>
-          <td>8.30 -</td>
-          <td>22.00</td>
+          <td>9.00 -</td>
+          <td>21.00</td>
         </tr>
         <tr>
           <td>Sabato</td>
-          <td>8.30 -</td>
-          <td>23.00</td>
+          <td>9.00 -</td>
+          <td>21.00</td>
         </tr>
         <tr>
           <td>Domenica</td>
-          <td>8.30 -</td>
-          <td>23.00</td>
+          <td>9.00 -</td>
+          <td>21.00</td>
+        </tr>
+      </table>
+
+      <h1 class="Title-tab-2">Orario Invernale</h1>
+
+      <table align="center" style="text-rendering: optimizeLegibility;" class="Table1">
+        <tr>
+          <td>Lunedì </td>
+          <td>≃9.00</td>
+          <td>≃17.30</td>
+        </tr>
+        <tr>
+          <td>Martedì</td>
+          <td>9.00 -</td>
+          <td>17.30</td>
+        </tr>
+        <tr>
+          <td>Mercoledì</td>
+          <td>9.00 -</td>
+          <td>17.30</td>
+        </tr>
+        <tr>
+          <td>Giovedì</td>
+          <td>9.00 -</td>
+          <td>17.30</td>
+        </tr>
+        <tr>
+          <td>Venerdì</td>
+          <td>9.00 -</td>
+          <td>17.30</td>
+        </tr>
+        <tr>
+          <td>Sabato</td>
+          <td>9.00 -</td>
+          <td>17.30</td>
+        </tr>
+        <tr>
+          <td>Domenica</td>
+          <td>9.00 -</td>
+          <td>17.30</td>
         </tr>
       </table>
       
@@ -410,7 +468,7 @@
       <section id="spacer"></section>
 
       <div class="box" style="margin-top: 8%; margin-bottom: 8%;">
-      <h4 style="text-align: center; margin-top: 4.5%; margin-bottom: 5%;" class="title is-4 mgt-medium">Any questions / Qualche dubbio? </h4>
+      <h4 style="text-align: center; margin-top: 4.5%; margin-bottom: 5%;" class="title is-4 mgt-medium" id="questions">Any questions / Qualche dubbio? </h4>
       </div>
 
       <!--modulo compilazione da inviare con la mail-->

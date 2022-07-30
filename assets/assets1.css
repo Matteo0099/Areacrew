@@ -111,6 +111,12 @@ h1 {
     }
 }
 
+@media screen and (max-width: 650px) {
+    body {
+        font-size: 20px;
+    }
+}
+
 /*GLOBAL STYLE*/
 * {
     box-sizing: border-box;
@@ -218,20 +224,44 @@ h1 {
     #myBtn {
         position: fixed;
         float: right;
-        left: 92%;
+        left: 94%;
         bottom: 15%;
         max-width: 41.5px;
         height: 42px;
         text-align: center;
         width: 100%;
         border-color: rgba(85, 85, 85, 0.2);
-        background-color: rgb(100,100,100);
+        background-color: var(--txt-title);
         border-radius: 24px;
-        transition: all .4s ease-in-out;
+        /* Here we declare our inline animation */
+        animation: rotate 3s linear infinite;
+        animation-name: rotate;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
     }
+
+    @keyframes rotate {
+        0% {
+            transform: translateY(0px);
+        }
+        25% {
+            transform: translateY(5px);
+        }
+        50% {
+            transform: translateY(10px);
+        }
+        75% {
+            transform: translateY(-5px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
     /*On Hover Color Change*/
     #myBtn:hover {
-        transition: all .4s ease-in-out;
+        transition: all .35s ease-in-out;
         background-color: var(--txt-hover);
         cursor: pointer;
     }
@@ -252,33 +282,40 @@ h1 {
             left: 90%
         }
     }
+    @media screen and (max-width: 540px) {
+        #myBtn {
+            left: 85%
+        }
+    }
+/***end btn***/
 
-  /* Responsive layout - makes a two column-layout instead of four columns */
-  @media screen and (max-width: 800px) {
-      .column {
-          -ms-flex: 50%;
-          flex: 50%;
-          max-width: 50%;
-      }
-  }
 
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-      .column {
-          -ms-flex: 75%;
-          flex: 75%;
-          max-width: 75%;
-      }
-  }
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+    }
+}
 
-  /*IPHONE*/
-  @media screen and (max-width: 400px) {
-      .column {
-          -ms-flex: 100%;
-          flex: 100%;
-          max-width: 100%;
-      }
-  }
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+.column {
+    -ms-flex: 75%;
+    flex: 75%;
+    max-width: 75%;
+    }
+}
+
+/*IPHONE*/
+@media screen and (max-width: 400px) {
+.column {
+    -ms-flex: 100%;
+    flex: 100%;
+    max-width: 100%;
+    }
+}
 
 .social1 {
     font: icon;
@@ -471,6 +508,11 @@ nav ul#social-media > li {
     display: inline-block;
     font-size: 1.75em;
     margin: 0.25em;
+    color: var(--bg-white) !important;
+}
+
+nav ul#social-media {
+    color: var(--bg-white) !important;
 }
 
 #test1:hover {
@@ -498,8 +540,27 @@ nav ul#social-media > li {
     transition: .35s all ease-in-out;
     font-family: inherit;
     font-weight: bold;
-    font-size: clamp(32px, 80%, 40px) !important;
+    font-size: 45px;
     text-align: center;
+    padding: .75em;
+}
+
+@media screen and (max-width: 465px) {
+    #titolo-monfy {
+        font-size: 38px;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    #titolo-monfy {
+        font-size: 32px;
+    }
+}
+
+@media screen and (max-width: 365px) {
+    #titolo-monfy {
+        font-size: 26.5px;
+    }
 }
 
 h1#titolo-monfy:hover {

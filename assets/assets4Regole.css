@@ -33,7 +33,15 @@ nav {
     text-rendering: optimizeLegibility;
 }
 
-p {
+nav > ul > li {
+    padding-left: -4%;
+}
+
+ul#social-media {
+    padding-right: 8%;
+}
+
+.grid p {
     font: 500;
     font-size: 18px;
     margin: 0 auto;

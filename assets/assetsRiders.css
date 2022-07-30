@@ -2,52 +2,105 @@
 @import url(https://use.fontawesome.com/releases/v5.0.6/css/all.css);   /*icons*/
 
 * html {
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
 }
+
 html, body {
-    font-family: 'Palanquin', sans-serif;
-    text-align: center;
+  font-family: 'Palanquin', sans-serif;
 }
 
 body {
-    background-color: #f5f1ed;
+  background-color: #f5f1ed;
 }
 
-table {
-    text-align: left;
-    position: relative;
-    border-collapse: collapse; 
-    background-color: #f5f1ed;
-  }
-  /* Spacing */
-  td, th {
-    border: 1px solid #444;
-    border-radius: 9px;
-    padding: 24px;
-  }
+.thegrid {
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 5px;
+  padding: 15px;
+  word-wrap: break-word;
+}
 
-  th {
-    background: #f3f3f3;
-    color: white;
-    border-radius: 0;
-    position: sticky;
-    top: 0;
-    padding: 10px;
-  }
+.thegrid, .head {
+  border: 2.5px dotted #999;
+  border-radius: 22px;
+}
 
-  .primary{
-    background-color: #f3f3f3;
-    font-size: 22px;
-    font: 900;
+.head {
+  font-size: 22px;
+  color: #14213D;
+  text-shadow: 0 0 18px rgba(63,107,169, 0.6)
+}
+
+.head:hover {
+  color: #FCA311;
+  text-shadow: 0 0 25px #FCA311;
+}
+ 
+/* (B) ON SMOL SCREEN */
+@media screen and (max-width:768px) {
+  .thegrid { grid-template-columns: auto auto; }
+}
+@media screen and (max-width: 290px) {
+  .thegrid {
+    font-size: 14px !important;
+    gap: 2px;
+    padding: 18px;
   }
-  
-  tfoot > tr  {
-    background: black;
-    color: white;
-  }
-  tbody > tr:hover {
-    opacity: 0.95;
-    cursor:text;
-  }
+}
+
+.gfg-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20%;
+}
+
+#box {
+  padding: 8px 35px;
+  font-size: 30px;
+  color: black;
+  border: 2px solid #f3f3f3;
+}
+
+#box h1 {
+  color: #FCA311;
+  text-shadow: 0 0 18px #FCA311;
+}
+
+#box h1:hover {
+  text-shadow: 0 0 29px #FCA311;
+}
+
+.primary{
+  background-color: #f3f3f3;
+  font-size: 22px;
+  font: 900;
+}
+
+tfoot > tr  {
+  overflow:hidden;
+  background: black;
+  color: white;
+}
+
+tbody > tr:hover {
+  opacity: 0.95;
+  cursor:text;
+}
+
+nav > ul > li {
+  padding-left: -4%;
+}
+
+ul#social-media {
+  padding-right: 8%;
+}
+
+#spacer {
+  height: 10vh;
+  padding: .8em;
+}

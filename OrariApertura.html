@@ -12,6 +12,7 @@
     <link href="./fonts/google-sans-cufonfonts-webfont/ProductSans-Regular.woff" rel="stylesheet" type="text/css"/>
     <!--bootstrap-->
     <!-- CSS only -->
+    <link rel="stylesheet" href="./assets/assets3Orari.css">
     <link rel="stylesheet" href="./assets/assets1.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
@@ -19,352 +20,69 @@
   </head>
 
     <body>
-      <style>     
-        @font-face {
-          font-family: 'Product Sans Regular';
-          font-style: normal;
-          font-weight: normal;
-          src: local('Product Sans Regular'), url('ProductSans-Regular.woff') format('woff');
-        }
-        *, html {
-          font-family: 'Product Sans Regular';
-          font: 600;
-        }
-        html, body {
-          background-color: #f5f1ed;  /*fdfafa*/
-          color: #14213D !important;
-        }
-        h1, h2, h3, p {
-          color: #14213D !important;
-          font-family: inherit;
-        }
-
-        .Table1, .Table1 th,.Table1 td,.Table1 tr {
-          border-collapse: collapse;
-          border-radius: 5px;
-          text-align: middle;
-        } 
-        table {
-          border-collapse: separate;
-          border-spacing: 0;
-          font: 500;
-          font-family: inherit;
-          font-size: 4px;
-          background-color:#0d1117 !important;
-          text-align: middle;
-          border-collapse: collapse;
-          width: 80%;
-        }
-
-        tbody, td {
-          color: #f6f6f6;
-        }
-
-        td {
-          border-style: none solid solid none;
-          padding: 10px;
-        }
-        /*
-        tr:first-child td:first-child { border-top-left-radius: 10px; }
-        tr:first-child td:last-child { border-top-right-radius: 10px; }
-
-        tr:last-child td:first-child { border-bottom-left-radius: 10px; }
-        tr:last-child td:last-child { border-bottom-right-radius: 10px; }
-
-        tr:first-child td { border-top-style: solid; }
-        tr td:first-child { border-left-style: solid; }
-        */
-        th, td {
-          padding: 8px;
-          text-align: left;
-        }
-        
-        .Table1 tr:hover {
-          opacity: 0.92;
-          background-color: #777;
-        }
-
-        nav {
-          height: auto;
-          overflow: hidden;
-        }
-
-        tr{
-          opacity: 1;
-          font-family: inherit;
-          font: 700;
-          font-size: 25px;
-          text-rendering: optimizeLegibility;
-        }
-
-        * {box-sizing: border-box;}
-        
-        .tabella {
-          width: 80%;
-          font: 500;
-          font-family: inherit;
-          font-size: 22px;
-          background-color:#0d1117;
-          color: #f2f2f2;
-          text-align: left;
-          padding-left: 3%;
-          border: 7px #333; 
-          border-radius: 4px;
-          border-collapse: collapse;
-        }
-
-        b {
-          padding-top: 4%;
-          padding: 2% 2% 2% 2%;
-          font: 400;
-          font-family: inherit;
-          color: #f0f6fc;
-          text-align: middle;
-        }
-
-        .tabella:hover {
-          opacity: .975;
-        }
-
-        .send {
-          background-color: #999;
-          border: 2px rgb(201, 194, 194);
-          border-radius: 6px;
-          width: 90px;
-        }
-        .send:hover {
-          background-color: rgba(218, 217, 217, 0.678);
-          border-radius: 8px;
-          opacity: 0.96;
-          cursor: pointer;
-        }
-
-        /* BackG color + padding*/
-        .container1 {
-          border-radius: 5px;
-          background-color: #f3f3f3;
-          padding: 20px;
-        } 
-
-        #loginbox {
-          width: 400px;
-          height: 200px;
-          margin-left: auto;
-          margin-right: auto;
-          margin-top: 25%;
-        }
-
-        .logindata {
-          margin-left: auto;
-          margin-right: auto;
-          margin-top: 20px;
-          height: 60px;
-          width: 290px;
-          transition: 0.25s ease;
-          color: #f2f2f2;
-        }
-
-        .form-control {
-          color: #f2f2f2;
-          margin-left: auto;
-          margin-right: auto;
-          height: 55px;
-          width: 288px;
-          border-style: none;
-          background-color: transparent;
-          text-align: center;
-          border: solid 2px #00FF7F;
-          transition: 0.28s ease;
-          font-size: 20px;
-          font-family: "Trebuchet MS";
-          font: 500;
-        }
-
-        .form-control:hover {
-          box-shadow: 2px 2px 34px #2E8B57;
-        }
-        ::-webkit-input-placeholder {
-          color: #00FF7F;
-        }
-        .invia {
-          align-content: center;
-          width: 84%;
-          margin-top: 3%;
-          margin-bottom: 2%;
-          height: 60px;
-          border: 2px inherit;
-          border-radius: 15px;
-          background-color: #ff626c;
-        }
-        .invia:focus {
-          transition: 0.6s;
-          background-color: #00fc7e;
-        }
-        #spacer {
-          height: 6vh;
-          margin: 1em 0;
-        }
-        @media screen and (max-width: 470px) {
-          .tabella {
-            width: 30%;
-            -ms-flex: 30%;
-            flex: 30%;
-            font-size: 16px !important;
-            padding: 0%;
-          }
-          .form-control {
-            height: 45px;
-            width: 258px;
-            font-size: 17px !important;
-          }
-          .logindata {
-            margin-top: 14px;
-            height: 45px;
-            width: 260px;
-          }
-        }
-        @media screen and (max-width: 435px) {
-          .tabella {
-            width: 20%;
-            -ms-flex: 20%;
-            flex: 20%;
-            font-size: 12px !important;
-            padding: 0%;
-          }
-          .form-control {
-            height: 35px;
-            width: 228px;
-            font-size: 14px !important;
-          }
-          .logindata {
-            margin-top: 12px;
-            height: 35px;
-            width: 225px;
-          }
-        }
-        @media screen and (max-width: 405.1px) {
-          .tabella {
-            width: 15%;
-            -ms-flex: 15%;
-            flex: 15%;
-            font-size: 11px !important;
-            padding: 0%;
-          }
-          .form-control {
-            height: 30px;
-            width: 210px;
-            font-size: 12px !important;
-          }
-          .logindata {
-            margin-top: 11px;
-            height: 30px;
-            width: 210px;
-          }
-        }
-        @media screen and (max-width: 380px) {
-          .tabella {
-            width: 10%;
-            -ms-flex: 10%;
-            flex: 10%;
-            font-size: 10px !important;
-            padding: 0%;
-          }
-          .form-control {
-            height: 29px;
-            width: 206px;
-            font-size: 11px !important;
-          }
-          .logindata {
-            margin-top: 11px;
-            height: 29px;
-            width: 206px;
-          }
-        }
-
-        .Title-tab-1 , .Title-tab-2 {
-          margin-top: 50px;
-          font-size: 34px;
-          font-weight: bold;
-          font-style: normal;
-          padding: .4em;
-          text-align: center;
-          word-wrap: break-word;
-        }
-
-        .Title-tab-1:hover , .Title-tab-2:hover, #titolo:hover, #questions:hover {
-          color: #FCA311 !important;
-        }
-
-      </style>
-
       <nav>
         <div class="containers">
-            <input id="responsive-menu" type="checkbox">
-            <label for="responsive-menu" class="Logo">
-              <img src="./img/Logo/LogoAreaCrewVerro.jpeg" class="img" style="margin-left: 2%;">
-              <span class="toptexts2" id="toptexts2">AreaCrew</span>
-              <span id="menu-icon" class="IconaMenu"></span>
-            </label>
+          <input id="responsive-menu" type="checkbox">
+          <label for="responsive-menu" class="Logo">
+            <img src="./img/Logo/LogoAreaCrewVerro.jpeg" class="img" style="margin-left: 2%;">
+            <span class="toptexts2" id="toptexts2">AreaCrew</span>
+            <span id="menu-icon" class="IconaMenu"></span>
+          </label>
 
-            <div id="overlay" align="center"></div>
-            <ul>
-              <!--
-              <div class="darkMode" align="center">
-                <h3 id="DarkModetext">DARK MODE is OFF</h3>
-                <button onclick="darkMode()" class="DarkBtn"><img src = "./img/night-mode.png"></button>
-                <button onclick="lightMode()" class="LightBtn"><img src = "./img/brightness.png"></button>
-              </div> <br>
-              -->
-              <style>
-                svg {
-                  margin-right:2%;
-                }
-              </style>
+          <div id="overlay" align="center"></div>
+          <ul>
+            <!--
+            <div class="darkMode" align="center">
+              <h3 id="DarkModetext">DARK MODE is OFF</h3>
+              <button onclick="darkMode()" class="DarkBtn"><img src = "./img/night-mode.png"></button>
+              <button onclick="lightMode()" class="LightBtn"><img src = "./img/brightness.png"></button>
+            </div> <br>
+            -->
+            <style>
+              svg {
+                margin-right:2%;
+              }
+            </style>
 
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
-                    <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
-                  </svg><a href="./index.html">Home</a></li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-house" viewBox="0 0 16 16">
+                  <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
+                  <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
+                </svg><a href="./index.html">Home</a></li>
 
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-file-person-fill" viewBox="0 0 16 16">
-                  <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-1 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm-3 4c2.623 0 4.146.826 5 1.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-1.245C3.854 11.825 5.377 11 8 11z"/>
-                </svg><a href="./About-us.html">  Chi siamo</a></li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-file-person-fill" viewBox="0 0 16 16">
+                <path d="M12 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm-1 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0zm-3 4c2.623 0 4.146.826 5 1.755V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1v-1.245C3.854 11.825 5.377 11 8 11z"/>
+              </svg><a href="./About-us.html">  Chi siamo</a></li>
 
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-clock-history" viewBox="0 0 16 16">
-                  <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z"/>
-                  <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z"/>
-                  <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z"/>
-                </svg><a href="./OrariApertura.html">  Orari Apertura Park</a></li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-clock-history" viewBox="0 0 16 16">
+                <path d="M8.515 1.019A7 7 0 0 0 8 1V0a8 8 0 0 1 .589.022l-.074.997zm2.004.45a7.003 7.003 0 0 0-.985-.299l.219-.976c.383.086.76.2 1.126.342l-.36.933zm1.37.71a7.01 7.01 0 0 0-.439-.27l.493-.87a8.025 8.025 0 0 1 .979.654l-.615.789a6.996 6.996 0 0 0-.418-.302zm1.834 1.79a6.99 6.99 0 0 0-.653-.796l.724-.69c.27.285.52.59.747.91l-.818.576zm.744 1.352a7.08 7.08 0 0 0-.214-.468l.893-.45a7.976 7.976 0 0 1 .45 1.088l-.95.313a7.023 7.023 0 0 0-.179-.483zm.53 2.507a6.991 6.991 0 0 0-.1-1.025l.985-.17c.067.386.106.778.116 1.17l-1 .025zm-.131 1.538c.033-.17.06-.339.081-.51l.993.123a7.957 7.957 0 0 1-.23 1.155l-.964-.267c.046-.165.086-.332.12-.501zm-.952 2.379c.184-.29.346-.594.486-.908l.914.405c-.16.36-.345.706-.555 1.038l-.845-.535zm-.964 1.205c.122-.122.239-.248.35-.378l.758.653a8.073 8.073 0 0 1-.401.432l-.707-.707z"/>
+                <path d="M8 1a7 7 0 1 0 4.95 11.95l.707.707A8.001 8.001 0 1 1 8 0v1z"/>
+                <path d="M7.5 3a.5.5 0 0 1 .5.5v5.21l3.248 1.856a.5.5 0 0 1-.496.868l-3.5-2A.5.5 0 0 1 7 9V3.5a.5.5 0 0 1 .5-.5z"/>
+              </svg><a href="./OrariApertura.html">  Orari Apertura Park</a></li>
 
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-file-earmark-ruled" viewBox="0 0 16 16">
-                  <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V9H3V2a1 1 0 0 1 1-1h5.5v2zM3 12v-2h2v2H3zm0 1h2v2H4a1 1 0 0 1-1-1v-1zm3 2v-2h7v1a1 1 0 0 1-1 1H6zm7-3H6v-2h7v2z"/>
-                </svg><a href="./RegolamentoPark.html">  Regolamento-Park</a></li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-file-earmark-ruled" viewBox="0 0 16 16">
+                <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2zM9.5 3A1.5 1.5 0 0 0 11 4.5h2V9H3V2a1 1 0 0 1 1-1h5.5v2zM3 12v-2h2v2H3zm0 1h2v2H4a1 1 0 0 1-1-1v-1zm3 2v-2h7v1a1 1 0 0 1-1 1H6zm7-3H6v-2h7v2z"/>
+              </svg><a href="./RegolamentoPark.html">  Regolamento-Park</a></li>
 
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-folder-symlink-fill" viewBox="0 0 16 16">
-                  <path d="M13.81 3H9.828a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 6.172 1H2.5a2 2 0 0 0-2 2l.04.87a1.99 1.99 0 0 0-.342 1.311l.637 7A2 2 0 0 0 2.826 14h10.348a2 2 0 0 0 1.991-1.819l.637-7A2 2 0 0 0 13.81 3zM2.19 3c-.24 0-.47.042-.683.12L1.5 2.98a1 1 0 0 1 1-.98h3.672a1 1 0 0 1 .707.293L7.586 3H2.19zm9.608 5.271-3.182 1.97c-.27.166-.616-.036-.616-.372V9.1s-2.571-.3-4 2.4c.571-4.8 3.143-4.8 4-4.8v-.769c0-.336.346-.538.616-.371l3.182 1.969c.27.166.27.576 0 .742z"/>
-                </svg>
-                <a href="./YoutubeVideo.html">
-                  Youtube's video
-                </a>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-folder-symlink-fill" viewBox="0 0 16 16">
+                <path d="M13.81 3H9.828a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 6.172 1H2.5a2 2 0 0 0-2 2l.04.87a1.99 1.99 0 0 0-.342 1.311l.637 7A2 2 0 0 0 2.826 14h10.348a2 2 0 0 0 1.991-1.819l.637-7A2 2 0 0 0 13.81 3zM2.19 3c-.24 0-.47.042-.683.12L1.5 2.98a1 1 0 0 1 1-.98h3.672a1 1 0 0 1 .707.293L7.586 3H2.19zm9.608 5.271-3.182 1.97c-.27.166-.616-.036-.616-.372V9.1s-2.571-.3-4 2.4c.571-4.8 3.143-4.8 4-4.8v-.769c0-.336.346-.538.616-.371l3.182 1.969c.27.166.27.576 0 .742z"/>
+              </svg>
+              <a href="./YoutubeVideo.html">
+                Youtube's video
+              </a>
 
-                <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-info-square" viewBox="0 0 16 16">
-                <path d="M14 1a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h12zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
-                <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-              </svg><a href="./AreaPark.html">  AreaCrew-Park</a></li>
-
-              <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-envelope-plus" viewBox="0 0 16 16">
-                <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2H2Zm3.708 6.208L1 11.105V5.383l4.708 2.825ZM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2-7-4.2Z"/>
-                <path d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-3.5-2a.5.5 0 0 0-.5.5v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 0 0 1 0v-1h1a.5.5 0 0 0 0-1h-1v-1a.5.5 0 0 0-.5-.5Z"/>
-              </svg><a href="mailto:matteomania09@gmail.com">  Contattaci!</a></li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-envelope-plus" viewBox="0 0 16 16">
+              <path d="M2 2a2 2 0 0 0-2 2v8.01A2 2 0 0 0 2 14h5.5a.5.5 0 0 0 0-1H2a1 1 0 0 1-.966-.741l5.64-3.471L8 9.583l7-4.2V8.5a.5.5 0 0 0 1 0V4a2 2 0 0 0-2-2H2Zm3.708 6.208L1 11.105V5.383l4.708 2.825ZM1 4.217V4a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v.217l-7 4.2-7-4.2Z"/>
+              <path d="M16 12.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0Zm-3.5-2a.5.5 0 0 0-.5.5v1h-1a.5.5 0 0 0 0 1h1v1a.5.5 0 0 0 1 0v-1h1a.5.5 0 0 0 0-1h-1v-1a.5.5 0 0 0-.5-.5Z"/>
+            </svg><a href="mailto:matteomania09@gmail.com">  Contattaci!</a></li>
           </ul>
                             
           <ul id="social-media" style="margin-right: -2%">
             <li>
-                <a href="https://www.instagram.com/areaycrew/" target="_blank">
-                  <i class="fab fa-instagram" id="test1"></i>
-                  <span class="screen-reader-text">Instagram</span>
-                </a>
-                <p class="social1">Instagram</p>
+              <a href="https://www.instagram.com/areaycrew/" target="_blank">
+                <i class="fab fa-instagram" id="test1"></i>
+                <span class="screen-reader-text">Instagram</span>
+              </a>
+              <p class="social1">Instagram</p>
             </li>
             <li>
               <a href="https://www.youtube.com/AREACREWBMX/video" target="_blank">
@@ -383,84 +101,131 @@
       
       <section id="spacer"></section>
 
-      <p style="margin-top: 1%; text-align: center;">*gli orari sono puramente indicativi*</p>
+      <center>
+        <div class="flex-container" id="#sect">
+          <div class="dotted">
+            <p class="sottotitolo1">*gli orari sono puramente indicativi*</p>
+          </div>
+        </div>
+      </center>
+
       
-      <h1 class="Title-tab-1">Orario Estivo</h1>
+      <h1 class="Title-tab-1">Orario da Novembre a Marzo</h1>
       <table align="center" style="text-rendering: optimizeLegibility;" class="Table1">
         <tr>
           <td>Lunedì </td>
-          <td>≃9.00</td>
-          <td>≃21.00</td>
+          <td>9.00 -</td>
+          <td>17.30</td>
         </tr>
         <tr>
           <td>Martedì</td>
           <td>9.00 -</td>
-          <td>21.00</td>
+          <td>17.30</td>
         </tr>
         <tr>
           <td>Mercoledì</td>
           <td>9.00 -</td>
-          <td>21.00</td>
+          <td>17.30</td>
         </tr>
         <tr>
           <td>Giovedì</td>
           <td>9.00 -</td>
-          <td>21.00</td>
+          <td>17.30</td>
         </tr>
         <tr>
           <td>Venerdì</td>
           <td>9.00 -</td>
-          <td>21.00</td>
+          <td>17.30</td>
         </tr>
         <tr>
           <td>Sabato</td>
           <td>9.00 -</td>
-          <td>21.00</td>
+          <td>17.30</td>
         </tr>
         <tr>
           <td>Domenica</td>
           <td>9.00 -</td>
-          <td>21.00</td>
+          <td>17.30</td>
         </tr>
       </table>
 
-      <h1 class="Title-tab-2">Orario Invernale</h1>
+      <h1 class="Title-tab-2">Orario Aprile e Ottobre</h1>
 
       <table align="center" style="text-rendering: optimizeLegibility;" class="Table1">
         <tr>
           <td>Lunedì </td>
-          <td>≃9.00</td>
-          <td>≃17.30</td>
+          <td>9.00</td>
+          <td>20.00</td>
         </tr>
         <tr>
           <td>Martedì</td>
           <td>9.00 -</td>
-          <td>17.30</td>
+          <td>20.00</td>
         </tr>
         <tr>
           <td>Mercoledì</td>
           <td>9.00 -</td>
-          <td>17.30</td>
+          <td>20.00</td>
         </tr>
         <tr>
           <td>Giovedì</td>
           <td>9.00 -</td>
-          <td>17.30</td>
+          <td>20.00</td>
         </tr>
         <tr>
           <td>Venerdì</td>
           <td>9.00 -</td>
-          <td>17.30</td>
+          <td>20.00</td>
         </tr>
         <tr>
           <td>Sabato</td>
           <td>9.00 -</td>
-          <td>17.30</td>
+          <td>20.00</td>
         </tr>
         <tr>
           <td>Domenica</td>
           <td>9.00 -</td>
-          <td>17.30</td>
+          <td>20.00</td>
+        </tr>
+      </table>
+
+
+      <h1 class="Title-tab-2">Orario da Maggio a Settembre</h1>
+      <table align="center" style="text-rendering: optimizeLegibility;" class="Table1">
+        <tr>
+          <td>Lunedì</td>
+          <td>9.00 -</td>
+          <td>21.30</td>
+        </tr>
+        <tr>
+          <td>Martedì</td>
+          <td>9.00 -</td>
+          <td>21.30</td>
+        </tr>
+        <tr>
+          <td>Mercoledì</td>
+          <td>9.00 -</td>
+          <td>21.30</td>
+        </tr>
+        <tr>
+          <td>Giovedì</td>
+          <td>9.00 -</td>
+          <td>21.30</td>
+        </tr>
+        <tr>
+          <td>Venerdì</td>
+          <td>9.00 -</td>
+          <td>21.30</td>
+        </tr>
+        <tr>
+          <td>Sabato</td>
+          <td>9.00 -</td>
+          <td>21.30</td>
+        </tr>
+        <tr>
+          <td>Domenica</td>
+          <td>9.00 -</td>
+          <td>21.30</td>
         </tr>
       </table>
       
@@ -468,8 +233,23 @@
 
       <section id="spacer"></section>
 
-      <div class="box" style="margin-top: 8%; margin-bottom: 8%;">
-      <h4 style="text-align: center; margin-top: 4.5%; margin-bottom: 5%;" class="title is-4 mgt-medium" id="questions">Any questions / Qualche dubbio? </h4>
+      <div class="box" id="boxbefore" style="margin-top: 8%; margin-bottom: 8%;">
+        <h4 style="text-align: center; margin-top: 4.5%; margin-bottom: 5%;" class="title is-4 mgt-medium" id="questions">Any questions / Qualche dubbio <span id="puntodid">?</span> </h4>
+        
+        <div class="flex-container">
+          <div class="dotted">
+            <h5 id="h5Form">Completa il form e spedisci la mail completa, per completare la registrazione ad un evento!</h5>
+          </div>
+        </div>
+          
+        <p id="spanForm">/</p>
+        
+        <div class="flex-container">
+          <div class="dotted">
+            <h5 id="h5Form">Complete the form and send the complete email, to complete the registration for an event!</h5>
+          </div>
+        </div>
+      
       </div>
 
       <!--modulo compilazione da inviare con la mail-->

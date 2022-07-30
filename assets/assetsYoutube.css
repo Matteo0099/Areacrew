@@ -55,3 +55,11 @@ nav {
         width: 90%;
     }
 }
+
+nav > ul > li {
+    padding-left: -4%;
+}
+
+ul#social-media {
+    padding-right: 8%;
+}

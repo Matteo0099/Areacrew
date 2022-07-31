@@ -200,13 +200,18 @@
     background-color: #00fc7e;
   }
 
-  #spacer {
-    height: 6vh;
+  #spacer1 {
+    height: 5vh;
     margin: 1em 0;
     word-wrap: break-word;
   }
 
+  img, svg {
+    vertical-align: auto !important;
+  }
+
   #sect .dotted {
+    top: 15%;
     margin: 8em 0;
     padding: 2em;
   }
@@ -342,6 +347,8 @@
     transform: rotate(3.75deg);
   }
   .flex-container{
+    padding: 1.5em;
+    margin: 2em auto;
     text-align: center;
     display: flex;
     height: 100%;
@@ -393,3 +400,4 @@
     padding-right: 8%;
     color: #f0f6fc !important;
   }
+

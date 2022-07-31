@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang = it>
+<html lang = "it">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,18 +20,10 @@
     <!--maps-->
     <!--<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly" defer></script>-->
-    <script type = "text/javascript">
-      /*
-      window.addEventListener("scroll", function() {
-        showFunction()
-      });
-      function showFunction() {
-        if (document.body.scrollTop > 55 || document.documentElement.scrollTop > 55) {
-          document.getElementById("toptexts2").style.display = "none";
-        } else {
-          document.getElementById("toptexts2").style.display = "block";
-        }
-      }*/
+    <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'it'}, 'google_translate_element');
+      }
     </script>
   </head>
 
@@ -99,7 +91,11 @@
     </div>
   </nav>
 
-    <div class="containerz">
+  <!--google traduttore e footer-->
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <!--inizio body vero-->
+  <div class="page-wrap">
+    <main id="body">
       <main title="Bmx-Park-Monfalcone">
         <div class="container" align="center" href="#top">
           <h1>
@@ -117,7 +113,7 @@
 
 
       <!--The div element for the map -->
-      <div id="maps-title" style="margin-top: 40px">Street where it's located</div>
+      <div id="maps-title" style="margin-top: 40px">La via dov'è posizionato il Bmx-park</div>
         <div id="vcontainer">
           <div id="hcontainer">
             <div id="content">
@@ -127,8 +123,8 @@
         </div>
       </div>
 
-      <section class="articolo1">
-        <h1 class="title has-text-dark" id="titleh1"> Go visit all photo of our park ↓</h1>
+      <section class="section is-large">
+        <h1 class="title has-text-dark" id="titleh1"> Vai a vedere la gallery del park! ↓</h1>
           <center><button class="button is-active is-rounded is-hovered is-large" style="margin-top: 75px; font-size: 20px; font: 700; text-align: center;">
             <a href="./GalleryPhoto.html" target="_blank" class="has-text-info is-hovered m-3">GO TO GALLLERY</a> 
           </button></center>
@@ -137,20 +133,28 @@
 
       <section class="articolo2">
         <div class="section">
-          <h1 class="title">AreaCrew on the Local's Newspaper ↓ </h1>
-          <p class="subtitle m-2 has-text-grey">Inauguration of the BMX-PARK</p>
+          <h1 class="title">AreaCrew è anche sul giornale! ↓ </h1>
+          <p class="subtitle m-2 has-text-grey">" Inaugurazione del BMX-PARK "</p>
           <img src="./img/giornale/Foto AreaCrew.jpg.png" id="section-image">
         </div>
       </section>
 
-      <section class="articolo2">
+      <section class="section is-large">
         <div class="section">
-          <h1 class="title">*Eventi*</h1>
-          <p class="subtitle m-2 has-text-grey">... some event cooming soon ...</p>
-          <button class="button is-active is-loading p-5 m-5 is-rounded"> wait for updates! </button>
+          <h1 class="title">* Eventi *</h1>
+          <p class="subtitle m-2 has-text-grey has-text-centered">... qualche evento è in fase di sviluppo!</p>
+          <div class="box">
+            <h1 id="jam">Nei tempi più brevi possibili, cerchiamo di finire di organizzare la BMX-JAM</h1>
+            <h4>Che cos'è una BMX-JAM <span id="puntodid">?</span></h4>
+            <p id="corpo">Questo è un evento, chiamato generalmente come "JAM", inventato originariamente in America, 
+              e poi espanso anche nel resto del mondo, e a noi rider ci piace un sacco, perchè è un motivo si di 
+              di dimostrare le proprie "abilità" con la BMX, ma anche un momento di aggregazione e opportunità 
+              per i rider, provenienti anche da posti lontani, di conoscersi e scambiare un due chiacchiere in compagnia 
+              fra qualche salto quà e là.
+            </p>
+          </div>
         </div>
       </section>
-
 
       <!--section to not touch ↓-->
       <button id="myBtn">
@@ -160,15 +164,23 @@
           </svg>
         </a>
       </button>
-    
-      <footer class="footer" style="margin-top: 8%; background-color: var(--bg-dark); color: var(--bg-white);">
-        <div class="content has-text-centered">
-          <p>
-            <span id="AreaFoot">AreaCrew</span> by <a href="https://www.zippo107.tk">zippo107</a>
-            all rights reserved.
+    </main>
+  </div>
+
+  <section id="spacer"></section>
+
+    <footer class="footer-section">
+      <div class="copyright-area">
+         <!--Google translate-->
+          <p class="google">Translate this page:</p>
+          <div id="google_translate_element" class="google"></div>
+        
+        <div class="container">     
+          <p class="has-text-centered">Copyright &copy; 2022, All Right Reserved 
+            <a href="https://www.zippo107.tk"> Matteo Manià</a>
           </p>
         </div>
-      </footer>
-    </div> <!--chiusura per lo sfondo della black mode-->
+      </div>
+    </footer>
   </body>
 </html>

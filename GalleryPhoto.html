@@ -90,12 +90,30 @@
         </div>
     </nav>
 
+    <style>
+      #Grid-Button {
+        transition: all 300ms ease-in-out;
+        padding: .75em;
+        background-color: #f6f6f6;
+      }
+      #Grid-Button-2 {
+        transition: all 300ms ease-in-out;
+        padding: .75em .85em;
+        background-color: #f6f6f6;
+        text-align: center;
+      }
+      #Grid-Button:hover {
+        color: #f6f6f6;
+        background-color: black;
+      }
+    </style>
+
     <div class="header" id="myHeader">
-        <h1 style="margin-bottom: 3px; margin-top: 5%; color: #777; font-size: 20px;" class="view pulse">(click to change view grid)</h1>
-        <p>&ensp; normal&ensp; 1/2 &ensp;collage</p>
-        <button onclick="one()" class="btn"> 100% </button>
-        <button onclick="two()" class="btn"> 50% </button>
-        <button onclick="four()" class="btn"> 25% </button>
+        <h1 style="margin-bottom: 6px; margin-top: 5%; color: #777; font-size: 20px;" class="view pulse">(click to change view grid)</h1>
+        <p style="margin-bottom: 4px">&ensp; normal&ensp; 1/2 &ensp;collage</p>
+        <button onclick="one()" class="btn" id="Grid-Button"> 100% </button>
+        <button onclick="two()" class="btn" id="Grid-Button"> 50% </button>
+        <button onclick="four()" class="btn" id="Grid-Button-2"> 25% </button>
       </div>
     </div>
     
@@ -133,8 +151,8 @@
 
     <button id="myBtn">
       <a href="#top" style="color: white" align="middle">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" align="middle" fill="currentColor" class="bi bi-arrow-up-circle" viewBox="0 0 16 16">
-          <path fill-rule="evenodd" d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707V11.5z"/>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+          <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
         </svg>
       </a>
     </button>

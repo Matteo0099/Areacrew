@@ -401,3 +401,9 @@
     color: #f0f6fc !important;
   }
 
+  footer {
+    text-rendering: optimizeSpeed;
+    letter-spacing: .8px;
+    font-size: 17px !important;
+    background-color: #e5e5e5;
+  }

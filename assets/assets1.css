@@ -12,16 +12,20 @@
     --bg-white: #FFFFFF;
     /*aggiunta*/
     --txt-semiGray: rgb(119, 118, 118);
+    --bg-lightGray: #e5e5e5;
+    /*section colors*/
+    --bg-red: #FAD2E1;
+    --bg-blue: #CDDAFD;
+    --bg-trasp: #FFF1E6;
+    --bg-greenlight: #BEE1E6;
+    --bg-violet: #EAE4E9;
+    --bg-lightRed: #FDE2E4;
 }
 
-*, *:before, *:after {
+*, 
+*:before, 
+*:after {
     box-sizing: border-box;
-}
-
-@supports (font-size-adjust: 1) {
-    article {
-        font-size-adjust: 0.5;
-    }
 }
  
 html {
@@ -34,6 +38,7 @@ body {
     padding: 0;
     min-height: 100%;
     width: 100%;
+    font: 400;
 }
 
 h1, h2, h3, h4, h5, title {
@@ -45,6 +50,7 @@ body {
     background-color: var(--bg-white); 
     color: var(--txt-title);
     font: 18px/1.5 'Palanquin', sans-serif;
+    text-rendering: optimizeSpeed !important;
 }
  
 h1 {
@@ -57,11 +63,11 @@ h1 {
     /* equal to footer height */
     margin-bottom: -142px; 
 }
+
 .page-wrap:after {
     content: "";
     display: block;
 }
-
 
 .img {
     border: 1px transparent;
@@ -81,28 +87,19 @@ h1 {
     top: 14%;
     left: 50%;
     margin-top: -100px;/* Negative half of height. */
-    margin-left: -82px;
-    font-size: 39px;
+    margin-left: -72px;
+    font-size: 40px;
     font-weight: bold;
     color: var(--txt-hover);
     display: block;
-    animation: fadeEffect 4s all ease-in-out; 
+    /*animation: fadeEffect 4s all ease-in-out;*/ 
 }
 
 .toptexts2:hover {
     color: var(--bg-white);
     cursor:text;
 }
- 
-@keyframes fadeEffect { 
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-}
-/*end title with js incorporated*/
+
 
 @media screen and (max-width: 650px) {
     .toptexts2 {
@@ -136,16 +133,6 @@ h1 {
 }
 
 /*GLOBAL STYLE*/
-* {
-    box-sizing: border-box;
-  }
-  
-  body {
-    margin: 0;
-    font-size: 18px;
-    font: 400;
-  }
-  
   .header {
     text-align: center;
     padding: 32px;
@@ -236,72 +223,72 @@ h1 {
  }
 
  /*js button*/
+#myBtn {
+    position: fixed;
+    float: right;
+    left: 94%;
+    bottom: 15%;
+    max-width: 42px;
+    height: 42px;
+    text-align: center;
+    width: 100%;
+    border-color: rgba(85, 85, 85, 0.2);
+    background-color: var(--txt-title);
+    border-radius: 26px;
+    /* Here we declare our inline animation */
+    animation: up-down 4.25s linear infinite;
+    animation-name: up-down;
+    animation-duration: 4.25s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes up-down {
+    0% {
+        transform: translateY(0px);
+    }
+    25% {
+        transform: translateY(5px);
+    }
+    50% {
+        transform: translateY(8px);
+    }
+    75% {
+        transform: translateY(-4px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/*On Hover Color Change*/
+#myBtn:hover {
+    transition: all .35s ease-in-out;
+    background-color: var(--txt-hover);
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1012px) {
     #myBtn {
-        position: fixed;
-        float: right;
-        left: 94%;
-        bottom: 15%;
-        max-width: 41.5px;
-        height: 42px;
-        text-align: center;
-        width: 100%;
-        border-color: rgba(85, 85, 85, 0.2);
-        background-color: var(--txt-title);
-        border-radius: 24px;
-        /* Here we declare our inline animation */
-        animation: up-down 4s linear infinite;
-        animation-name: up-down;
-        animation-duration: 4s;
-        animation-timing-function: linear;
-        animation-iteration-count: infinite;
+        left: 94.5%
     }
+}
 
-    @keyframes up-down {
-        0% {
-            transform: translateY(0px);
-        }
-        25% {
-            transform: translateY(5px);
-        }
-        50% {
-            transform: translateY(8px);
-        }
-        75% {
-            transform: translateY(-4px);
-        }
-        100% {
-            transform: translateY(0px);
-        }
+@media screen and (max-width: 800px) {
+    #myBtn {
+        left: 90%
     }
-
-    /*On Hover Color Change*/
-    #myBtn:hover {
-        transition: all .35s ease-in-out;
-        background-color: var(--txt-hover);
-        cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+    #myBtn {
+        left: 90%
     }
-
-    @media screen and (max-width: 1012px) {
-        #myBtn {
-            left: 94.5%
-        }
+}
+@media screen and (max-width: 540px) {
+    #myBtn {
+        left: 85%
     }
-
-    @media screen and (max-width: 800px) {
-        #myBtn {
-            left: 90%
-        }
-    }
-    @media screen and (max-width: 600px) {
-        #myBtn {
-            left: 90%
-        }
-    }
-    @media screen and (max-width: 540px) {
-        #myBtn {
-            left: 85%
-        }
-    }
+}
 /***end btn***/
 
 
@@ -316,19 +303,19 @@ h1 {
 
 /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-.column {
-    -ms-flex: 75%;
-    flex: 75%;
-    max-width: 75%;
+    .column {
+        -ms-flex: 75%;
+        flex: 75%;
+        max-width: 75%;
     }
 }
 
 /*IPHONE*/
 @media screen and (max-width: 400px) {
-.column {
-    -ms-flex: 100%;
-    flex: 100%;
-    max-width: 100%;
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
     }
 }
 
@@ -642,13 +629,6 @@ div.nav-link {
     }
 }
 
-@media screen and (max-width: 520px) {
-    .maps {
-        width: 505px !important;
-        height: 470px !important;
-    }
-}
-
 @media screen and (max-width: 675px) {
     .maps {
         width: 450px !important;
@@ -656,46 +636,80 @@ div.nav-link {
     }
 }
 
-@media screen and (max-width: 540px) {
+@media screen and (max-width: 626px) {
     .maps {
-        width: 410px !important;
+        width: 415px !important;
+        height: 410px !important;
+    }
+}
+
+@media screen and (max-width: 585px) {
+    .maps {
+        width: 400px !important;
+        height: 400px !important;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .maps {
+        width: 375px !important;
         height: 395px !important;
     }
 }
 
-@media screen and (max-width: 487px) {
-    .maps {
-        width: 365px !important;
-        height: 340px !important;
-    }
-}
 
-@media screen and (max-width: 461px) {
+@media screen and (max-width: 540px) {
     .maps {
         width: 325px !important;
         height: 320px !important;
     }
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 490px) {
     .maps {
         width: 290px !important;
         height: 280px !important;
     }
 }
 
-@media screen and (max-width: 380px) {
+@media screen and (max-width: 466px) {
     .maps {
         width: 255px !important;
         height: 260px !important;
     }
 }
 
+@media screen and (max-width: 415px) {
+    .maps {
+        width: 220px !important;
+        height: 260px !important;
+    }
+}
+
+@media screen and (max-width: 384px) {
+    .maps {
+        width: 200px !important;
+        height: 250px !important;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .maps {
+        width: 175px !important;
+        height: 230px !important;
+        padding-left: -100px;
+    }
+}
+
 #titleh1 {
     text-decoration: underline;
     text-decoration-color: var(--txt-hover);
-    margin: 8em 0 0 0;
+    margin: 3em 0 1em 0;
     font-size: 32px;
+}
+
+section {
+    padding: 3em 0;
 }
 
 .articolo1 {
@@ -709,11 +723,9 @@ div.nav-link {
     position: relative;
     text-align: center;
     margin: 0 auto;
-    padding: 8em 1em;
     word-wrap: break-word;
     font-family: inherit;
     font-size: 28px;
-    margin-bottom: 4em;
     max-height: 100vh;
 }
 
@@ -741,7 +753,6 @@ div.nav-link {
 
 h1.title {
     padding: 1em auto;
-    font-size: 38px !important;
     letter-spacing: 2px !important;
 }
 
@@ -797,6 +808,58 @@ h1.title {
 }
 
 
+/*
+    --bg-green: #BEE1E6; 
+    bg-blue: #CDDAFD;
+    --bg-trasp: #FFF1E6;
+    bg-greenlight: #BEE1E6;
+    --bg-violet: #EAE4E9;
+    --bg-lightRed: #FDE2E4;
+*/
+
+
+.section {
+    padding: auto 2em;
+    overflow: hidden;
+    text-rendering: optimizeSpeed;
+}
+
+#sect1 {
+    background-color: var(--bg-greenlight); /* For browsers that do not support gradients */
+    background-image: linear-gradient(to right,#cde6ea, #f0f9fa,#ffffffed);
+}
+
+#sect2 {
+    background-color: var(--bg-blue);
+    background-image: linear-gradient(to right, #fdf0e6, #fff7f1 ,#ffffffed);
+}
+
+#sect3 {
+    background-color: var(--bg-lightRed);
+    background-image: linear-gradient(to right, #fde7e9, #fcedee ,#ffffffed);
+}
+
+#sect4 {
+    background-color: var(--bg-trasp);
+    background-image: linear-gradient(to right, #fff3e9, #fdf8f5, #ffffffed);
+    margin-top: auto;
+}
+
+
+/*BOX eventi*/
+
+.contenidor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#BoxEventi {
+    margin-top: 20px !important;
+    max-width: 1024px !important;
+    padding: auto 1em 2em 1em;
+}
+
 
 /*****FOOOTERRR****/
 #translate {
@@ -804,9 +867,12 @@ h1.title {
     width: 40%;
 }
 
-.google{
+.google {
+    border: 2px var(--bg-white);
+    border-radius: 26px !important;
+    font-family: 'Palanquin', sans-serif;
     color: var(--txt-muted);
-    padding: 20px !important;
+    padding: 10px !important;
 }
 
 ul {

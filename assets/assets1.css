@@ -242,6 +242,8 @@ h1 {
     animation-timing-function: linear;
     animation-iteration-count: infinite;
     z-index: 99999;
+    pointer-events: all;
+    user-select: all;
 }
 
 @keyframes up-down {
@@ -565,8 +567,8 @@ nav ul#social-media {
 #titolo-monfy {
     transition: .35s all ease-in-out;
     font-family: inherit;
-    font-weight: bold;
-    font-size: 45px;
+    font-weight: bolder;
+    font-size: 47px;
     text-align: center;
     padding: .75em;
 }

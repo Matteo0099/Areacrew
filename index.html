@@ -12,15 +12,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Palanquin&display=swap" rel="stylesheet"> 
-    <!--Js button and scripts by me-->
-    <script src="./src/backtoTop.js"></script>
-    <script src="./src/darkMode.js"></script>
-    <script src="./src/img.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script>
-    <script src="./src/newTabOnClick.js"></script>
     <!--maps-->
-    <!--<script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap&v=weekly" defer></script>-->
     <script type="text/javascript">
       function googleTranslateElementInit() {
         new google.translate.TranslateElement({pageLanguage: 'it'}, 'google_translate_element');
@@ -92,8 +84,6 @@
     </div>
   </nav>
 
-  <!--google traduttore e footer-->
-  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
   <!--inizio body vero-->
   <div class="page-wrap">
     <main id="body">
@@ -111,6 +101,13 @@
           </h1>
         </div>
       </main>
+
+      <section class="section is-small" id="locandina">
+        <div class="section has-text-centered" id="sectEvent">
+          <h1 class="container p-3 title has-text-danger">JAM AREACREW 10 sett. 2022</h1>
+          <img src="/img/Locandina/LogoVeroAreaCrewLocandinaFinita1.png" alt="" id="section-image">
+        </div>
+      </section>
 
       <!--The div element for the map -->
       <section class="section is-small">
@@ -160,6 +157,14 @@
                 per i rider, provenienti anche da posti lontani, di conoscersi e scambiare un due chiacchiere in compagnia 
                 fra qualche salto quà e là.
               </p>
+              <h1 id="jam" class="dotted">*Aggiornamento*</h1>
+              <p id="jam-p">
+                E' in programma una BMX-JAM il 10 di settembre nel park di Monfalcone,
+                il tutto organizzato da AreaCrew. Non mancano di certo gli sponsor, 
+                fra cui <a href="https://www.ilbuttabmx.com/">Il ButtaBmx</a>, <a href="https://garage81.com/">Garage81</a>, e 
+                <a href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Frecordstreetshop%2F%3Ffbclid%3DIwAR0jinIZdd8gBg6oia3mgs265m8JNf42Pezn-ZgMSYXoARDIl0u5Ity7_6U&h=AT25_aZo6cXb4kHHxKJNcSNpfWthnyGNZCLpPQbFGk1HSz_OOuu-5IxHtOSDu_JgeQPu3PnAw1b3BmUUpXzPKOO9lSFR8tFcWR9D_yJbypuiZoEmwftgz2nC4mEh7S2b0AjcNQ"> Record</a>
+              </p>
+              <h3 class="top-to">Clicca <a href="#locandina">QUI</a> per vedere la locandina!</h3>
             </div>
           </div>
         </div>
@@ -186,17 +191,17 @@
 
         <div class="col-xl-4 col-lg-4 mb-50">
           <div class="footer-widget">
-              <div class="footer-logo">
-                <a href="index.html" onclick="test()"><img src="./img/Logo/LogoAreaCrewVerro.jpeg" class="img-fluid" alt="logo"></a>
-              </div>
-              <div class="footer-text">
-                  <p>AreaCrew &copy; 2022</p>
-              </div>
-              <div class="footer-social-icon">
-                <span>Follow us</span>
-                <a href="https://www.youtube.com/AREACREWBMX/video" target="_blank" crossorigin="anonymus"><i class="fab fa-instagram instagram-bg"></i>
-                <a href="https://www.instagram.com/areaycrew/" target="_blank" crossorigin="anonymus"><i class="fab fa-youtube youtube-bg"></i></a>
-                <a href="https://open.spotify.com/playlist/5w49GjtZ2UOT0e86q63PgP?si=32db3764330e4aca" target="_blank" crossorigin="anonymus"><i class="fab fa-spotify spotify-bg"></i></a>
+            <div class="footer-logo">
+              <a href="index.html" onclick="test()"><img src="./img/Logo/LogoAreaCrewVerro.jpeg" class="img-fluid" alt="logo"></a>
+            </div>
+            <div class="footer-text">
+              <p>AreaCrew &copy; 2022</p>
+            </div>
+            <div class="footer-social-icon">
+              <span>Follow us</span>
+              <a href="https://www.youtube.com/AREACREWBMX/video" target="_blank" crossorigin="anonymus"><i class="fab fa-instagram instagram-bg"></i>
+              <a href="https://www.instagram.com/areaycrew/" target="_blank" crossorigin="anonymus"><i class="fab fa-youtube youtube-bg"></i></a>
+              <a href="https://open.spotify.com/playlist/5w49GjtZ2UOT0e86q63PgP?si=32db3764330e4aca" target="_blank" crossorigin="anonymus"><i class="fab fa-spotify spotify-bg"></i></a>
             </div>
           </div>
         </div>
@@ -208,5 +213,14 @@
       </div>
     </div>
   </footer>
+
+  <!--google traduttore e footer-->
+  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+  <!--Js button and scripts by me-->
+  <script src="./src/backtoTop.js"></script>
+  <script src="./src/darkMode.js"></script>
+  <script src="./src/img.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.1/jquery-ui.min.js" type="text/javascript"></script>
+  <script src="./src/newTabOnClick.js"></script>
  </body>
 </html>

@@ -71,17 +71,19 @@ h1 {
 }
 
 .img {
+    position: relative;
     border: 1px transparent;
     border-radius: 50%;
-    margin-left: 35px !important;
-    margin: 20px auto;
     width: 70px !important;
     height: 70px !important;
-    margin-bottom: 35px;
+    margin-bottom: 40px;
+    margin-left: 35px !important;
+    margin-top: 20px;
 }
 
 /*title with js*/
 .toptexts2 {
+    max-width: fit-content;
     text-shadow: 0 0 70px var(--txt-hover);
     position: relative;
     padding: 10px;
@@ -111,6 +113,10 @@ h1 {
 @media screen and (max-width: 580px) {
     .toptexts2 {
         padding-right: -2%;
+        font-size: 20px;
+    }
+    li a.fancy-link, li a, a.fancy-link {
+        font-size: 18px;
     }
 }
 
@@ -122,8 +128,14 @@ h1 {
 
 @media screen and (max-width: 380px) {
     .toptexts2 {
-        margin-left: -46px;
-        font-size: 28px !important;
+        font-size: 28px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .toptexts2 {
+        font-size: 16px !important;
+        margin-left: -26px;
     }
 }
 
@@ -367,6 +379,7 @@ nav {
     top: 0;
     width: 100%;
     z-index: 9999;
+    min-height: 120px !important;
 }
  
 /*** INPUT ***/
@@ -379,7 +392,7 @@ nav input {
 /*** LABEL ***/
 nav label {
     display: block;
-    font: 2.1em/1 'Palanquin', sans-serif;
+    font: 2.2em/1 'Palanquin', sans-serif;
     padding: 0.4em;
     padding-left: 0;
 }
@@ -400,14 +413,13 @@ nav label {
     }
 }
 
- 
 /* Hamburger Icon */
 #menu-icon,
 #menu-icon:before,
 #menu-icon:after {
     background: var(--bg-white);
-    border-radius: 0.1em;
-    height: 0.1933em;
+    border-radius: 16px;
+    height: 7px;
     transition: all 125ms ease-in-out;
     width: 100%;
 }
@@ -419,8 +431,8 @@ nav label {
 
 #menu-icon {
     display: inline-block;
-    margin: 50px auto;
-    max-width: 1em;
+    margin-right: 3px;
+    max-width: 46px;
     position:relative;
     cursor: pointer;
     align-self: middle;
@@ -625,7 +637,7 @@ div.nav-link {
     padding-top: 35px;
     font-size: 28px;
     text-align: center;
-    font-weight: bold;
+    font-weight: 900;
 }
 
 /*align center*/
@@ -744,6 +756,7 @@ div.nav-link {
     text-decoration-color: var(--txt-hover);
     margin: 3em 0 1em 0;
     font-size: 32px;
+    font-weight: 900;
 }
 
 section {
@@ -790,8 +803,10 @@ section {
 }
 
 h1.title {
-    padding: 1em auto;
+    padding: 1em 0;
     letter-spacing: 2px !important;
+    font-weight: 800 !important;
+    color: var(--bg-dark);
 }
 
 .jam {
@@ -921,6 +936,10 @@ h1.title {
     padding-top: 1.2em !important;
 }
 
+#jam-p a:hover {
+    text-decoration: underline;
+}
+
 .dotted {
     font-size: 28px !important;
     font-weight: 900 !important;
@@ -940,6 +959,13 @@ h3.top-to {
     padding-bottom: 1.5em;
 }
 
+.top-to a {
+    text-decoration: none;
+}
+
+.top-to a:hover {
+    text-decoration: underline;
+}
 
 /*****FOOOTERRR****/
 #translate {

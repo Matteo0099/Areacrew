@@ -50,15 +50,21 @@ body {
   font-size: 4px;
   background-color:#0d1117 !important;
   border-collapse: collapse;
-  max-width: 540px;
+  max-width: 600px;
   height: auto;
   text-align: center;
-  padding: 50px;
+  padding: 25px;
 }
 
-@media only screen and(max-width: 768px) {
+@media screen and(min-width: 768px) {
   table.Table1 {
-    max-width: 1024px !important;
+    max-width: 1024px;
+  }
+}
+
+@media (max-width: 650px) {
+  .Table1 {
+    max-width: 450px !important;
   }
 }
 
@@ -84,7 +90,11 @@ td {
 }
 
 tr > td {
-  padding: 20px !important;
+  padding: 8px !important;
+}
+
+tbody {
+  max-width: auto !important;
 }
 
 th, td {

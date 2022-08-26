@@ -49,8 +49,7 @@ nav > ul > li {
 }
 
 .grid {
-    padding-left: 3%;
-    padding-right: 3%;
+    padding: 0 25px;
 }
 
 .container {

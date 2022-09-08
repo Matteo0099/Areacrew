@@ -1,12 +1,5 @@
-@font-face {
-  font-family: 'Product Sans Regular';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Product Sans Regular'), url('ProductSans-Regular.woff') format('woff');
-}
-
 *, html {
-  font-family: 'Product Sans Regular';
+  font-family: inherit;
   font: 600;
 }
 
@@ -43,14 +36,13 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-collapse: separate;
   border-spacing: 0;
   font: 500;
   font-family: inherit;
   font-size: 4px;
-  background-color:#0d1117 !important;
-  border-collapse: collapse;
-  max-width: 600px;
+  background-color:#888 !important;
+  border-collapse:separate;
+  max-width: 650px;
   height: auto;
   text-align: center;
   padding: 25px;
@@ -74,14 +66,16 @@ table {
   font: 500;
   font-family: inherit;
   font-size: 4px;
-  background-color:#0d1117 !important;
+  background-color:#e4e1e1 !important;
+  color: black !important;
   border-collapse: collapse;
   text-align: center;
   padding: 20px;
 }
 
 tbody, td {
-  color: #f6f6f6;
+  color: whitesmoke;
+  border: none;
 }
 
 td {
@@ -102,14 +96,8 @@ th, td {
   text-align: left;
 }
 
-.Table1 tr:hover {
-  opacity: 0.92;
-  background-color: #777;
-}
-
-nav {
-  height: auto;
-  overflow: hidden;
+tr {
+  background-color: #888 !important;
 }
 
 tr{
@@ -120,7 +108,10 @@ tr{
   text-rendering: optimizeLegibility;
 }
 
-* {box-sizing: border-box;}
+.Table1 tr > td:hover {
+  color: #FCA311;
+  background-color: #bbb6b6;
+}
 
 .tabella {
   margin: 0 auto;
@@ -134,8 +125,12 @@ tr{
   text-align: left;
   padding-left: 3%;
   border: 7px #333; 
-  border-radius: 4px;
+  border-radius: 22px;
   border-collapse: collapse;
+}
+
+.Table1 {
+  margin-top: 2em;
 }
 
 b {
@@ -143,7 +138,7 @@ b {
   padding: 2% 2% 2% 2%;
   font: 400;
   font-family: inherit;
-  color: #f0f6fc;
+  color: black !important;
   text-align: middle;
 }
 
@@ -227,24 +222,18 @@ input {
 
 .invia {
   align-content: center;
-  width: 84%;
+  width: 55%;
   margin-top: 3%;
   margin-bottom: 2%;
   height: 60px;
   border: 2px inherit;
   border-radius: 15px;
-  background-color: #ff626c;
+  background-color: #ff636d;
 }
 
 .invia:focus {
   transition: 0.6s;
   background-color: #00fc7e;
-}
-
-#spacer1 {
-  height: 5vh;
-  margin: 1em 0;
-  word-wrap: break-word;
 }
 
 img, svg {
@@ -262,7 +251,7 @@ img, svg {
   margin-top: 1%; 
   text-align: center;
   font-size: 18px;
-  color: #333;
+  color: #444;
   font-family: inherit;
 }
 
@@ -354,7 +343,7 @@ img, svg {
     margin: 6em 0;
   }
   h5#h5Form{
-    font-size: 14px !important;
+    font-size: 13px !important;
   }
 }
 
@@ -411,9 +400,16 @@ h4 .title {
 }
 
 div.dotted {
+  font-size: 15px;
   position: absolute;
   border-bottom: 3px dotted #FCA311;
   text-align: left;
+}
+
+.dotted p {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 1.5em;
 }
   
 span#puntodid {
@@ -425,7 +421,7 @@ span#puntodid {
 }
 
 .Title-tab-1 , .Title-tab-2 {
-  margin-top: 50px;
+  margin-top: 60px;
   font-size: 34px;
   font-weight: bold;
   font-style: normal;
@@ -438,13 +434,6 @@ span#puntodid {
   color: #FCA311 !important;
 }
 
-nav > ul > li {
-  padding-left: -4%;
-}
-
-ul#social-media {
-  color: #f0f6fc !important;
-}
 
 footer {
   text-rendering: optimizeSpeed;

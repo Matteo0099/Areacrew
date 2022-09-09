@@ -53,12 +53,51 @@ body {
     color: var(--txt-title);
     font: 18px/1.5 'Palanquin', sans-serif;
     text-rendering: optimizeSpeed !important;
+    scrollbar-width: thin;          /* "auto" or "thin" */
+    scrollbar-color: var(--txt-title) var(--txt-hover);   /* scroll thumb and track */ 
 }
  
 h1 {
     font-family: 'Palanquin', sans-serif;
     text-align: center;
 }
+
+/**scroll bar**/
+body::-webkit-scrollbar {
+    width: 12px;               /* width of the entire scrollbar */
+}
+  
+body::-webkit-scrollbar-track {
+    background: var(--txt-hover);        /* color of the tracking area */
+}
+  
+body::-webkit-scrollbar-thumb {
+    background-color: var(--txt-title);    /* color of the scroll thumb */
+    border-radius: 20px;       /* roundness of the scroll thumb */
+    border: 3px solid var(--txt-hover);  /* creates padding around scroll thumb */
+}
+  
+/* Works on Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--txt-title) var(--txt-hover);
+}
+  
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 12px;
+}
+  
+*::-webkit-scrollbar-track {
+    background: var(--txt-hover);
+}
+  
+*::-webkit-scrollbar-thumb {
+    background-color: var(--txt-title);
+    border-radius: 20px;
+    border: 3px solid var(--txt-hover);
+}
+/****/  
 
 .page-wrap {
     min-height: 100%;
@@ -949,6 +988,39 @@ h1.title {
 
 #jam-p a:hover {
     text-decoration: underline;
+}
+
+/**meteo**/
+.weatherwidget-io {
+    position: relative;
+}
+.center1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+/****/
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 1rem;
+}
+
+#meteo a {
+    word-spacing: 2px;
+    letter-spacing: 2px;
+}
+
+.underline {
+    font-weight: 600;
+    font-size: 32px;
+    color: white;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    -webkit-text-stroke: 3px #FCA311;
 }
 
 .dotted {

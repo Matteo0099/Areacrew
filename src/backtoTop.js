@@ -1,8 +1,6 @@
-
-
 const showOnPx = 100;
 const backToTopButton = document.querySelector(".back-to-top");
-const pageProgressBar = document.querySelector(".progress-bar");
+//const pageProgressBar = document.querySelector(".progress-bar");
 
 const scrollContainer = () => {
   return document.documentElement || document.body;
@@ -14,6 +12,9 @@ const goToTop = () => {
   });
 };
 
+//backToTopButton.addEventListener("click", goToTop);
+
+/*
 document.addEventListener("scroll", () => {
   console.log("Scroll Height: ", scrollContainer().scrollHeight);
   console.log("Client Height: ", scrollContainer().clientHeight);
@@ -31,6 +32,4 @@ document.addEventListener("scroll", () => {
     backToTopButton.classList.add("hidden");
   }
 });
-
-backToTopButton.addEventListener("click", goToTop);
-
+*/

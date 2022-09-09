@@ -64,28 +64,29 @@ h1 {
 
 /**scroll bar**/
 body::-webkit-scrollbar {
-    width: 12px;               /* width of the entire scrollbar */
+    width: 12px;       /* width of the entire scrollbar */
 }
   
 body::-webkit-scrollbar-track {
-    background: var(--txt-hover);        /* color of the tracking area */
+    background: var(--txt-hover); /* color of the tracking area */
 }
   
 body::-webkit-scrollbar-thumb {
-    background-color: var(--txt-title);    /* color of the scroll thumb */
-    border-radius: 20px;       /* roundness of the scroll thumb */
-    border: 3px solid var(--txt-hover);  /* creates padding around scroll thumb */
+    background-color: var(--txt-title);   /* color of the scroll thumb */
+    border-radius: 20px;   /* roundness of the scroll thumb */
+    border: 3px solid var(--txt-hover);   /* creates padding around scroll thumb */
 }
   
-/* Works on Firefox */
+/*Firefox */
 * {
     scrollbar-width: thin;
     scrollbar-color: var(--txt-title) var(--txt-hover);
 }
   
-/* Works on Chrome, Edge, and Safari */
+/*Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
     width: 12px;
+    -webkit-overflow-scrolling: auto; 
 }
   
 *::-webkit-scrollbar-track {
@@ -119,6 +120,7 @@ body::-webkit-scrollbar-thumb {
     margin-bottom: 40px;
     margin-left: 35px !important;
     margin-top: 20px;
+    image-rendering: optimizeSpeed;
 }
 
 /*title with js*/
@@ -441,8 +443,6 @@ nav.navbar {
   
 .nav > .nav-header > .nav-title {
     display: inline-block;
-    font-size: 22px;
-    color: #fff;
     padding: 10px 10px 10px 10px;
 }
   
@@ -464,7 +464,8 @@ nav.navbar {
 }
   
 .nav > .nav-links > a:hover {
-    background-color: rgba(0, 0, 0, 0.3);
+    color: var(--txt-hover);
+    background-color: rgba(0, 0, 0, 0.1);
 }
   
 .nav > #nav-check {
@@ -472,8 +473,9 @@ nav.navbar {
 }
 
 .nav .nav-title span {
-    font-size: clamp(20px, 5vw, 24px);
+    font-size: clamp(20px, 5vw, 26px);
     color: #FCA311;
+    letter-spacing: .8px;
 }
   
 @media (max-width: 768px) {
@@ -795,9 +797,9 @@ div.nav-link {
 
 @media screen and (max-width: 370px) {
     .maps {
-        width: 175px !important;
-        height: 230px !important;
-        padding-left: -100px;
+        width: 170px !important;
+        height: 240px !important;
+        padding-left: -105px;
     }
 }
 
@@ -853,7 +855,6 @@ section {
 }
 
 h1.title {
-    padding: 1em 0;
     letter-spacing: 2px !important;
     font-weight: 800 !important;
     color: var(--bg-dark);
@@ -956,7 +957,6 @@ h1.title {
 }
 
 
-
 /*BOX eventi*/
 .contenidor {
     display: flex;
@@ -994,6 +994,11 @@ h1.title {
 .weatherwidget-io {
     position: relative;
 }
+
+.cleanslate {
+    padding: 2em;
+}
+
 .center1 {
     position: absolute;
     top: 50%;
@@ -1006,7 +1011,7 @@ h1.title {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0 1rem;
+    margin: 0 8rem;
 }
 
 #meteo a {
@@ -1015,12 +1020,12 @@ h1.title {
 }
 
 .underline {
-    font-weight: 600;
+    font-weight: 900;
+    font-family: 'Palanquin', sans-serif;
     font-size: 32px;
-    color: white;
     letter-spacing: 2px;
     word-spacing: 2px;
-    -webkit-text-stroke: 3px #FCA311;
+    /*-webkit-text-stroke: 1px #FCA311;*/
 }
 
 .dotted {

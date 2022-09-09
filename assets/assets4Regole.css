@@ -9,12 +9,15 @@
 }
 
 .titolo {
+    text-transform: uppercase;
     margin-top: 1%;
-    font-size: 30px;
+    font-size: clamp(24px, 5vw, 34px);
     text-align: center;
-    font: 900;
+    font: 900 !important;
     font-family: 'Palanquin', sans-serif;
     text-shadow: #f0ebeb 1px 1px;
+    text-decoration: underline 1px black;
+    text-underline-offset: 7.5px;
 }
 
 .box {

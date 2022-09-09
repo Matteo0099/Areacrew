@@ -43,6 +43,10 @@ p {
     font-size: 16px;
 }
 
+.nav-title {
+    font-weight: 400 !important;
+}
+
 .corpoPr {
     margin: 10px 30px 15px 30px;
     margin-bottom: 10%;

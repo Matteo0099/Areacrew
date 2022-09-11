@@ -37,12 +37,10 @@ nav {
     font-family:Palaquin, sans-serif;
 }
 
-@font-face{font-family: YoutubeSans; src: url('../fonts/Youtube-Sans-font-1/youtube-sans-light.ttf');}
 #Box:hover {
     font-size: 30px;
     color: red;
     transition: 0.45s;
-    font-family:"Google Sans Text", Roboto, Arial, sans-serif;
     font: 900;
 }
 

@@ -1,4 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Palanquin&display=swap');
+@import url(/fonts/Palanquin-Regular.ttf); 
+@import url(/fonts/Palanquin-Light.ttf); 
+@import url(/fonts/Palanquin-ExtraLight.ttf); 
+@import url(/fonts/Palanquin-Medium.ttf); 
+@import url(/fonts/Palanquin-Thin.ttf); 
+@import url(/fonts/Palanquin-SemiBold.ttf); 
+@import url(/fonts/Palanquin-Bold.ttf); 
 @import url(https://use.fontawesome.com/releases/v5.0.6/css/all.css);   /*icons*/
  
 /*colori per i testi, con variabili*/

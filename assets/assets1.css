@@ -100,6 +100,160 @@ body::-webkit-scrollbar-thumb {
 }
 /****/  
 
+
+/*********navbar new***********/
+nav.navbar {
+    margin-bottom: 2rem;
+    background-color: #373636;
+    min-height: 4rem !important;
+    z-index: 99999 !important;
+}
+
+.nav {
+    min-height: 65px;
+    width: 100%;
+    background-color: #4d4d4d;
+    position: relative;
+}
+
+.nav > * {
+    z-index: 99999 !important;
+}
+  
+.nav > .nav-header {
+    display: inline;
+}
+  
+.nav > .nav-header > .nav-title {
+    display: inline-block;
+    padding: 10px 10px 10px 10px;
+}
+  
+.nav > .nav-btn {
+    display: none;
+}
+  
+.nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+}
+  
+.nav > .nav-links > a {
+    display: inline-block;
+    padding: 18px 10px 13px 10px;
+    text-decoration: none;
+    color: #efefef;
+}
+  
+.nav > .nav-links > a:hover {
+    color: var(--txt-hover);
+    background-color: rgba(0, 0, 0, 0.1);
+}
+  
+.nav > #nav-check {
+    display: none;
+}
+
+.nav .nav-title span {
+    font-size: clamp(20px, 5vw, 26px);
+    color: #FCA311;
+    letter-spacing: .8px;
+}
+  
+@media (max-width: 768px) {
+    .nav > .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+      background-color: rgba(0, 0, 0, 0.3);
+    }
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #eee;
+    }
+    .nav > .nav-links {
+      position: absolute;
+      display: block;
+      text-align: center;
+      font-size: 22px;
+      width: 100%;
+      height: fit-content;
+      background-color: #333;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+    .nav > .nav-links > a {
+      display: block;
+      width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+    .nav .nav-title {
+        margin-top: .2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-header {
+        margin-left: 1rem;
+    }
+    .nav-btn {
+        margin-top: .475rem;
+        margin-right: 1.25rem;
+    }
+    /*.nav-links {
+        margin-right: 1rem;
+    }*/
+}
+
+@media screen and (min-width: 768px) {
+    .nav-header {
+        margin-left: 3rem;
+    }
+    .nav-links {
+        margin-right: 1rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .nav-header {
+        margin-left: 4rem;
+    }
+    .nav-links {
+        margin-right: 3.5rem;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .nav-header {
+        margin-left: 8rem;
+    }
+    .nav-links {
+        margin-right: 6.5rem;
+    }
+}
+/** end nav **/
+
 .page-wrap {
     min-height: 100%;
     /* equal to footer height */
@@ -417,155 +571,6 @@ main#body main {
     top: 15% !important;
 }
 
-
-/*********navbar new***********/
-nav.navbar {
-    margin-bottom: 2rem;
-    background-color: #373636;
-    min-height: 4rem !important;
-    z-index: 99999 !important;
-}
-
-.nav {
-    height: 58px;
-    width: 100%;
-    background-color: #4d4d4d;
-    position: relative;
-}
-
-.nav > * {
-    z-index: 99999 !important;
-}
-  
-.nav > .nav-header {
-    display: inline;
-}
-  
-.nav > .nav-header > .nav-title {
-    display: inline-block;
-    padding: 10px 10px 10px 10px;
-}
-  
-.nav > .nav-btn {
-    display: none;
-}
-  
-.nav > .nav-links {
-    display: inline;
-    float: right;
-    font-size: 18px;
-}
-  
-.nav > .nav-links > a {
-    display: inline-block;
-    padding: 18px 10px 13px 10px;
-    text-decoration: none;
-    color: #efefef;
-}
-  
-.nav > .nav-links > a:hover {
-    color: var(--txt-hover);
-    background-color: rgba(0, 0, 0, 0.1);
-}
-  
-.nav > #nav-check {
-    display: none;
-}
-
-.nav .nav-title span {
-    font-size: clamp(20px, 5vw, 26px);
-    color: #FCA311;
-    letter-spacing: .8px;
-}
-  
-@media (max-width: 768px) {
-    .nav > .nav-btn {
-      display: inline-block;
-      position: absolute;
-      right: 0px;
-      top: 0px;
-    }
-    .nav > .nav-btn > label {
-      display: inline-block;
-      width: 50px;
-      height: 50px;
-      padding: 13px;
-    }
-    .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
-      background-color: rgba(0, 0, 0, 0.3);
-    }
-    .nav > .nav-btn > label > span {
-      display: block;
-      width: 25px;
-      height: 10px;
-      border-top: 2px solid #eee;
-    }
-    .nav > .nav-links {
-      position: absolute;
-      display: block;
-      text-align: center;
-      font-size: 22px;
-      width: 100%;
-      height: fit-content;
-      background-color: #333;
-      height: 0px;
-      transition: all 0.3s ease-in;
-      overflow-y: hidden;
-      top: 50px;
-      left: 0px;
-    }
-    .nav > .nav-links > a {
-      display: block;
-      width: 100%;
-    }
-    .nav > #nav-check:not(:checked) ~ .nav-links {
-      height: 0px;
-    }
-    .nav > #nav-check:checked ~ .nav-links {
-      height: calc(100vh - 50px);
-      overflow-y: auto;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .nav-header {
-        margin-left: 1rem;
-    }
-    .nav-btn {
-        margin-top: .2rem;
-        margin-right: 1rem;
-    }
-    /*.nav-links {
-        margin-right: 1rem;
-    }*/
-}
-
-@media screen and (min-width: 768px) {
-    .nav-header {
-        margin-left: 3rem;
-    }
-    .nav-links {
-        margin-right: 1rem;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .nav-header {
-        margin-left: 4rem;
-    }
-    .nav-links {
-        margin-right: 3.5rem;
-    }
-}
-
-@media screen and (min-width: 1440px) {
-    .nav-header {
-        margin-left: 8rem;
-    }
-    .nav-links {
-        margin-right: 6.5rem;
-    }
-}
  
 .fancy-link {
     text-decoration: none;
@@ -956,6 +961,11 @@ h1.title {
     margin-top: auto;
 }
 
+p.line {
+    line-height: 1.6 !important;
+    letter-spacing: .4px !important;
+    text-rendering: optimizeLegibility;
+}
 
 /*BOX eventi*/
 .contenidor {

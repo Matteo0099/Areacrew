@@ -56,6 +56,10 @@ nav {
     }
 }
 
+.layer iframe {
+    margin: 2rem;
+}
+
 nav > ul > li {
     padding-left: -4%;
 }

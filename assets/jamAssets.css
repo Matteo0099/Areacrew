@@ -6,21 +6,47 @@ html, body {
     image-rendering: optimizeSpeed;
     font-style: normal;
     line-height: 1.5;
+    background-color: #f5f1ed;
 }
 
-.container {
+.container a {
     display: block;
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
     text-align: center;
 }
- 
+
+@media screen and (max-width: 837px) {  
+    img {
+        image-rendering: optimizeSpeed; 
+    }
+}
+
+@media screen and (min-width: 837px) {  
+    img {
+        image-rendering: optimizeQuality; 
+    }
+}
+
 .small {
-    width: 180px;
-    height: auto;
+    max-width: 90%;
     position: relative;
-    margin: 6px;
+    margin: 14px 4px;
     border-radius: 5px;
+}
+
+a img {
+    margin: 24px 10px;
+}
+
+main .container {
+    padding: 2em 1em !important;
+}
+
+@media screen and (min-width: 1440px) {
+    .small {
+        min-height: max-content;
+    }
 }
  
 .small:hover {
@@ -39,25 +65,9 @@ html, body {
     background: rgba(0, 0, 0, 0.7);
 }
 
-a div {
-    position: relative;
-    margin: auto auto;
-    text-align: center;
-}
- 
 .lightbox:target {
     display: -webkit-box;
     display: flex;
-}
- 
-.container a {
-    text-decoration: none;
-}
- 
-.container p {
-    font-size: 20px;
-    color: white;
-    font-family: 'Poiret One';
 }
 
 footer {
@@ -66,3 +76,32 @@ footer {
     bottom: 0;
     margin-top: 4rem;
 }
+
+/*
+a {
+    display: inline-block;
+    margin-bottom: 8px;
+    width: calc(50% - 4px);
+    text-decoration: none;
+    color: black;
+}
+@media screen and (min-width: 50em) {
+    a {
+      width: calc(25% - 6px);
+    }
+}
+a:hover img {
+    transform: scale(1.1);
+}
+img.small {
+    margin: 0;
+    overflow: hidden;
+    margin-top: 15px;
+    border: none;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    background: #ccc;
+    transition: transform .2s ease-in-out;
+}
+*/

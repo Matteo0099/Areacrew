@@ -168,7 +168,7 @@ nav.navbar {
     letter-spacing: .8px;
 }
   
-@media (max-width: 768px) {
+@media (max-width: 837px) {
     .nav > .nav-btn {
       display: inline-block;
       position: absolute;
@@ -220,7 +220,7 @@ nav.navbar {
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 837px) {
     .nav-header {
         margin-left: 1rem;
     }

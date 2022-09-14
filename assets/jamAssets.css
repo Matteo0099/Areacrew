@@ -16,6 +16,18 @@ html, body {
     text-align: center;
 }
 
+.card-footer-item {
+    display: block !important;
+}
+
+#salotto {
+    text-decoration: underline;
+}
+
+#salotto:hover {
+    text-decoration: none;
+}
+
 @media screen and (max-width: 837px) {  
     img {
         image-rendering: optimizeSpeed; 

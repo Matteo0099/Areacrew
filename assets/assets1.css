@@ -329,6 +329,10 @@ section#sectVideo[class*="col-"] {
     width: 100%;
 }
 
+section#sectVideo {
+    margin-top: 100px !important;
+}
+
 @media only screen and (min-width: 600px) {
     .col-s-1 {
         width: 8.33%;

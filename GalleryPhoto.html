@@ -1,135 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Photo Gallery BMX-PARK</title>
-        <link rel="icon" href="./img/areaCrewLogo.png">
-        <link rel="stylesheet" href="./assets/assets1.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
-        <script src="./src/img.js"></script>
-    </head>
 
-    <body>
-      <header> 
-        <div class="nav">
-            <input type="checkbox" id="nav-check">
-    
-            <div class="nav-header">
-              <div class="nav-title">
-                <span>AreaCrew &reg;</span>
-              </div>
-            </div>
-            
-            <div class="nav-btn">
-              <label for="nav-check">
-                <span></span>
-                <span></span>
-                <span></span>
-              </label>
-            </div>
-          
-            <div class="nav-links">
-              <a href="index.html">
-                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-house-fill" viewBox="0 0 16 16">
-                  <path fill-rule="evenodd" d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
-                  <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
-                </svg>
-              </a>
-              <a href="About-us.html">About</a>
-              <a href="RegolamentoPark.html">Regolamento</a>
-              <a href="OrariApertura.html">Orari</a>
-              <a href="YoutubeVideo.html">Youtube Videos</a>
-              <a href="GalleryJam.html">Photo-Jam</a>
-              <a href="#contact">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
-                  <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
-                </svg>
-              </a>
-            </div>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Photo Gallery BMX-PARK</title>
+  <link rel="icon" href="./img/areaCrewLogo.png">
+  <link rel="stylesheet" href="./assets/assets1.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+  <script src="./src/img.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check">
+
+      <div class="nav-header">
+        <div class="nav-title">
+          <span>AreaCrew &reg;</span>
         </div>
-      </header>
+      </div>
 
-    <style>
-      #Grid-Button {
-        transition: all 300ms ease-in-out;
-        padding: .75em;
-        background-color: #f6f6f6;
-      }
-      #Grid-Button-2 {
-        transition: all 300ms ease-in-out;
-        padding: .75em .85em;
-        background-color: #f6f6f6;
-        text-align: center;
-      }
-      #Grid-Button:hover {
-        color: #f6f6f6;
-        background-color: black;
-      }
-      #Grid-Button-2:hover {
-        background-color: black;
-      }
-      @media screen and (max-width: 1500px) {
-        #third-column {
-          flex: 1 1 2.55%;
-        }
-      }
-      @media screen and (min-width: 1500px) {
-        #third-column {
-          flex: 1 1 2.2%;
-        }
-      }
-      svg {
-        margin-right:2%;
-      }
-    </style>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
 
-    <div class="header" id="myHeader">
-        <h1 style="margin-bottom: 6px; margin-top: 5%; color: #777; font-size: 20px;" class="view pulse">(click to change view grid)</h1>
-        <p style="margin-bottom: 4px">&ensp; normal&ensp; 1/2 &ensp;collage</p>
-        <button onclick="one()" class="btn" id="Grid-Button"> 100% </button>
-        <button onclick="two()" class="btn" id="Grid-Button"> 50% </button>
-        <button onclick="four()" class="btn" id="Grid-Button-2"> 25% </button>
+      <div class="nav-links">
+        <a href="index.html">
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-house-fill"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+              d="m8 3.293 6 6V13.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5V9.293l6-6zm5-.793V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z" />
+            <path fill-rule="evenodd"
+              d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z" />
+          </svg>
+        </a>
+        <a href="About-us.html">About</a>
+        <a href="RegolamentoPark.html">Regolamento</a>
+        <a href="OrariApertura.html">Orari</a>
+        <a href="YoutubeVideo.html">Youtube Videos</a>
+        <a href="GalleryJam.html">Photo-Jam</a>
+        <a href="#contact">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope-fill"
+            viewBox="0 0 16 16">
+            <path
+              d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z" />
+          </svg>
+        </a>
       </div>
     </div>
-    
-    <div class="containerz1">
-      <!--Griglia per le foto... FOTO TOTALI: 28-->
-      <div class="row" align="center"> 
-        <div class="column">
-          <img src="./img/immagini park/1BCC428C-6879-4B11-8A7D-B5C9B9F31298-min.jpeg" style="width:100%">
-          <img src="./img/immagini park/2343EE4E-28CF-431A-ACCF-E20F95F3D936-min.jpeg" style="width:100%">
-          <img src="./img/immagini park/34B75AC5-BE44-4295-8498-27051D9D3863-min.jpeg" style="width:100%">
-          <img src="./img/immagini park/43F20AEC-B1B4-47D2-A308-15849BC474D9-min.jpeg" style="width:100%">
-          <img src="./img/immagini park/4F8682D1-B2BA-4BBB-9576-1EB8994B2348-min.jpeg" style="width:100%">
-          <img src="./img/immagini park/62E3B918-1DCC-4BBD-B832-5520A13CB0DB-min.jpeg" style="width:100%">
-          <img src="./img/immagini park/637ABE60-1C1D-4C7A-B553-7BBEB131E7E2-min.jpeg" style="width:100%">
-        </div>
-        <div class="column">
-            <img src="./img/immagini park/65EEBAF9-B26D-4C31-94C0-C14B36F31EF5-min.jpeg" style="width:100%">
-            <img src="./img/immagini park/6C77B922-2249-4529-8EE7-B4929CD4594B-min.jpeg" style="width:100%">
-            <img src="./img/immagini park/82F307F8-6FB4-4A42-91A0-75F3AAC2A069-min.jpeg" style="width:100%">
-            <img src="./img/immagini park/863055B1-A516-48CF-B448-8291217F4BBB-min.jpeg" style="width:100%">
-            <img src="./img/immagini park/89033D4E-6FD3-4EF1-A2A2-CEAD499E081B-min.jpeg" style="width:100%">
-            <img src="./img/immagini park/A1DDBEC6-9CC2-49FB-A880-9BE9D2C04B76-min.jpeg" style="width:100%">
-            <img src="./img/immagini park/A3A58E2E-25F8-4E86-AE6F-F6583A61A6A9-min.jpeg" style="width:100%">
-        </div>  
-        <div class="column" id="third-column">
-            <img src="./img/immagini park/AA275D3D-2D6C-47C4-91AE-C8BBEB462F46-min.jpeg" style="width:100%">
-            <img src="./img/immagini park/B29613D3-FDD2-4800-A3AB-6BE81D8D8880-min.jpeg" style="width:100%">
-            <img src="./img/immagini park/BF8ECAA9-9A77-4C7A-8CF9-8A974A624900-min.jpeg" style="width:100%">
-            <img src="./img/immagini park/CDED0C8C-F2B4-4501-B8A8-527960BD17B2-min.jpeg" style="width:100%">
-            <img src="./img/immagini park/E4B142FF-2EC7-4E5D-AEAC-7FA0775FCE92-min.jpeg" style="width:100%">
-            <img src="./img/immagini park/E4D92772-794F-477B-8018-1ECC7521DD2F-min.jpeg" style="width:100%">
-            <img src="./img/immagini park/F06CBA50-AE5A-4D8B-AAF6-66343E605B99-min.jpeg" style="width:100%">
-        </div>
+  </header>
+
+  <style>
+    #Grid-Button {
+      transition: all 300ms ease-in-out;
+      padding: .75em;
+      background-color: #f6f6f6;
+    }
+
+    #Grid-Button-2 {
+      transition: all 300ms ease-in-out;
+      padding: .75em .85em;
+      background-color: #f6f6f6;
+      text-align: center;
+    }
+
+    #Grid-Button:hover {
+      color: #f6f6f6;
+      background-color: black;
+    }
+
+    #Grid-Button-2:hover {
+      background-color: black;
+    }
+
+    @media screen and (max-width: 1500px) {
+      #third-column {
+        flex: 1 1 2.55%;
+      }
+    }
+
+    @media screen and (min-width: 1500px) {
+      #third-column {
+        flex: 1 1 2.2%;
+      }
+    }
+
+    svg {
+      margin-right: 2%;
+    }
+  </style>
+
+  <div class="header" id="myHeader">
+    <h1 style="margin-bottom: 6px; margin-top: 5%; color: #777; font-size: 20px;" class="view pulse">(click to change
+      view grid)</h1>
+    <p style="margin-bottom: 4px">&ensp; normal&ensp; 1/2 &ensp;collage</p>
+    <button onclick="one()" class="btn" id="Grid-Button"> 100% </button>
+    <button onclick="two()" class="btn" id="Grid-Button"> 50% </button>
+    <button onclick="four()" class="btn" id="Grid-Button-2"> 25% </button>
+  </div>
+  </div>
+
+  <div class="containerz1">
+    <!--Griglia per le foto... FOTO TOTALI: 28-->
+    <div class="row" align="center">
+      <div class="column">
+        <img src="./img/immagini park/1BCC428C-6879-4B11-8A7D-B5C9B9F31298-min.jpeg" style="width:100%">
+        <img src="./img/immagini park/2343EE4E-28CF-431A-ACCF-E20F95F3D936-min.jpeg" style="width:100%">
+        <img src="./img/immagini park/34B75AC5-BE44-4295-8498-27051D9D3863-min.jpeg" style="width:100%">
+        <img src="./img/immagini park/43F20AEC-B1B4-47D2-A308-15849BC474D9-min.jpeg" style="width:100%">
+        <img src="./img/immagini park/4F8682D1-B2BA-4BBB-9576-1EB8994B2348-min.jpeg" style="width:100%">
+        <img src="./img/immagini park/62E3B918-1DCC-4BBD-B832-5520A13CB0DB-min.jpeg" style="width:100%">
+        <img src="./img/immagini park/637ABE60-1C1D-4C7A-B553-7BBEB131E7E2-min.jpeg" style="width:100%">
       </div>
+      <div class="column">
+        <img src="./img/immagini park/65EEBAF9-B26D-4C31-94C0-C14B36F31EF5-min.jpeg" style="width:100%">
+        <img src="./img/immagini park/6C77B922-2249-4529-8EE7-B4929CD4594B-min.jpeg" style="width:100%">
+        <img src="./img/immagini park/82F307F8-6FB4-4A42-91A0-75F3AAC2A069-min.jpeg" style="width:100%">
+        <img src="./img/immagini park/863055B1-A516-48CF-B448-8291217F4BBB-min.jpeg" style="width:100%">
+        <img src="./img/immagini park/89033D4E-6FD3-4EF1-A2A2-CEAD499E081B-min.jpeg" style="width:100%">
+        <img src="./img/immagini park/A1DDBEC6-9CC2-49FB-A880-9BE9D2C04B76-min.jpeg" style="width:100%">
+        <img src="./img/immagini park/A3A58E2E-25F8-4E86-AE6F-F6583A61A6A9-min.jpeg" style="width:100%">
+      </div>
+      <div class="column" id="third-column">
+        <img src="./img/immagini park/AA275D3D-2D6C-47C4-91AE-C8BBEB462F46-min.jpeg" style="width:100%">
+        <img src="./img/immagini park/B29613D3-FDD2-4800-A3AB-6BE81D8D8880-min.jpeg" style="width:100%">
+        <img src="./img/immagini park/BF8ECAA9-9A77-4C7A-8CF9-8A974A624900-min.jpeg" style="width:100%">
+        <img src="./img/immagini park/CDED0C8C-F2B4-4501-B8A8-527960BD17B2-min.jpeg" style="width:100%">
+        <img src="./img/immagini park/E4B142FF-2EC7-4E5D-AEAC-7FA0775FCE92-min.jpeg" style="width:100%">
+        <img src="./img/immagini park/E4D92772-794F-477B-8018-1ECC7521DD2F-min.jpeg" style="width:100%">
+        <img src="./img/immagini park/F06CBA50-AE5A-4D8B-AAF6-66343E605B99-min.jpeg" style="width:100%">
+      </div>
+    </div>
 
     <button id="myBtn">
       <a href="#top" style="color: white; padding-bottom: 2%;" align="middle">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
-          <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill"
+          viewBox="0 0 16 16">
+          <path
+            d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
         </svg>
       </a>
     </button>
@@ -137,11 +152,12 @@
     <footer class="footer mt-5 mb-1 has-text-centered">
       <div class="center container">
         <p class="has-text-dark"> <strong>AreaCrew</strong> by <a href="https://matteomania.tk">zippo107</a>
-            all rights reserved.
+          all rights reserved.
         </p>
       </div>
     </footer>
 
     <script src="./src/toggle.js"></script>
-  </body>
+</body>
+
 </html>

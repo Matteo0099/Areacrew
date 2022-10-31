@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Palanquin&display=swap');
 
-* html, body {
+html, body {
     width: 100%;
     height: auto;
     margin: auto;
@@ -14,7 +14,6 @@
     font-size: clamp(24px, 5vw, 34px);
     text-align: center;
     font: 900 !important;
-    font-family: 'Palanquin', sans-serif;
     text-shadow: #f0ebeb 1px 1px;
     text-decoration: underline 1px black;
     text-underline-offset: 7.5px;
@@ -25,7 +24,6 @@
     padding-top: 2%;
     background-color: #fefefe;
     color: rgb(130, 130, 130);
-    font-family: 'Palanquin', sans-serif;
     font: 400;
     height: auto;
 }

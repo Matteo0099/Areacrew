@@ -163,7 +163,8 @@ nav.navbar {
     color: #efefef;
 }
 
-.nav>.nav-links>a:hover {
+/**** class active current page ****/
+.active, .nav-btn.hover {
     color: var(--txt-hover);
     background-color: rgba(0, 0, 0, 0.1);
 }
@@ -309,7 +310,6 @@ section.video-area {
     font-weight: 500 !important;
     letter-spacing: .4px !important;
     line-height: 1.2 !important;
-    margin: 1.5rem auto !important;
 }
 
 video {
@@ -454,10 +454,11 @@ section#sectVideo video {
     border-radius: 6px;
     object-fit: cover;
     outline: 1px solid var(--bg-red);
-    box-shadow: 0px 0px 33px 10px rgba(250,210,225, .75);
-    -webkit-box-shadow: 0px 0px 33px 10px rgba(250,210,225,.75);
-    -moz-box-shadow: 0px 0px 33px 10px rgba(250,210,225,.75);
+    box-shadow: 0px 0px 33px 10px rgba(250, 210, 225, .75);
+    -webkit-box-shadow: 0px 0px 33px 10px rgba(250, 210, 225, .75);
+    -moz-box-shadow: 0px 0px 33px 10px rgba(250, 210, 225, .75);
 }
+
 /**************** end video player ****************/
 
 
@@ -777,7 +778,7 @@ p fa-youtube:hover {
 }
 
 main .container {
-    padding: 2em;
+    padding: .2em .25em 1em .25em;
     text-rendering: optimizeSpeed;
     z-index: 999;
 }
@@ -789,6 +790,10 @@ main .container {
     overflow: hidden;
     position: absolute !important;
     width: 1px;
+}
+
+.container.photo {
+    margin: 1rem auto;
 }
 
 #spacer {
@@ -1107,8 +1112,8 @@ section {
 
 #section-image {
     margin: 0 auto;
-    padding: .5em;
-    max-height: 65vh;
+    padding: .1em;
+    max-height: 70vh;
     max-width: 100%;
     overflow: hidden;
 }
@@ -1166,7 +1171,7 @@ h1.title {
     font-weight: 400;
     font-size: 23px !important;
     margin: 0 auto;
-    padding: .5em 2.25em !important;
+    padding: .5em 1.25em !important;
     padding-bottom: 2em !important;
     word-wrap: break-word;
 }
@@ -1352,7 +1357,7 @@ ul {
     position: relative;
 }
 
-.footer-section > * {
+.footer-section>* {
     margin: 0 auto;
 }
 
@@ -1486,19 +1491,19 @@ div.row {
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role='list'],
 ol[role='list'] {
-  list-style: none;
+    list-style: none;
 }
 
 /* Set core root defaults */
 html:focus-within {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 /* Set core body defaults */
 body {
-  min-height: 100vh;
-  text-rendering: optimizeSpeed;
-  line-height: 1.5;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
 }
 
 /* Inherit fonts for inputs and buttons */
@@ -1506,8 +1511,7 @@ input,
 button,
 textarea,
 select {
-  font: inherit;
+    font: inherit;
 }
 
 /******* end reset *******/
-

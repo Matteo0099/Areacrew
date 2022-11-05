@@ -59,12 +59,12 @@ p {
 }
 
 .corpoPr p {
-    font-weight: 400; 
-    font-size: 20px; 
+    font-weight: 400;
+    font-size: 20px;
     color: #444;
 }
 
-#testImmagine{
+#testImmagine {
     text-align: center;
     margin: auto;
     align-self: center;
@@ -96,13 +96,13 @@ footer {
 }
 
 svg {
-    margin-right:2%;
+    margin-right: 2%;
 }
 
 #textFooter {
     color: var(--muted);
     font: 400;
     font-size: 15px;
-    margin-top: 3%; 
-    text-align: center; 
+    margin-top: 3%;
+    text-align: center;
 }

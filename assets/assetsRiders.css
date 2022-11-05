@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Palanquin&display=swap');
-@import url(https://use.fontawesome.com/releases/v5.0.6/css/all.css);   /*icons*/
+@import url(https://use.fontawesome.com/releases/v5.0.6/css/all.css);
+/*icons*/
 
 * html {
   width: 100%;
@@ -8,7 +9,8 @@
   padding: 0;
 }
 
-html, body {
+html,
+body {
   font-family: 'Palanquin', sans-serif;
 }
 
@@ -37,9 +39,11 @@ body {
   0% {
     color: #202020;
   }
+
   50% {
     color: #FCA311;
   }
+
   100% {
     color: #202020;
   }
@@ -84,7 +88,7 @@ body {
   align-items: center;
   font-size: 22px;
   color: whitesmoke;
-  text-shadow: 0 0 22px rgba(63,107,169, 0.6)
+  text-shadow: 0 0 22px rgba(63, 107, 169, 0.6)
 }
 
 .box {
@@ -107,7 +111,7 @@ body {
   text-shadow: 0 0 29px #FCA311;
 }
 
-.primary{
+.primary {
   background-color: #f3f3f3;
   font-size: 22px;
   font: 900;

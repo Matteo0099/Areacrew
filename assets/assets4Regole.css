@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Palanquin&display=swap');
 
-html, body {
+html,
+body {
     width: 100%;
     height: auto;
     margin: auto;
@@ -30,11 +31,12 @@ html, body {
 
 nav {
     height: auto;
-    overflow: hidden; /*magic*/
+    overflow: hidden;
+    /*magic*/
     text-rendering: optimizeLegibility;
 }
 
-nav > ul > li {
+nav>ul>li {
     padding-left: -4%;
 }
 

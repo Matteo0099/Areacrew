@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Palanquin&display=swap');
-@import url(https://use.fontawesome.com/releases/v5.0.6/css/all.css);   /*icons*/
+@import url(https://use.fontawesome.com/releases/v5.0.6/css/all.css);
+/*icons*/
 
 /*colori per i testi, con variabili*/
 :root {
-    --normal:#333;
-    --muted:#888;
+    --normal: #333;
+    --muted: #888;
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: border-box;
 }
 
@@ -21,7 +24,7 @@
     margin: auto;
     max-width: auto;
     min-height: auto;
-    width: 100%;   
+    width: 100%;
 }
 
 nav {
@@ -34,7 +37,7 @@ nav {
     font-size: 28px;
     margin-top: 2%;
     text-align: center;
-    font-family:Palaquin, sans-serif;
+    font-family: Palaquin, sans-serif;
 }
 
 #Box:hover {
@@ -48,7 +51,7 @@ nav {
     image-rendering: optimizeQuality;
 }
 
-@media  screen and (max-width:763.33px) {
+@media screen and (max-width:763.33px) {
     iframe {
         width: 90%;
     }
@@ -58,7 +61,7 @@ nav {
     margin: 2rem;
 }
 
-nav > ul > li {
+nav>ul>li {
     padding-left: -4%;
 }
 

@@ -4,9 +4,9 @@
     
     -site official of AreayCrew
     
-    4000+ lines html 
-    2500+ lines css
-    800+ lines js + libraries
+    2000+ lines html 
+    2500 lines css + resets and maps(bulma)
+    4000+ lines js and libraries
 
     50+ hours work
 

@@ -89,7 +89,7 @@ function newtab() {
 */
 // Add active class to the current button (highlight it)
 var header = document.querySelector("#nav-lins-all");
-var btns = document.querySelector(".nav-btn");
+var btns = document.getElementsByClassName("nav-btn");
 for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function () {
         var current = document.getElementsByClassName("active");
@@ -160,29 +160,11 @@ $(document).ready(function () {
 /**video script**/
 let video = document.querySelector('.video-area .video')
 videoPlayer = document.querySelector('.videoPlayer')
-videoProgressBar = document.querySelector('.videoProgressBar')
-videoProgressDuration = document.querySelector('.videoProgressDuration')
 
 video.addEventListener('timeupdate', function (e) {
     let videoPosition = video.currentTime / video.duration;
     dot.style.left = (videoPosition * 100) + '%';
     videoProgressDuration.style.width = (videoPosition * 100) + '%';
-});
-
-const i = setInterval(function () {
-    if (video.readyState > 0) {
-        var minutes = parseInt(video.duration / 60, 10);
-        var seconds = Math.round(video.duration % 60);
-        totalVideoDuration.innerText = minutes + ":" + seconds;
-        clearInterval(i);
-    }
-}, 10);
-
-videoProgressBar.addEventListener('click', function (e) {
-    let videoDuration = video.duration;
-    let progressWidthValue = this.clientWidth;
-    let clickOffestX = e.offsetX;
-    video.currentTime = (clickOffestX / progressWidthValue) * videoDuration;
 });
 
 video.addEventListener('timeupdate', function (e) {
@@ -194,6 +176,7 @@ video.addEventListener('timeupdate', function (e) {
     currentSec < 10 ? currentSec = '0' + currentSec : currentSec;
     currentVideoDuration.innerHTML = `${currentMin}:${currentSec}`
 });
+
 
 /**back to top button**/
 const showOnPx = 100;

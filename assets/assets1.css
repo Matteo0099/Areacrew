@@ -27,7 +27,7 @@
 *,
 *:before,
 *:after {
-    box-sizing: border-box;
+    box-sizing: border-box !important;
     padding: 0;
 }
 
@@ -130,7 +130,8 @@ nav.navbar {
     min-height: 65px;
     width: 100%;
     background-color: #4d4d4d;
-    position: relative;
+    position: fixed;
+    z-index: 9999;
 }
 
 .nav>* {
@@ -284,11 +285,15 @@ nav.navbar {
         margin-right: 6.5rem;
     }
 }
-
 /** end nav **/
 
+main#body main {
+    top: 15% !important;
+}
+
 section {
-    padding: 1.5rem !important
+    padding: 3rem 0;
+    margin: 0 auto;
 }
 
 /**************** video player ****************/
@@ -800,11 +805,6 @@ main .container {
     height: 25vh !important;
 }
 
-main#body main {
-    top: 15% !important;
-}
-
-
 .fancy-link {
     text-decoration: none;
     color: var(--txt-hover);
@@ -1255,6 +1255,13 @@ p.line {
     padding: auto 1em 2em 1em;
 }
 
+@media screen and (max-width: 525px) {
+    #BoxEventi.box {
+        padding: 0.2rem !important;
+        margin-top: 2.5rem !important;
+    }
+}
+
 #jam-p {
     font-size: 22px !important;
     text-align: center !important;
@@ -1402,7 +1409,7 @@ ul {
 
 .container p,
 #translate {
-    color: var(--txt-muted);
+    color: var(--txt-normal);
 }
 
 div.row {

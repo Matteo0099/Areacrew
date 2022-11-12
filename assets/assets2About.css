@@ -75,6 +75,24 @@ p {
     margin-top: 2%;
 }
 
+.container, .container.first  {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-direction: column !important;
+    margin: auto !important;
+}
+
+.container main {
+    margin-top: 60px;
+    min-height: 70vh;
+    margin-bottom: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
 footer {
     position: absolute;
     left: 0;
@@ -89,7 +107,7 @@ footer {
 /*inside footer*/
 .center {
     padding: 22px 0;
-    margin: auto;
+    margin: 0 auto;
     /*border: 3px solid #f5f5f5;*/
     text-align: center;
     font-size: 20px;

@@ -5,6 +5,7 @@ html {
   font-family: inherit;
   font: 600;
   text-rendering: optimizeSpeed;
+  margin: 0;
 }
 
 html {
@@ -36,6 +37,25 @@ body {
   background-color: #f5f1ed;
 }
 
+a {
+  color: #14213D;
+}
+
+button, a {
+  cursor: pointer;
+}
+
+.box h1 {
+  padding-top: 100px;
+  font-size: 38px; 
+  text-decoration: underline; 
+  font-weight: 900;
+}
+
+.button.is-rounded {
+  margin: 0 auto !important;
+}
+
 .Table1,
 .Table1 th,
 .Table1 td,
@@ -49,6 +69,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto !important;
   border-spacing: 0;
   font: 500;
   font-family: inherit;
@@ -473,4 +494,5 @@ footer {
   letter-spacing: .8px;
   font-size: 17px !important;
   background-color: #e5e5e5;
+  text-align: center;
 }

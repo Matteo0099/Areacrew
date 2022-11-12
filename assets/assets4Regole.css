@@ -44,6 +44,10 @@ nav>ul>li {
     padding-right: 8%;
 }*/
 
+.container.pt-5 {
+    padding-top: 70px !important;
+}
+
 .grid p {
     font: 500;
     font-size: 18px;

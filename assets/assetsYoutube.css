@@ -20,6 +20,10 @@
     }
 }
 
+*, html, body {
+    margin: 0 !important;
+}
+
 .footer {
     margin: auto;
     max-width: auto;
@@ -32,10 +36,15 @@ nav {
     overflow: hidden;
 }
 
+.container {
+    margin: 0 auto !important;
+}
+
 #Box {
     font: 600;
     font-size: 28px;
-    margin-top: 2%;
+    padding-top: 120px !important;
+    padding-bottom: 75px;
     text-align: center;
     font-family: Palaquin, sans-serif;
 }

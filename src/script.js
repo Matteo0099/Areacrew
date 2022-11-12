@@ -195,26 +195,6 @@ video.addEventListener('timeupdate', function (e) {
     currentVideoDuration.innerHTML = `${currentMin}:${currentSec}`
 });
 
-
-/**google translate**/
-function googleTranslateElementInit() {
-    new google.translate.TranslateElement({
-        pageLanguage: 'it'
-    }, 'google_translate_element');
-}
-
-/**weather script**/
-!function (d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (!d.getElementById(id)) {
-        js = d.createElement(s);
-        js.id = id;
-        js.src = 'https://weatherwidget.io/js/widget.min.js';
-        fjs.parentNode.insertBefore(js, fjs);
-    }
-}(document, 'script', 'weatherwidget-io-js');
-
-
 /**back to top button**/
 const showOnPx = 100;
 const backToTopButton = document.querySelector(".back-to-top");
@@ -229,5 +209,4 @@ const goToTop = () => {
         behavior: "smooth"
     });
 };
-
-/**fine script enorme**/
+/**fine script**/

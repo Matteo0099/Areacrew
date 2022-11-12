@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Palanquin&display=swap');
 @import url(https://use.fontawesome.com/releases/v5.0.6/css/all.css);
 /*icons*/
 
@@ -9,13 +8,17 @@
   padding: 0;
 }
 
-html,
-body {
-  font-family: 'Palanquin', sans-serif;
+html, body { font-family: 'Source Sans Pro', sans-serif; }
+
+body { background-color: #f5f1ed; }
+
+header, nav {
+  top: 0;
+  left: 0;
 }
 
-body {
-  background-color: #f5f1ed;
+.container.fullscreen {
+  padding-top: 150px;
 }
 
 .has-centered {
@@ -36,17 +39,9 @@ body {
 }
 
 @keyframes pulse {
-  0% {
-    color: #202020;
-  }
-
-  50% {
-    color: #FCA311;
-  }
-
-  100% {
-    color: #202020;
-  }
+  0% { color: #202020; }
+  50% { color: #FCA311; }
+  100% { color: #202020; }
 }
 
 .has-flex {
@@ -56,9 +51,7 @@ body {
   align-items: center;
 }
 
-.container {
-  max-width: unset !important;
-}
+.container { max-width: unset !important; }
 
 .wrapper {
   position: relative;
@@ -91,9 +84,7 @@ body {
   text-shadow: 0 0 22px rgba(63, 107, 169, 0.6)
 }
 
-.box {
-  border-radius: 10px !important;
-}
+.box { border-radius: 10px !important; }
 
 #box {
   padding: 8px 35px;
@@ -136,18 +127,14 @@ footer {
   font-size: 22px;
 }
 
-.center .footer-item {
-  margin-top: 20px !important;
-}
+.center .footer-item { margin-top: 20px !important; }
 
 .center .footer-item a {
   color: #286bb8;
   text-decoration: underline;
 }
 
-.center .footer-item a:hover {
-  text-decoration: none;
-}
+.center .footer-item a:hover { text-decoration: none; }
 
 #spacer {
   height: 10vh;

@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Palanquin&display=swap');
 @import url(https://use.fontawesome.com/releases/v5.0.6/css/all.css);
 /*icons*/
 
@@ -8,20 +7,16 @@
     --muted: #888;
 }
 
-*,
-*:before,
-*:after {
-    box-sizing: border-box;
-}
+*, *:before, *:after { box-sizing: border-box; }
 
 @supports (font-size-adjust: 1) {
-    article {
-        font-size-adjust: 0.5;
-    }
+    article { font-size-adjust: 0.5; }
 }
 
 *, html, body {
-    margin: 0 !important;
+    text-rendering: optimizeSpeed;
+    image-rendering: optimizeSpeed;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .footer {
@@ -36,9 +31,7 @@ nav {
     overflow: hidden;
 }
 
-.container {
-    margin: 0 auto !important;
-}
+.container { margin: 0 auto !important; }
 
 #Box {
     font: 600;
@@ -46,7 +39,6 @@ nav {
     padding-top: 120px !important;
     padding-bottom: 75px;
     text-align: center;
-    font-family: Palaquin, sans-serif;
 }
 
 #Box:hover {
@@ -56,24 +48,12 @@ nav {
     font: 900;
 }
 
-.layer {
-    image-rendering: optimizeQuality;
-}
+.layer { image-rendering: optimizeQuality; }
 
 @media screen and (max-width:763.33px) {
-    iframe {
-        width: 90%;
-    }
+    iframe { width: 90%; }
 }
 
-.layer iframe {
-    margin: 2rem;
-}
+.layer iframe { margin: 2rem; }
 
-nav>ul>li {
-    padding-left: -4%;
-}
-
-/*ul#social-media {
-    padding-right: 8%;
-}*/
+nav>ul>li { padding-left: -4%; }

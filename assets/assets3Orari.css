@@ -1,11 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Palanquin&display=swap');
-
 *,
 html {
   font-family: inherit;
   font: 600;
   text-rendering: optimizeSpeed;
   margin: 0;
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 html {
@@ -29,32 +28,22 @@ h5 {
 }
 
 img,
-svg {
-  vertical-align: unset !important;
-}
+svg { vertical-align: unset !important; }
 
-body {
-  background-color: #f5f1ed;
-}
+body { background-color: #f5f1ed; }
 
-a {
-  color: #14213D;
-}
+a { color: #14213D; }
 
-button, a {
-  cursor: pointer;
-}
+button, a { cursor: pointer; }
 
 .box h1 {
-  padding-top: 100px;
+  padding-top: 125px;
   font-size: 38px; 
   text-decoration: underline; 
   font-weight: 900;
 }
 
-.button.is-rounded {
-  margin: 0 auto !important;
-}
+.button.is-rounded { margin: 0 auto !important; }
 
 .Table1,
 .Table1 th,
@@ -73,25 +62,21 @@ button, a {
   border-spacing: 0;
   font: 500;
   font-family: inherit;
-  font-size: 4px;
-  background-color: #888 !important;
+  background-color: #fff !important;
+  outline: 2px solid #888;
   border-collapse: separate;
-  max-width: 650px;
+  max-width: fit-content;
   height: auto;
   text-align: center;
-  padding: 25px;
+  padding: 20px;
 }
 
 @media screen and(min-width: 768px) {
-  table.Table1 {
-    max-width: 1024px;
-  }
+  table.Table1 { max-width: 1024px; }
 }
 
 @media (max-width: 650px) {
-  .Table1 {
-    max-width: 450px !important;
-  }
+  .Table1 { max-width: 450px !important; }
 }
 
 table {
@@ -100,40 +85,27 @@ table {
   font: 500;
   font-family: inherit;
   font-size: 4px;
-  background-color: #e4e1e1 !important;
+  /*background-color: #e4e1e1 !important;*/
   color: black !important;
   border-collapse: collapse;
   text-align: center;
   padding: 20px;
 }
 
-tbody,
 td {
-  color: whitesmoke;
-  border: none;
-}
-
-td {
-  border-style: none solid solid none;
+  /*border-style: none solid solid none;*/
+  border-style:hidden;
   padding: 50px;
 }
 
-tr>td {
-  padding: 8px !important;
-}
+tr>td { padding: 8px !important; }
 
-tbody {
-  max-width: auto !important;
-}
+tbody { max-width: auto !important; }
 
 th,
 td {
   padding: 8px;
   text-align: left;
-}
-
-tr {
-  background-color: #888 !important;
 }
 
 tr {
@@ -156,8 +128,8 @@ tr {
   font: 500;
   font-family: inherit;
   font-size: 22px;
-  background-color: #0d1117;
-  color: #f2f2f2;
+  background-color: #0d1117 !important;
+  color: #f2f2f2 !important;
   text-align: left;
   padding-left: 3%;
   border: 7px #333;
@@ -165,22 +137,18 @@ tr {
   border-collapse: collapse;
 }
 
-.Table1 {
-  margin-top: 2em;
-}
+.Table1 { margin-top: 2em; }
 
 b {
   padding-top: 4%;
   padding: 2% 2% 2% 2%;
   font: 400;
   font-family: inherit;
-  color: black !important;
+  /*color: black !important;*/
   text-align: middle;
 }
 
-.tabella:hover {
-  opacity: .975;
-}
+.tabella:hover { opacity: .975; }
 
 .send {
   background-color: #999;
@@ -214,9 +182,7 @@ th {
   align-items: center;
 }
 
-input {
-  margin: 0 auto;
-}
+input { margin: 0 auto; }
 
 #loginbox {
   width: 400px;
@@ -252,13 +218,9 @@ input {
   font: 500;
 }
 
-.form-control:hover {
-  box-shadow: 2px 2px 34px #2E8B57;
-}
+.form-control:hover { box-shadow: 2px 2px 34px #2E8B57; }
 
-::-webkit-input-placeholder {
-  color: #00FF7F;
-}
+::-webkit-input-placeholder { color: #00FF7F; }
 
 .invia {
   align-content: center;
@@ -269,6 +231,7 @@ input {
   border: 2px inherit;
   border-radius: 15px;
   background-color: #ff636d;
+  cursor: pointer;
 }
 
 .invia:focus {
@@ -276,10 +239,7 @@ input {
   background-color: #00fc7e;
 }
 
-img,
-svg {
-  vertical-align: auto !important;
-}
+img, svg { vertical-align: auto !important; }
 
 #sect .dotted {
   top: 15%;
@@ -460,7 +420,7 @@ div.dotted {
 .dotted p {
   text-align: center;
   font-size: 14px;
-  margin-top: 1.5em;
+  margin-top: .7em;
 }
 
 span#puntodid {
@@ -473,22 +433,14 @@ span#puntodid {
 
 .Title-tab-1,
 .Title-tab-2 {
-  margin-top: 60px;
+  margin-top: 80px;
   font-size: 34px;
   font-weight: bold;
   font-style: normal;
   padding: .4em;
   text-align: center;
-  word-wrap: break-word;
+  word-wrap:unset;
 }
-
-.Title-tab-1:hover,
-.Title-tab-2:hover,
-#titolo:hover,
-#questions:hover {
-  color: #FCA311 !important;
-}
-
 
 footer {
   letter-spacing: .8px;

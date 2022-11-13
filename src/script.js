@@ -158,7 +158,7 @@ $(document).ready(function () {
 
 
 /**video script**/
-let video = document.querySelector('.video-area .video')
+/*let video = document.querySelector('.video-area .video')
 videoPlayer = document.querySelector('.videoPlayer')
 
 video.addEventListener('timeupdate', function (e) {
@@ -175,7 +175,7 @@ video.addEventListener('timeupdate', function (e) {
     currentMin < 10 ? currentMin = '0' + currentMin : currentMin;
     currentSec < 10 ? currentSec = '0' + currentSec : currentSec;
     currentVideoDuration.innerHTML = `${currentMin}:${currentSec}`
-});
+});*/
 
 
 /**back to top button**/

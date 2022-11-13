@@ -45,7 +45,7 @@ body {
     border-radius: 5px;
 }
 
-a img { margin: 24px 10px; }
+a img { margin: 24px auto !important; }
 
 main .container { padding: 5.75em 1em !important; }
 

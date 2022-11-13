@@ -72,6 +72,10 @@ h1 {
     text-align: center;
 }
 
+img, picture {
+    display: block;
+}
+
 /**scroll bar**/
 body::-webkit-scrollbar {
     width: 12px;
@@ -940,140 +944,31 @@ div.nav-link {
 }
 
 /*align center*/
-#vcontainer {
-    padding: 1.5em;
-    display: table;
-    height: 100%;
-    width: 100%;
-}
-
-#hcontainer {
-    padding: 1.5em;
-    display: table-cell;
-    vertical-align: middle;
-    text-align: center;
-}
-
 #content {
-    display: inline-block;
-    border: var(--txt-muted) 1px solid;
-    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem auto;
 }
 
-.maps {
-    margin: 0 auto;
-    width: 855px !important;
-    height: 615px !important;
+/*maps*/
+.gmap_canvas {
+    overflow: hidden;
+    background: none !important;
+    height: 450px;
+    max-width: 450px;
 }
-
-/*resize*/
-@media screen and (max-width: 1100px) {
-    .maps {
-        width: 790px !important;
-        height: 565px !important;
-    }
+.mapouter {
+    position: relative;
+    text-align: right;
+    height: 450px;
+    width: 450px;
 }
-
-@media screen and (max-width: 960px) {
-    .maps {
-        width: 775px !important;
-        height: 565px !important;
-    }
+iframe:not(.layer iframe) {
+    width: 100%;
+    height: 100%;
 }
-
-@media screen and (max-width: 910px) {
-    .maps {
-        width: 700px !important;
-        height: 525px !important;
-    }
-}
-
-
-@media screen and (max-width: 850px) {
-    .maps {
-        width: 550px !important;
-        height: 500px !important;
-    }
-}
-
-@media screen and (max-width: 710px) {
-    .maps {
-        width: 515px !important;
-        height: 440px !important;
-    }
-}
-
-@media screen and (max-width: 675px) {
-    .maps {
-        width: 450px !important;
-        height: 420px !important;
-    }
-}
-
-@media screen and (max-width: 626px) {
-    .maps {
-        width: 415px !important;
-        height: 410px !important;
-    }
-}
-
-@media screen and (max-width: 585px) {
-    .maps {
-        width: 400px !important;
-        height: 400px !important;
-    }
-}
-
-@media screen and (max-width: 560px) {
-    .maps {
-        width: 375px !important;
-        height: 395px !important;
-    }
-}
-
-
-@media screen and (max-width: 540px) {
-    .maps {
-        width: 325px !important;
-        height: 320px !important;
-    }
-}
-
-@media screen and (max-width: 490px) {
-    .maps {
-        width: 290px !important;
-        height: 280px !important;
-    }
-}
-
-@media screen and (max-width: 466px) {
-    .maps {
-        width: 255px !important;
-        height: 260px !important;
-    }
-}
-
-@media screen and (max-width: 415px) {
-    .maps {
-        width: 220px !important;
-        height: 260px !important;
-    }
-}
-
-@media screen and (max-width: 384px) {
-    .maps {
-        width: 200px !important;
-        height: 250px !important;
-    }
-}
-
-@media screen and (max-width: 370px) {
-    .maps {
-        width: 170px !important;
-        height: 240px !important;
-        padding-left: -105px;
-    }
-}
+/** end maps **/
 
 #titleh1 {
     text-decoration: underline;
@@ -1352,6 +1247,12 @@ h3.top-to {
     font-family: 'Source Sans Pro', sans-serif;
     color: var(--txt-muted);
     padding: 10px !important;
+    text-align: center !important; 
+}
+
+.google a.goog-logo-link img {
+    text-align: center !important;
+    margin: 0 auto !important;
 }
 
 ul {
@@ -1418,6 +1319,11 @@ div.row {
 
 .footer-logo {
     padding: 2em 1em 0 1em;
+    max-width: fit-content;
+    margin: 0 auto !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .img-fluid {

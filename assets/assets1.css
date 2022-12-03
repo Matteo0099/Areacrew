@@ -17,26 +17,30 @@
      --bg-lightRed: #fde2e4;
      --bg-Event: #fbf8cc;
 }
- .custom-cursor {
+
+/** custom cursor **/
+.cursor{
+     position: absolute;
+     top: 0;
+     left: 0;
+     z-index: 99999 !important;
+     pointer-events: none !important;
      width: 2.25rem;
      height: 2.25rem;
      border: 1.25px solid var(--bg-dark);
      border-radius: 100%;
      background: rgb(255, 255, 255, 0.375);
-     position: absolute;
-     box-shadow: 0px 0px 50px 6px rgba(255, 255, 100, 0.25);
-     -webkit-box-shadow: 0px 0px 50px 6px rgba(238, 237, 67, 0.25);
-     -moz-box-shadow: 0px 0px 50px 6px rgba(238, 237, 67, 0.25);
-     z-index: 99999 !important;
      transform: translate(-50%, -50%);
-     pointer-events: none !important;
-     transition: 35ms all ease-out !important;
-     text-rendering: optimizeSpeed !important;
+     transition: none !important;
+     box-shadow: 0px 0px 66px 3px rgba(255, 255, 100, 0.25);
+     -webkit-box-shadow: 0px 0px 66px 3px rgba(238, 237, 67, 0.25);
+     -moz-box-shadow: 0px 0px 66px 3px rgba(238, 237, 67, 0.25);
      opacity: 1;
      visibility: inherit;
      display: block;
      text-align: center;
 }
+
  *, *:before, *:after {
      box-sizing: border-box !important;
      padding: 0;
@@ -571,7 +575,7 @@
      animation-duration: 4.25s;
      animation-timing-function: linear;
      animation-iteration-count: infinite;
-     z-index: 99999;
+     z-index: 999;
      pointer-events: all;
      user-select: all;
 }

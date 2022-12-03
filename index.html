@@ -461,16 +461,19 @@
     </footer>
 
     <!-- cursor -->
-    <div class="custom-cursor"></div>
-    <!-- /cursor -->
+    <div class="cursor"></div>
     <script>
-      const cursor = document.querySelector(".custom-cursor");
-      // Cursor Event
-      /* ============================================================ */
-      window.addEventListener("mousemove", ({ pageY: Y, pageX: X }) => {
-        cursor.style.top = `${Y}px`;
-        cursor.style.left = `${X}px`;
-      })
+      const cursor = document.querySelector('.cursor');
+      window.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.pageX + 'px';
+        cursor.style.top = e.pageY + 'px';
+        cursor.setAttribute('data-fromTop', (cursor.offsetTop - scrollY));
+      });
+      window.addEventListener('scroll', () => {
+        const fromTop = cursor.getAttribute('data-fromTop');
+        cursor.style.top = scrollY + parseInt(fromTop) + 'px';
+        console.log(scrollY);
+      });
     </script>
 
     <script>

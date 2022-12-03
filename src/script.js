@@ -127,25 +127,6 @@ $(document).ready(function () {
     $input2.on("keyup", onChangeInput2);
 });
 
-/**video script**/
-/*let video = document.querySelector('.video-area .video')
-videoPlayer = document.querySelector('.videoPlayer')
- 
-video.addEventListener('timeupdate', function (e) {
-    let videoPosition = video.currentTime / video.duration;
-    dot.style.left = (videoPosition * 100) + '%';
-    videoProgressDuration.style.width = (videoPosition * 100) + '%';
-});
- 
-video.addEventListener('timeupdate', function (e) {
-    let currentVideoTime = e.target.currentTime;
-    let currentMin = Math.floor(currentVideoTime / 60);
-    let currentSec = Math.floor(currentVideoTime % 60);
- 
-    currentMin < 10 ? currentMin = '0' + currentMin : currentMin;
-    currentSec < 10 ? currentSec = '0' + currentSec : currentSec;
-    currentVideoDuration.innerHTML = `${currentMin}:${currentSec}`
-});*/
 /**back to top button**/
 const showOnPx = 100;
 const backToTopButton = document.querySelector(".back-to-top");
@@ -158,4 +139,4 @@ const goToTop = () => {
         behavior: "smooth"
     });
 };
-  /**fine script**/
+/**fine script**/

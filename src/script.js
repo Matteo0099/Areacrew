@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
  * How to make event listeners passive to improve scrolling performance 
  * Add a passive flag to every event listener that Lighthouse identified.
  */
-document.addEventListener('touchstart', onTouchStart, {
+document.querySelector('body').addEventListener('touchstart', onTouchStart, {
     passive: true
 });
 /**new tab on click img**/

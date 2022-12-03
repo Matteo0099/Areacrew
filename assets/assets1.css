@@ -795,10 +795,7 @@
      height: 450px;
      width: 450px;
 }
- iframe:not(.layer iframe) {
-     width: 100%;
-     height: 100%;
-}
+
  #titleh1 {
      text-decoration: underline;
      text-decoration-color: var(--txt-hover);

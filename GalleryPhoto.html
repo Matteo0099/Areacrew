@@ -187,6 +187,18 @@
         }
       }
     </script>
+    <!-- cursor -->
+    <div class="custom-cursor"></div>
+    <!-- /cursor -->
+    <script>
+      const cursor = document.querySelector(".custom-cursor");
+      // Cursor Event
+      /* ============================================================ */
+      window.addEventListener("mousemove", ({ pageY: Y, pageX: X }) => {
+        cursor.style.top = `${Y}px`;
+        cursor.style.left = `${X}px`;
+      })
+    </script>
     <!--script generale-->
     <script src="./src/script.js"></script>
 </body>

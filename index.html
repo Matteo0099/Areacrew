@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,10 +18,13 @@
   <meta property="description" content="Bmx Park situato a Monfalcone, (GO)">
   <meta property="dc.language" content="ita" scheme="RFC1766">
   <meta http-equiv="pragma" content="no-cache">
+  <script src="./node_modules/jquery/dist/jquery.js" defer></script>
   <!--fontss-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -86,7 +90,7 @@
             poster="./video/copertina.jpg" preload type="video/mp4">
           </video>
           <p class="subtitle">Video realized by: <a href="https://salottofotografico.it/"
-            target="_blank">SalottoFotografico</a></p>
+              target="_blank">SalottoFotografico</a></p>
           <!--link download-->
           <p> Click the link below to download the file! </p>
           <a href="./video/AREACREW-VIDEO-JAM.mp4" download class="download" target="_blank" width="1920" height="1080">
@@ -108,8 +112,8 @@
             Gallery of 1th AreaCrewJam!
           </h1>
           <div class="container photo">
-            <img src="img/1th JAM/FotoGruppoJam.2022.AreaCrew.10.09.2022.jpg" 
-            loading="lazy" alt="logo" width="1920" height="1080">
+            <img src="img/1th JAM/FotoGruppoJam.2022.AreaCrew.10.09.2022.jpg" loading="lazy" alt="logo" width="1920"
+              height="1080">
           </div>
           <a class="button is-info is-medium bg-t is-outlined is-active is-focused"
             onclick="window.open('GalleryJam.html', '_self')">
@@ -170,7 +174,8 @@
         <div class="section" id="sect3">
           <h1 class="title">AreaCrew è anche sul giornale! ↓ </h1>
           <p class="subtitle m-2 has-text-grey">" Inaugurazione del BMX-PARK "</p>
-          <img src="./img/giornale/Foto AreaCrew.jpg.png" id="section-image" loading="lazy" width="971" height="1048" alt="logo">
+          <img src="./img/giornale/Foto AreaCrew.jpg.png" id="section-image" loading="lazy" width="971" height="1048"
+            alt="logo">
           <p class="subtitle fs-5 has-text-dark">Fonte:
             <a href="https://ilpiccolo.gelocal.it/trieste/" target="_blank" class="is-hovered is-link">Il Piccolo</a>
           </p>
@@ -195,7 +200,8 @@
               <h1 id="jam" class="dotted">*Aggiornamento*</h1>
               <p id="jam-p">
                 Grazie a tutti quelli che hanno partecipato alla jam del 10 settembre 2022!
-                Grazie anche agli sponsor che hanno messo in palio dei premi per i vincitori del contest gratuitamente: <br>
+                Grazie anche agli sponsor che hanno messo in palio dei premi per i vincitori del contest gratuitamente:
+                <br>
                 <a href="https://www.ilbuttabmx.com/">Il ButtaBmx</a>, <a href="https://garage81.com/">Garage81</a>, e
                 <a
                   href="https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Frecordstreetshop%2F%3Ffbclid%3DIwAR0jinIZdd8gBg6oia3mgs265m8JNf42Pezn-ZgMSYXoARDIl0u5Ity7_6U&h=AT25_aZo6cXb4kHHxKJNcSNpfWthnyGNZCLpPQbFGk1HSz_OOuu-5IxHtOSDu_JgeQPu3PnAw1b3BmUUpXzPKOO9lSFR8tFcWR9D_yJbypuiZoEmwftgz2nC4mEh7S2b0AjcNQ">
@@ -234,9 +240,10 @@
           </div>
         </div>
         <div class="container is-align-items-flex has-text-centered mx-auto mt-4">
-          <a href="https://www.3bmeteo.com/meteo/monfalcone" 
-          class="has-text-centered flex button is-link is-focused is-active is-light is-medium is-outlined" target="_blank">
-          Meteo Monfalcone (in tempo reale)</a>
+          <a href="https://www.3bmeteo.com/meteo/monfalcone"
+            class="has-text-centered flex button is-link is-focused is-active is-light is-medium is-outlined"
+            target="_blank">
+            Meteo Monfalcone (in tempo reale)</a>
         </div>
       </section>
 
@@ -290,6 +297,19 @@
     </div>
   </footer>
 
+  <!-- cursor -->
+  <div class="custom-cursor"></div>
+  <!-- /cursor -->
+  <script>
+    const cursor = document.querySelector(".custom-cursor");
+    // Cursor Event
+    /* ============================================================ */
+    window.addEventListener("mousemove", ({ pageY: Y, pageX: X }) => {
+      cursor.style.top = `${Y}px`;
+      cursor.style.left = `${X}px`;
+    })
+  </script>
+
   <script>
     /**google translate**/
     function googleTranslateElementInit() {
@@ -304,4 +324,5 @@
   <!--script generale-->
   <script src="./src/script.js" defer></script>
 </body>
+
 </html>

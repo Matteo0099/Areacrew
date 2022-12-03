@@ -21,7 +21,7 @@
 }
 
 /** custom cursor **/
-.cursor{
+.cursor {
      position: absolute;
      top: 0;
      left: 0;
@@ -85,7 +85,7 @@
      display: block;
 }
  @media screen and (max-width: 767px) {
-     .custom-cursor {
+     .cursor {
          display: none !important;
          opacity: 0 !important;
          pointer-events: all !important;
@@ -401,6 +401,11 @@
      transform: scale(1.2);
      transition: 150ms all !important;
 }
+
+ a.button:hover {
+    color: var(--bg-trasp);
+ }
+
  section#sectVideo video {
      border-radius: 6px;
      object-fit: cover;
@@ -1155,6 +1160,17 @@
  .spotify-bg {
      background: rgb(20, 134, 20);
 }
+
+.copyright-area p a {
+    color: var(--txt-hover);
+}
+
+.copyright-area p a:hover {
+    color: var(--txt-hover);
+    text-decoration: underline;
+}
+
+/**reset**/
  ul[role="list"], ol[role="list"] {
      list-style: none;
 }

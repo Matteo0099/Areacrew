@@ -7,12 +7,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=7">
   <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
   <!--ASSETS STYLE-->
- <!--<link rel="stylesheet" href="./assets/bulma/bulma.min.css" />-->
+  <link rel="stylesheet" href="./assets/bulma/bulma.min.css" />
   <link rel="stylesheet" href="./assets/assets1.css" />
   <title>AreaCrew | BMX-park</title>
   <link rel="icon" href="./img/areaCrewLogo.png" />
-  <meta name="keywords"
-    content="areacrew, bmx-park, bmx, bmx street, monfalcone, bmx park monfalcone, park monfalcone" />
+  <meta name="keywords" content="areacrew, bmx-park, bmx, bmx street, monfalcone, bmx park monfalcone, park monfalcone" />
   <meta http-equiv="keywords" content="bmx street, bmx monfalcone, bmx park, bmx park monfalcone, bici monfalcone" />
   <meta property="og:title" name="og:title" content="AreaCrew - BMXpark - Monfalcone" />
   <meta property="og:url" name="og:url" content="https://areacrewmonfalcone.it" />
@@ -20,7 +19,6 @@
   <meta property="og:site_name" name="og:site_name" content="AreaCrewWebsite" />
   <meta property="description" name="description" content="Bmx Park situato a Monfalcone, (GO) [italy]" />
   <meta property="dc.language" content="ita" scheme="RFC1766" />
-  <!-- <meta http-equiv="refresh" content="0; url=http://www.areacrewmonfalcone.it/index.html"> -->
   <!--fontss--><!-- upload in a css-file -->
 </head>
 
@@ -147,11 +145,11 @@
           <div id="content">
             <div class="mapouter">
               <div class="gmap_canvas">
-                <iframe width="450" height="450" id="gmap_canvas" title="maps"
-                  src="https://maps.google.com/maps?q=Via%20Portorosega,%2034074%20Monfalcone%20GO&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                  frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d708.8746735494927!2d13.544343791465419!3d45.80272817045195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x2a32e649f49722b7!2sAreaCrew!5e0!3m2!1sit!2sit!4v1670096914433!5m2!1sit!2sit" 
+                  width="600" height="450" style="border:0;" 
+                  allowfullscreen="" loading="lazy" 
+                  referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
-                <!-- <a href="https://www.embedgooglemap.net"></a> -->
               </div>
             </div>
           </div>
@@ -163,11 +161,11 @@
           <h1 class="title has-text-dark" id="titleh1">
             Vai a vedere la gallery del park! ↓
           </h1>
-          <center>
-            <a class="button is-info is-medium bg-t is-outlined is-active is-focused"
+          <div class="container mx-auto is-flex is-widescreen is-align-items-center">
+            <a class="button is-info mx-auto is-medium bg-t is-outlined is-active is-focused"
               onclick="window.open('GalleryPhoto.html', '_self')">
               Go to Park's gallery</a>
-          </center>
+          </div>
         </div>
       </section>
 
@@ -250,11 +248,14 @@
             <div id="clock_block_cb631b19b49d6f8"></div>
           </div>
         </div>
-        <div class="container is-align-items-flex has-text-centered mx-auto mt-4">
+        <div class="container has-shadow is-align-items-flex has-text-centered mx-auto mt-4">
+          <div class="section has-text-centered">
+            <h1 class="underline">Meteo in tempo reale</h1>
+          </div>
           <a href="https://www.3bmeteo.com/meteo/monfalcone"
             class="has-text-centered flex button is-link is-focused is-active is-light is-medium is-outlined"
             target="_blank">
-            Meteo Monfalcone (in tempo reale)</a>
+            Meteo Monfalcone</a>
         </div>
       </section>
 
@@ -275,10 +276,6 @@
 
   <footer class="footer-section" id="contact">
     <div class="copyright-area">
-      <!--Google translate-->
-      <p class="google">Translate this page:</p>
-      <div id="google_translate_element" class="google"></div>
-
       <div class="col-xl-4 col-lg-4 mb-50">
         <div class="footer-widget">
           <div class="footer-logo">
@@ -325,23 +322,9 @@
       console.log(scrollY);
     });
   </script>
-
-  <script>
-    /**google translate**/
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement({
-        pageLanguage: 'it'
-      }, 'google_translate_element');
-    }
-  </script>
-  <script type="text/javascript" src="./src/Translate.js" defer></script>
-  <!-- <script type="text/javascript"
-    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> -->
-  <!--ora locale-->
-  <script type="text/javascript" src="//w.24timezones.com/l.js" async></script>
+  <!--orologio-->
+  <script type="text/javascript" src="./src/Clock.js" async defer></script>
   <!--script generale-->
   <script src="./src/script.js" defer></script>
-  <!--libreria jquery-->
-  <script src="./node_modules/jquery/dist/jquery.min.js"></script>
 </body>
 </html>

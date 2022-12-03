@@ -1,4 +1,7 @@
+# Read me 
+
 # AreacrewWebsite
+>
 <html>
   <body>
     
@@ -17,3 +20,5 @@
     
   </body>
 </html>
+
+>*file css and html are minifyed* for improve performance

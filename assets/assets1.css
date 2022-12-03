@@ -92,6 +92,14 @@ img, picture {
     display: block;
 }
 
+@media screen and (max-width: 767px) {
+    .custom-cursor {
+        display: none !important;
+        opacity: 0 !important;
+        pointer-events: all !important;
+    }
+}
+
 /**scroll bar**/
 body::-webkit-scrollbar {
     width: 12px;

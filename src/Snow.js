@@ -3,7 +3,7 @@
 //Each update cycle should remove this much life from a snowflake
 const LIFE_PER_TICK = 1000 / 60;
 /**mobile */ //Number of snowflakes
-const MAX_FLAKES = Math.min(12, (screen.width / 1280) * 2);  //75 original
+const MAX_FLAKES = Math.min(36, (screen.width / 1280) * 3);  //75 original
 const flakes = []; //The array of snow particles to be animated. They are HTMLElements
 //A variety of periodic movement functions for the x-axis to create a range of snow falling models
 //The initial multiplier determines how far it moves in vw units at most, from the original x-axis position.

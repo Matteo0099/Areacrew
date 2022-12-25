@@ -3,7 +3,7 @@
 //Each update cycle should remove this much life from a snowflake
 const LIFE_PER_TICK = 1000 / 60;
 /**mobile */ //Number of snowflakes
-const MAX_FLAKES = Math.min(36, (screen.width / 1280) * 3);  //75 original
+const MAX_FLAKES = Math.min(36, (screen.width / 1280) * 3); //75 original
 const flakes = []; //The array of snow particles to be animated. They are HTMLElements
 //A variety of periodic movement functions for the x-axis to create a range of snow falling models
 //The initial multiplier determines how far it moves in vw units at most, from the original x-axis position.
@@ -50,9 +50,9 @@ const cssString = `.snowfall-container {
 // Add a DOMContentLoaded listener, or fire the function immediately if that already happened
 function ready(fn) {
     if (
-        document.attachEvent
-            ? document.readyState === "complete"
-            : document.readyState !== "loading"
+        document.attachEvent ?
+        document.readyState === "complete" :
+        document.readyState !== "loading"
     ) {
         fn();
     } else {
@@ -77,7 +77,7 @@ function resetFlake(flake) {
     //This is the index into the period function array
     flake.dataset.periodFunction = Math.floor(Math.random() * period.length);
     if (Math.random() < 0.005) { //Very small chance of some fun happening (original=0.001)
-        flake.innerText = fun[Math.floor(Math.random() * fun.length)]; 
+        flake.innerText = fun[Math.floor(Math.random() * fun.length)];
     }
 }
 

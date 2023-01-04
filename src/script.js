@@ -3,13 +3,13 @@ document.addEventListener("DOMContentLoaded", () => {
     let navbarBurger = document.querySelector(".navbar-burger");
     let navbarMenu = document.querySelector(".navbar-menu");
     if (navbarBurger && navbarMenu) {
-        navbarBurger.addEventListener("click", function() {
+        navbarBurger.addEventListener("click", function () {
             navbarBurger.classList.toggle("is-active");
             if (navbarBurger.classList.contains("is-active")) {
                 navbarMenu.style.display = "block";
                 if (navbarMenu.querySelectorAll("a[href]")) {
-                    [].forEach.call(navbarMenu.querySelectorAll("a[href]"), function(navURL) {
-                        navURL.addEventListener("click", function() {
+                    [].forEach.call(navbarMenu.querySelectorAll("a[href]"), function (navURL) {
+                        navURL.addEventListener("click", function () {
                             navbarMenu.style.display = "none";
                             navbarBurger.classList.remove("is-active");
                         });
@@ -19,26 +19,26 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
     if (document.querySelectorAll(".navbar-dropdown")) {
-        [].forEach.call(document.querySelectorAll(".navbar-dropdown"), function(elDrop) {
+        [].forEach.call(document.querySelectorAll(".navbar-dropdown"), function (elDrop) {
             elDrop.style.display = "none";
         });
     }
     if (document.querySelectorAll(".navbar-link")) {
-        [].forEach.call(document.querySelectorAll(".navbar-link"), function(elLink) {
+        [].forEach.call(document.querySelectorAll(".navbar-link"), function (elLink) {
             if (elLink.classList.contains("is-active")) elLink.classList.toggle("is-active");
             if (elLink.nextElementSibling.classList.contains("navbar-dropdown") && elLink.nextElementSibling.hasChildNodes()) {
-                elLink.addEventListener("click", function() {
+                elLink.addEventListener("click", function () {
                     elLink.classList.toggle("is-active");
                     if (elLink.classList.contains("is-active") && elLink.nextElementSibling.style.display === "none") elLink.nextElementSibling.style.display = "block";
                     else if (!elLink.classList.contains("is-active") && elLink.nextElementSibling.style.display === "block") elLink.nextElementSibling.style.display = "none";
-                    [].forEach.call(elLink.nextElementSibling.childNodes, function(siblingChild) {
-                        siblingChild.addEventListener("click", function() {
+                    [].forEach.call(elLink.nextElementSibling.childNodes, function (siblingChild) {
+                        siblingChild.addEventListener("click", function () {
                             siblingChild.parentNode.style.display = "none";
                             if (elLink.classList.contains("is-active")) elLink.classList.toggle("is-active");
                         });
                     });
                 });
-                elLink.nextElementSibling.addEventListener("mouseleave", function() {
+                elLink.nextElementSibling.addEventListener("mouseleave", function () {
                     elLink.nextElementSibling.style.display = "none";
                     if (elLink.classList.contains("is-active")) elLink.classList.toggle("is-active");
                 });
@@ -46,6 +46,26 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+
+/**
+ * 
+ * Color picker from the t-shirt
+ * 
+*/
+
+/*
+function bgchange(color) {
+    document.body.style.background = colorarray[color];
+}
+
+var colorarray = ["#e58e26", "#f9b4ab", "#B1FB17", "#78e08f", "#fd79a8"];
+var str = "";
+for (var i = 0; i < colorarray.length; i++) {
+    str += '<span onclick="bgchange(' + i + ')'
+    style = "background-color:'+colorarray[i]+'" > '+colorarray[i]+</span >'
+}
+document.getElementById("colorbox").innerHTML = str;
+*/
 
 /**
  * How to make event listeners passive to improve scrolling performance 
@@ -71,7 +91,7 @@ function newtab() {
 var header = document.querySelector("#nav-lins-all");
 var btns = document.getElementsByClassName("nav-btn");
 for (var i = 0; i < btns.length; i++) {
-    btns[i].addEventListener("click", function() {
+    btns[i].addEventListener("click", function () {
         var current = document.getElementsByClassName("active");
         current[0].className = current[0].className.replace(" active", "");
         this.className += " active";
@@ -104,7 +124,7 @@ function Modulo() {
         document.modulo.submit();
     }
 }
-$(document).ready(function() {
+$(document).ready(function () {
     var $input1 = $("#logindata1 input");
     var $input2 = $("#logindata2 input");
 

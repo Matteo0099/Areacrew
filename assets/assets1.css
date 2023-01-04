@@ -241,10 +241,11 @@ nav.navbar {
         font-size: 22px;
         background-color: #333;
         height: 0;
-        transition: all .3s ease-in;
+        transition: all .275s ease-in-out;
+        transform-origin: top;
         overflow-y: hidden;
         top: 54px;
-        left: 0
+        left: 0;
     }
 
     .nav>.nav-links, .nav>.nav-links>a {
@@ -352,11 +353,11 @@ section {
     align-content: start;
 }
 
-.app > * {
+.app>* {
     grid-column: 2 / -2;
 }
 
-.app > .full {
+.app>.full {
     grid-column: 1 / -1;
 }
 
@@ -374,7 +375,7 @@ section {
     grid-auto-columns: calc(50% - var(--gutter) * 2);
 
     overflow-x: scroll;
-    overscroll-behavior-y:contain;
+    overscroll-behavior-y: contain;
     scroll-snap-type: x proximity;
     padding-bottom: calc(.75 * var(--gutter));
     margin-bottom: calc(-.25 * var(--gutter));
@@ -394,6 +395,181 @@ section {
 
 .no-scrollbar::-webkit-scrollbar {
     display: none;
+}
+
+/* shop 2*/
+.tools__container .selection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+/* all input */
+input.switch-border[type="radio"] {
+    position: absolute;
+    /* remove standard background appearance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /* create custom radiobutton appearance */
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    padding: 5px;
+    /* background-color only for content */
+    background-clip: content-box;
+    border: 2px solid #bbbbbb;
+    background-color: #e7e6e7;
+    /* not default :) */
+    border-radius: 50%;
+    margin: 0 .25rem;
+    cursor: pointer !important;
+}
+
+input#r1 {
+    transform: translateY(-250px) translateX(-48px);
+    background-color: #e9c46a;
+}
+input#r2 {
+    transform: translateY(-200px) translateX(-48px);
+    background-color: #e76f51;
+}
+input#r3 {
+    transform: translateY(-150px) translateX(-48px);
+    background-color: #0077b6;
+}
+input#r4 {
+    transform: translateY(-100px) translateX(-48px);
+    background-color: #023e8a;
+}
+input#r5 {
+    transform: translateY(-50px) translateX(-48px);
+    background-color: #fee440;
+}
+input#r6 {
+    transform: translateY(0px) translateX(-48px);
+    background-color: #8338ec;
+}
+input#r7 {
+    transform: translateY(50px) translateX(-48px);
+    background-color: #ff006e;
+}
+input#r8 {
+    transform: translateY(100px) translateX(-48px);
+    background-color: #00f5d4;
+}
+input#r9 {
+    transform: translateY(150px) translateX(-48px);
+    background-color: #00bbf9;
+}
+input#r10 {
+    transform: translateY(200px) translateX(-48px);
+    background-color: #6a994e;
+}
+input#r11 {
+    transform: translateY(250px) translateX(-48px);
+    background-color:#363073;
+}
+
+input[type="radio"]:checked {
+    border: 2.5px solid #00bbf9 !important;
+} 
+
+input.switch-border+section>label {
+    display: none;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    cursor: pointer;
+    padding: 5px 7px;
+}
+
+section label {
+    display: none;
+}
+
+input[type="radio"] {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.selection label + input {
+    cursor: pointer;
+}
+
+input.switch-border:checked + label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+input.switch-border:checked + label > img {
+    display: block;
+} 
+
+section label span {
+    font-size: 2rem;
+    margin: .4rem 0;
+    padding: .75rem 1.35rem;
+    border-radius: 12px;
+    background-color: var(--txt-hover);
+}
+
+.button__shop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-overflow: ellipsis;
+}
+
+.button__shop a:hover, .button__shop:hover {
+    color: inherit;
+    background-color: inherit;
+    opacity: 1;
+}
+
+.shop__button {
+    cursor: pointer !important; 
+    border: none;      
+    background: #3498db;
+    border-bottom: #2980b9 3px solid;
+    border-left: #2980b9 1px solid;
+    border-right: #2980b9 1px solid;
+    border-radius: 6px;
+    text-align: center;
+    color: white;
+    padding: 24px 36px;
+    width: 375px;
+    height: 100px;         
+    display: inline-block;      
+    font-size: 1.25rem;    
+    font-weight: 700;  
+    margin: 4px 2px;      
+    transition-duration: 0.4s; 
+      /* Safari */     
+      -webkit-transition-duration: 0.4s;        
+    text-decoration: none;      
+    text-transform: uppercase;
+    /* box-shadow: ; */
+    box-shadow: 2px 4px 6px 3px rgba(198,198,198,0.76);
+    -webkit-box-shadow: 2px 4px 6px 3px rgba(198,198,198,0.76);
+    -moz-box-shadow: 2px 4px 6px 3px rgba(198,198,198,0.76);
+}
+
+.shop__button:hover {
+    box-shadow: 14px 9px 18px 6px rgba(198,198,198,0.76);
+    -webkit-box-shadow: 14px 9px 18px 6px rgba(198,198,198,0.76);
+    -moz-box-shadow: 14px 9px 18px 6px rgba(198,198,198,0.76);
+}
+
+@media screen and (max-width:767px) {
+    .shop__button {
+        width: 250px;
+        padding: 9px 18px;
+        height: auto;
+    }
 }
 /* end shop */
 

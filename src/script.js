@@ -112,6 +112,7 @@ function Modulo() {
     //INVIA IL MODULO
     else {
         document.modulo.action = open('mailto:matteomania09@gmail.com');
+        //php for backend richiesto
         document.modulo.submit();
     }
 }
@@ -120,7 +121,7 @@ $(document).ready(function () {
     var $input2 = $("#logindata2 input");
 
     function onChangeInput1() {
-        $input1.css("background-color", "#00007F");
+        $input1.css("background-color", "#e5e5e5");
         var value = $.trim($input1.val());
         if (value.length === 0) {
             $input1.css("background-color", "transparent");
@@ -128,7 +129,7 @@ $(document).ready(function () {
     }
 
     function onChangeInput2() {
-        $input2.css("background-color", "#00007F");
+        $input2.css("background-color", "#e5e5e5");
         var value = $.trim($input2.val());
         if (value.length === 0) {
             $input2.css("background-color", "transparent");

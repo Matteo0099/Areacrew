@@ -1,27 +1,16 @@
 <!DOCTYPE html>
 <html lang="it">
-
 <head>
-  <script src="./src/Snow.js" defer>
-  </script>
+  <!-- <script src="./src/Snow.js" defer></script> -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <link rel="stylesheet" href="./assets/assets1.css">
-  <title>AreaCrew
-  </title>
+  <title>AreaCrew</title>
   <link rel="icon" href="./img/areaCrewLogo.png">
   <link rel="stylesheet" href="./assets/assets3Orari.css">
   <link rel="stylesheet" href="./assets/assets1.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap"
-    rel="stylesheet">
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer="defer">
-  </script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"
-    defer="defer">
-    </script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" async defer="defer"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" async defer="defer"></script>
 </head>
 
 <body>
@@ -271,7 +260,7 @@
     </tr>
   </table>
   <div class="box" id="boxbefore" style="margin-top:8%;margin-bottom:8%">
-    <h4 style="text-align:center;margin-top:4.5%;margin-bottom:5%" class="title is-4 mgt-medium" id="questions">Any
+    <h4 class="h4Table title is-4 mgt-medium" id="questions">Any
       questions / Qualche dubbio
       <span id="puntodid">?
       </span>
@@ -373,6 +362,9 @@
       </p>
     </div>
   </footer>
+
+  <!-- script per il modulo -->
+  <script src="./src/script.js" defer="defer" async></script>
   <!-- cursor -->
   <div class="cursor">
   </div>
@@ -387,10 +379,9 @@
     window.addEventListener('scroll', () => {
       const fromTop = cursor.getAttribute('data-fromTop');
       cursor.style.top = scrollY + parseInt(fromTop) + 'px';
-      console.log(scrollY);
+      // console.log(scrollY);
     }
     );
   </script>
 </body>
-
 </html>

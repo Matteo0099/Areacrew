@@ -7,17 +7,20 @@ const MAX_FLAKES = Math.min(36, (screen.width / 1280) * 3); //75 original
 const flakes = []; //The array of snow particles to be animated. They are HTMLElements
 //A variety of periodic movement functions for the x-axis to create a range of snow falling models
 //The initial multiplier determines how far it moves in vw units at most, from the original x-axis position.
-const period = [
+
+/*const period = [
     (n) => 5 * Math.sin(n),
     (n) => 8 * Math.cos(n),
     (n) => 5 * (Math.sin(n) * Math.cos(2 * n)),
     (n) => 2 * (Math.sin(0.25 * n) - Math.cos(0.75 * n) + 1),
     (n) => 5 * (Math.sin(0.75 * n) + Math.cos(0.25 * n) - 1)
-];
+];*/
+
 //Emojis to substitute for snowflakes, just for fun :)
-const fun = ["⛄", "🎁", "🦌", "☃", "🍪"];
+//const fun = ["⛄", "🎁", "🦌", "☃", "🍪"];
 //The CSS styles for the snowflakes and container
-const cssString = `.snowfall-container {
+
+/*const cssString = `.snowfall-container {
     display: block;
     height: 100vh;
     left: 0;
@@ -143,4 +146,4 @@ function appendSnow() {
 
     updatePositions();
 }
-ready(appendSnow);
+ready(appendSnow);*/

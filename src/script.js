@@ -47,12 +47,8 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-/**
- * 
- * Color picker from the t-shirt
- * 
-*/
 /*
+//Color picker from the t-shirt
 function bgchange(color) {
     document.body.style.background = colorarray[color];
 }
@@ -62,8 +58,7 @@ for (var i = 0; i < colorarray.length; i++) {
     str += '<span onclick="bgchange(' + i + ')'
     style = "background-color:'+colorarray[i]+'" > '+colorarray[i]+</span >'
 }
-document.getElementById("colorbox").innerHTML = str;
-*/
+document.getElementById("colorbox").innerHTML = str;*/
 
 /**new tab on click img**/
 function newtab() {
@@ -74,10 +69,6 @@ function newtab() {
     popup.print();
 }
 
-/** add class active 
- * nav bar active state 
- * target = a;
- */
 // Add active class to the current button (highlight it)
 var header = document.querySelector("#nav-lins-all");
 var btns = document.getElementsByClassName("nav-btn");

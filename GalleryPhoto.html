@@ -1,17 +1,25 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="it">
 <head>
   <!-- <script src="./src/JqueryLoading.js"></script>
   <script src="./src/Snow.js" defer></script> -->
   <meta charset="UTF-8">
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
   <meta content="width=device-width,initial-scale=1" name="viewport">
-  <title>Photo Gallery BMX-PARK
-  </title>
+  <title>Photo Gallery BMX-PARK</title>
   <link href="./img/areaCrewLogo.png" rel="icon">
   <link href="./assets/assets1.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css" rel="stylesheet">
+  <style>
+    #Grid-Button, 
+    #Grid-Button-2 {transition:all .3s ease-in-out;padding:.75em;background-color:#f6f6f6;text-align: center}
+    #Grid-Button:hover { color: #f6f6f6; background-color: #000 }
+    #Grid-Button-2:hover { background-color: #000 }
+    @media screen and (max-width:1500px) { #third-column { flex: 1 1 2.55% } }
+    @media screen and (min-width:1500px) { #third-column { flex: 1 1 2.2% } }
+    svg { margin-right: 2% }
+    .pulse {margin-top: 60px !important}
+  </style>
 </head>
 
 <body>
@@ -28,12 +36,9 @@
       </div>
       <div class="nav-btn">
         <label for="nav-check">
-          <span>
-          </span>
-          <span>
-          </span>
-          <span>
-          </span>
+          <span></span>
+          <span></span>
+          <span></span>
         </label>
       </div>
       <div class="nav-links" id="nav-lins-all">
@@ -48,14 +53,10 @@
               fill-rule="evenodd" />
           </svg>
         </a>
-        <a onclick='window.open("RegolamentoPark.html","_self")' class="nav-btn">Regolamento
-        </a>
-        <a onclick='window.open("OrariApertura.html","_self")' class="nav-btn">Orari
-        </a>
-        <a onclick='window.open("YoutubeVideo.html","_self")' class="nav-btn">Youtube Videos
-        </a>
-        <a onclick='window.open("GalleryJam.html","_self")' class="nav-btn">Photo-Jam
-        </a>
+        <a onclick='window.open("RegolamentoPark.html","_self")' class="nav-btn">Regolamento</a>
+        <a onclick='window.open("OrariApertura.html","_self")' class="nav-btn">Orari</a>
+        <a onclick='window.open("YoutubeVideo.html","_self")' class="nav-btn">Youtube Videos</a>
+        <a onclick='window.open("GalleryJam.html","_self")' class="nav-btn">Photo-Jam</a>
         <a onclick='window.open("index.html#contact","_self")' class="nav-btn">
           <svg class="bi bi-envelope-fill" fill="currentColor" height="15" viewBox="0 0 16 16" width="15"
             xmlns="http://www.w3.org/2000/svg">
@@ -66,56 +67,12 @@
       </div>
     </div>
   </header>
-  <style>
-    #Grid-Button {
-      transition: all .3s ease-in-out;
-      padding: .75em;
-      background-color: #f6f6f6
-    }
-
-    #Grid-Button-2 {
-      transition: all .3s ease-in-out;
-      padding: .75em .85em;
-      background-color: #f6f6f6;
-      text-align: center
-    }
-
-    #Grid-Button:hover {
-      color: #f6f6f6;
-      background-color: #000
-    }
-
-    #Grid-Button-2:hover {
-      background-color: #000
-    }
-
-    @media screen and (max-width:1500px) {
-      #third-column {
-        flex: 1 1 2.55%
-      }
-    }
-
-    @media screen and (min-width:1500px) {
-      #third-column {
-        flex: 1 1 2.2%
-      }
-    }
-
-    svg {
-      margin-right: 2%
-    }
-  </style>
   <div class="header" id="myHeader">
-    <h1 class="pulse view" style="margin-bottom:6px;margin-top:5%;color:#777;font-size:20px">(click to change view grid)
-    </h1>
-    <p style="margin-bottom:4px">&ensp; normal&ensp; 1/2 &ensp;collage
-    </p>
-    <button id="Grid-Button" class="btn" onclick="one()">100%
-    </button>
-    <button id="Grid-Button" class="btn" onclick="two()">50%
-    </button>
-    <button id="Grid-Button-2" class="btn" onclick="four()">25%
-    </button>
+    <h1 class="pulse view mb-3 mt-5 pt-5 has-text-weight-normal">(click to change view grid)</h1>
+    <p style="margin-bottom:4px">&ensp; normal&ensp; 1/2 &ensp;collage</p>
+    <button id="Grid-Button" class="btn" onclick="one()">100%</button>
+    <button id="Grid-Button" class="btn" onclick="two()">50%</button>
+    <button id="Grid-Button-2" class="btn" onclick="four()">25%</button>
   </div>
   <div class="containerz1">
     <div class="row" align="center">
@@ -148,26 +105,24 @@
       </div>
     </div>
     <button id="myBtn">
-      <a href="#top" align="middle" style="color:#fff;padding-bottom:2%">
+      <a href="#top" align="middle" class="has-text-white pb-3">
         <svg class="bi bi-caret-up-fill" fill="currentColor" height="16" viewBox="0 0 16 16" width="16"
           xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
+          <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z" />
         </svg>
       </a>
     </button>
     <footer class="footer has-text-centered mb-1 mt-5">
       <div class="center container">
         <p class="has-text-dark">
-          <strong>AreaCrew
-          </strong>by
-          <a href="https://matteomania.tk">zippo107
-          </a>all rights
+          <strong>AreaCrew</strong>by
+          <a href="https://matteomania.vercel.app">zippo107</a>all rights
           reserved.
         </p>
       </div>
     </footer>
-    <script>var i, elements = document.getElementsByClassName("column");
+    <script>
+      var i, elements = document.getElementsByClassName("column");
       function one() {
         for (i = 0; i < elements.length; i++)elements[i].style.flex = "100%"
       }
@@ -179,23 +134,8 @@
       }
     </script>
     <!-- cursor -->
-    <div class="cursor">
-    </div>
-    <script>
-      const cursor = document.querySelector('.cursor');
-      window.addEventListener('mousemove', (e) => {
-        cursor.style.left = e.pageX + 'px';
-        cursor.style.top = e.pageY + 'px';
-        cursor.setAttribute('data-fromTop', (cursor.offsetTop - scrollY));
-      }
-      );
-      window.addEventListener('scroll', () => {
-        const fromTop = cursor.getAttribute('data-fromTop');
-        cursor.style.top = scrollY + parseInt(fromTop) + 'px';
-        console.log(scrollY);
-      }
-      );
-    </script>
+    <div class="cursor"></div>
+    <script src="./src/Cursor.js" defer></script>
+    <!-- <script src="./src/script.js" async></script> -->
 </body>
-
 </html>

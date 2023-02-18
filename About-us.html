@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html style="background:#f5f1ed">
-
+<html lang="it">
 <head>
   <!-- <script src="./src/Snow.js" defer></script> -->
   <meta charset="utf-8">
@@ -72,25 +71,13 @@
   </div>
   <footer>
     <div class="center">
-      <p><strong>AreaCrew </strong> by <a href="https://matteomania.tk"> Matteo Manià </a> all rights reserved.</p>
+      <p><strong>AreaCrew </strong> by <a href="https://matteomania.vercel.app"> Matteo Manià </a> all rights reserved.</p>
     </div>
   </footer>
   <!-- cursor -->
   <!--christams theme-->
   <div class="cursor"></div>
-  <script>
-    const cursor = document.querySelector('.cursor');
-    window.addEventListener('mousemove', (e) => {
-      cursor.style.left = e.pageX + 'px';
-      cursor.style.top = e.pageY + 'px';
-      cursor.setAttribute('data-fromTop', (cursor.offsetTop - scrollY));
-    });
-    window.addEventListener('scroll', () => {
-      const fromTop = cursor.getAttribute('data-fromTop');
-      cursor.style.top = scrollY + parseInt(fromTop) + 'px';
-      console.log(scrollY);
-    });
-  </script>
+  <script src="./src/Cursor.js" defer></script>
+  <script src="./src/script.js" async></script>
 </body>
-
 </html>

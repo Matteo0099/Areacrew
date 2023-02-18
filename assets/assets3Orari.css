@@ -120,8 +120,8 @@ tr {
 }
 
 .Table1 tr>td:hover {
-    color: #FCA311;
-    background-color: #bbb6b6
+    color: #fefefe;
+    background-color: #949494
 }
 
 table.tabella {
@@ -263,10 +263,6 @@ input {
     transition: 0.6s;
     background-color: rgba(224, 222, 222, 0.875)
 }
-/* 
-.invia:hover {
-    opacity: .75;
-} */
 
 img, svg {
     vertical-align: auto !important

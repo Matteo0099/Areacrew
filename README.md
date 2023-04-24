@@ -13,9 +13,9 @@
 
     50+ hours work
 
-    This is the Website of AreaCrew. <br>
-    AreaCrew is an association, of 10 friends, who are appassionated <br>
-    of bmx. Bmx is a bicycle, a little bit small than others, and it is used for <br>
+    This is the Website of AreaCrew. 
+    AreaCrew is an association, of 10 friends, who are appassionated 
+    of bmx. Bmx is a bicycle, a little bit small than others, and it is used for 
     doing tricks. 
     
   </body>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
   <!-- <script src="./src/Snow.js" defer></script> -->
   <meta charset="utf-8">
@@ -65,8 +66,14 @@
         Trip Lignano w boyz
       </h1>
       <div class="containerTrip p-2">
-        <video src="./video/videoTripToLignano.mp4" width="" height="750" controls class="is-max-widescreen videoTrip" alt="video" title="areacrew trip to lignano">
+        <video controls class="videoTrip" muted>
+          <source src="./video/videoTripToLignano.mp4" type="video/webm">
+          <source src="./video/videoTripToLignano.mp4" type="video/mp4">
         </video>
+
+        <!-- <video width="" height="750" controls class="is-max-widescreen videoTrip" alt="video" title="areacrew trip to lignano">
+          <source src="./video/videoTripToLignano.mp4"/>
+        </video> -->
       </div>
     </div>
     <div class="layer" align="center">
@@ -111,7 +118,8 @@
       <p>
         <strong>AreaCrew
         </strong>by
-        <a href="https://matteomania.tk">zippo107
+        <a href="https://matteomania.netlify.app">
+          Matteo Manià
         </a>all rights reserved.
       </p>
     </div>
@@ -120,4 +128,5 @@
   <div class="cursor"></div>
   <script src="src/Cursor.js" defer></script>
 </body>
+
 </html>

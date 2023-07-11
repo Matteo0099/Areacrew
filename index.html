@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="it">
-
 <head>
   <meta charset=utf-8>
   <meta name=viewport content="width=device-width,initial-scale=1">
@@ -29,11 +28,15 @@
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <!-- fontawesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css">
-  <script src=./src/JqueryLoading.js async defer></script>
+  <script src=./src/JqueryLoading.js defer></script>
   <!-- cursor script -->
   <!-- <script src="./src/Cursor.js"></script> -->
   <!-- general script -->
-  <script src="./src/script.js"></script>
+  <script src="./src/script.js" defer></script>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+  />
 </head>
 
 <body>
@@ -112,7 +115,7 @@
       </section>
 
       <!-- new JAM -->
-      <section class="section container has-text-centered is-medium my-0 mx-auto new-jam" id="new-jam">
+      <!-- <section class="section container has-text-centered is-medium my-0 mx-auto new-jam" id="new-jam">
         <h1 class="title title-jam mx-auto my-0 fs-5 font-bold">
           AreaCrew 2nd JAM - 08 / 07 / 2023
         </h1>
@@ -128,7 +131,7 @@
           ci teniamo che vengano più persone possibili. <br>
           Ci becchiamo rider!
         </p>
-      </section>
+      </section> -->
 
       <!-- SHOP -->
       <section class="section is-medium my-0 mx-2 shop" id="sectShop">
@@ -259,6 +262,31 @@
         </div>
       </section>
       <section class="section is-small mb-4 mt-4" id=locandina>
+        <div class="section has-text-centered has-background-danger-light" id=sectEvent2>
+          <h1 class="title has-text-dark" id=titleh1 data-aos="zoom-in" data-aos-delay="100" data-aos-easing="ease-out">
+            Gallery of 2nd AreaCrewJam!</h1>
+          <div class="container photo">
+            <img src="./img/2nd JAM/fotoGruppo2nd.jpeg" loading=lazy alt=logo width=1920
+              height=1080>
+          </div>
+          <a class="button is-active is-focused is-outlined bg-t is-info
+                is-medium" onclick="window.open('GalleryJam.html', '_self')" data-aos="zoom-out" data-aos-delay="150"
+            data-aos-easing="ease-out">Go to JAM-gallery
+            <i class="is-flex fa fa-arrow-circle-right
+                  is-justify-content-center ml-2" aria-hidden=true></i>
+          </a>
+          <div class=container>
+            <p class="has-text-centered subtitle has-text-dark line m-3 pl-1
+                  pr-1 pt-5" data-aos="flip-left" data-aos-delay="225" data-aos-easing="ease" data-aos-duration="325">
+              Thanks everyone for participating in this crazy event! it is
+              also thanks to you that you come that we can do this type of
+              event. The bmx scene in Italy and in the area is growing more
+              and more, and we are proud of this.
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="section is-small mb-4 mt-4" id=locandina>
         <div class="section has-text-centered" id=sectEvent>
           <h1 class="title has-text-dark" id=titleh1 data-aos="zoom-in" data-aos-delay="100" data-aos-easing="ease-out">
             Gallery of 1th AreaCrewJam!</h1>
@@ -329,9 +357,21 @@
             sul giornale! ↓</h1>
           <p class="subtitle has-text-grey m-2" data-aos="fade-up" data-aos-offset="500" data-aos-duration="500"
             data-aos-delay="220">" Inaugurazione del BMX-PARK "</p>
-          <img src="./img/giornale/Foto AreaCrew.WebP" id=section-image loading=lazy width=971 height=1048 alt=logo
-            title="Foto da: il Piccolo" data-aos="fade-left" data-aos-easing="ease-out-back" data-aos-offset="500"
-            data-aos-duration="550" data-aos-delay="125" />
+          <!-- need to upgrade with a swiper.js -->
+            <div class="swiper">
+              <swiper-container class="mySwiper" navigation="true">
+                <swiper-slide>
+                  <img src="./img/giornale/Foto AreaCrew.WebP" id=section-image loading=lazy width=971 height=1048 alt=logo
+                    title="Foto da: il Piccolo" data-aos="fade-left" data-aos-easing="ease-out-back" data-aos-offset="500"
+                    data-aos-duration="550" data-aos-delay="125" />
+                </swiper-slide>
+                <swiper-slide>
+                  <img src="./img/giornale/FotoPiccolo2nd.jpeg" id=section-image loading=lazy width=971 height=1048 alt=logo
+                    title="Foto da: il Piccolo" id="2ndJAM"/>
+                </swiper-slide>
+              </swiper-container>
+            </div>
+            
           <p class="subtitle has-text-dark fs-5">Fonte:
             <a href=https://ilpiccolo.gelocal.it/trieste/ target=_blank class="is-hovered is-link">Il Piccolo</a>
           </p>
@@ -451,13 +491,13 @@
     </div>
   </footer>
 
-  <!-- cursor -->
-  <!-- <div class="cursor"></div> -->
+  <!-- cursor --><!-- <div class="cursor"></div> -->
   <!-- AOS animation -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-element-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init();
   </script>
 </body>
-
 </html>

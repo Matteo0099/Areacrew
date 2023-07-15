@@ -47,18 +47,143 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 });
 
-/*
-//Color picker from the t-shirt
-function bgchange(color) {
-    document.body.style.background = colorarray[color];
+/**
+ * box switch (jam photo)
+**/
+const tabsContainer = document.querySelector(".tabs-container");
+const tabsList = tabsContainer.querySelector("ul");
+const tabButtons = tabsList.querySelectorAll("a");
+const tabPanels = tabsContainer.querySelectorAll(".tabs__panels > div");
+
+tabsList.setAttribute("role", "tablist");
+
+tabsList.querySelectorAll("li").forEach((listitem) => {
+    listitem.setAttribute("role", "presentation");
+});
+
+tabButtons.forEach((tab, index) => {
+    tab.setAttribute("role", "tab");
+    if (index === 0) {
+        tab.setAttribute("aria-selected", "true");
+        // we'll add something here
+    } else {
+        tab.setAttribute("tabindex", "-1");
+        tabPanels[index].setAttribute("hidden", "");
+    }
+});
+
+tabPanels.forEach((panel) => {
+    panel.setAttribute("role", "tabpanel");
+    panel.setAttribute("tabindex", "0");
+});
+
+tabsContainer.addEventListener("click", (e) => {
+    const clickedTab = e.target.closest("a");
+    if (!clickedTab) return;
+    e.preventDefault();
+
+    switchTab(clickedTab);
+});
+
+tabsContainer.addEventListener("keydown", (e) => {
+    switch (e.key) {
+        case "ArrowLeft":
+            moveLeft();
+            break;
+        case "ArrowRight":
+            moveRight();
+            break;
+        case "Home":
+            e.preventDefault();
+            switchTab(tabButtons[0]);
+            break;
+        case "End":
+            e.preventDefault();
+            switchTab(tabButtons[tabButtons.length - 1]);
+            break;
+    }
+});
+
+function moveLeft() {
+    const currentTab = document.activeElement;
+    if (!currentTab.parentElement.previousElementSibling) {
+        switchTab(tabButtons[tabButtons.length - 1]);
+    } else {
+        switchTab(
+            currentTab.parentElement.previousElementSibling.querySelector("a")
+        );
+    }
 }
-var colorarray = ["#e58e26", "#f9b4ab", "#B1FB17", "#78e08f", "#fd79a8"];
-var str = "";
-for (var i = 0; i < colorarray.length; i++) {
-    str += '<span onclick="bgchange(' + i + ')'
-    style = "background-color:'+colorarray[i]+'" > '+colorarray[i]+</span >'
+
+function moveRight() {
+    const currentTab = document.activeElement;
+    if (!currentTab.parentElement.nextElementSibling) {
+        switchTab(tabButtons[0]);
+    } else {
+        switchTab(currentTab.parentElement.nextElementSibling.querySelector("a"));
+    }
 }
-document.getElementById("colorbox").innerHTML = str;*/
+
+function switchTab(newTab) {
+    const activePanelId = newTab.getAttribute("href");
+    const activePanel = tabsContainer.querySelector(activePanelId);
+
+    tabButtons.forEach((button) => {
+        button.setAttribute("aria-selected", false);
+        button.setAttribute("tabindex", "-1");
+    });
+
+    tabPanels.forEach((panel) => {
+        panel.setAttribute("hidden", true);
+    });
+
+    activePanel.removeAttribute("hidden", false);
+
+    newTab.setAttribute("aria-selected", true);
+    newTab.setAttribute("tabindex", "0");
+    newTab.focus();
+}
+
+
+/**
+ * PHOTOSSSSSSSSSSS
+ * carico tutte le foto e le carico nella galleria. 
+**/
+const containers = {
+    "imageContainer1": {
+        "folder": "img/1th JAM/foto jam 2022 compr/",
+        "year": 2022,
+        "lenght": 68
+    },
+    "imageContainer2": {
+        "folder": "img/2nd JAM/foto jam 2023/",
+        "year": 2023,
+        "lenght": 69
+    }
+    /** aggiunggere altri per le iterazioni **/
+};
+
+/* itera per ogni container presente ↑ */
+Object.keys(containers).forEach(containerId => {
+    const container = document.querySelector(`#${containerId}`);
+    const folder = containers[containerId].folder;
+    const lenghtFiles = containers[containerId].lenght
+    const year = containers[containerId].year;
+
+    for (let i = 1; i <= lenghtFiles; i++) {
+        let a = document.createElement('a');
+        a.href = `#img${i}`;
+        let img = document.createElement('img');
+        img.loading = 'lazy';
+        img.src = `${folder}${i}.jpeg`;
+        img.classList.add('small');
+        if (i === 2) {
+            img.id = 'formato';
+        }
+        a.appendChild(img);
+        container.appendChild(a);
+    }
+});
 
 /**new tab on click img**/
 function newtab() {
@@ -72,10 +197,13 @@ function newtab() {
 // Add active class to the current button (highlight it)
 var header = document.querySelector("#nav-lins-all");
 var btns = document.getElementsByClassName("nav-btn");
+
 for (var i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function () {
         var current = document.getElementsByClassName("active");
-        current[0].className = current[0].className.replace(" active", "");
+        if (current.length > 0) {
+            current[0].className = current[0].className.replace(" active", "");
+        }
         this.className += " active";
     });
 }
@@ -107,6 +235,7 @@ function Modulo() {
         document.modulo.submit();
     }
 }
+
 $(document).ready(function () {
     var $input1 = $("#logindata1 input");
     var $input2 = $("#logindata2 input");

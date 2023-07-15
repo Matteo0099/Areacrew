@@ -51,6 +51,7 @@ body {
   background-color: var(--bg-white);
   text-rendering: optimizeSpeed !important;
   scrollbar-width: thin;
+  text-wrap: balance;
   scrollbar-color: var(--txt-title) var(--txt-hover)
 }
 

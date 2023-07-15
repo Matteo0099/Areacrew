@@ -1,1 +1,188 @@
-html,body{font-family: inherit;margin: 0;padding: 0}.container a{display: block;max-width: 900px;margin: 0 auto;text-align: center}.card-footer-item{display: block !important}#salotto{text-decoration: underline}#salotto:hover{text-decoration: none}@media screen and (max-width: 837px){img{image-rendering: optimizeSpeed !important}}@media screen and (min-width: 837px){img{image-rendering: optimizeQuality !important}}.small{max-width: 90%;position: relative;margin: 14px 4px;border-radius: 5px}a img{margin: 24px auto !important}main .container{padding: 5.75em 1em !important}@media screen and (min-width: 1440px){.small{min-height: max-content}}.small:hover{-webkit-transform: scale(1.03, 1.03);transform: scale(1.03, 1.03)}.lightbox{display: none;position: fixed;top: 0;left: 0;z-index: 1;width: 100%;height: 100%;background: rgba(0, 0, 0, 0.7)}.lightbox:target{display: -webkit-box;display: flex}footer{min-height: 3rem;text-align: center;bottom: 0;margin-top: 4rem}
+html, body {
+  font-family: inherit;
+  margin: 0;
+  padding: 0
+}
+
+.container a {
+  display: block;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center
+}
+
+.card-footer-item {
+  display: block !important
+}
+
+#salotto {
+  text-decoration: underline
+}
+
+#salotto:hover {
+  text-decoration: none
+}
+
+@media screen and (max-width: 837px) {
+  img {
+    image-rendering: optimizeSpeed !important
+  }
+}
+
+@media screen and (min-width: 837px) {
+  img {
+    image-rendering: optimizeQuality !important
+  }
+}
+
+/* box switch style */
+[role="tablist"] {
+  max-width: 820px !important;
+  list-style:decimal !important;
+  margin: 0 auto !important;
+  padding: 0 0 0 2rem;
+  display: flex;
+  gap: 2.5rem;
+  font-size: var(--fs-400);
+}
+
+[role="tablist"], 
+.wrapper {
+  width: min(80rem, 100% - 2rem) !important;
+}
+
+li[role="presentation"]::marker {
+  padding-left: 1rem
+}
+
+[aria-selected="true"] {
+  text-decoration-thickness: 0.15em;
+  text-underline-offset: 0.25em;
+  -ms-text-underline-position: under;
+  color: orangered;
+  text-decoration: underline;
+}
+
+/* extra styling to make the tabs look better that wasn't in the video */
+.tabs-container {
+  padding: 2.5rem;
+  border-radius: 0.5rem;
+  background: hsl(0 0% 50% / 0.1);
+}
+
+:root {
+  --color-scheme: var(--dark-mode);
+  --font-family: system-ui;
+  --fs-300: clamp(0.94rem, calc(0.92rem + 0.08vw), 0.98rem);
+  --fs-400: clamp(1.13rem, calc(1.06rem + 0.33vw), 1.31rem);
+  --fs-500: clamp(1.35rem, calc(1.21rem + 0.69vw), 1.75rem);
+  --fs-600: clamp(1.62rem, calc(1.37rem + 1.24vw), 2.33rem);
+  --fs-700: clamp(1.94rem, calc(1.54rem + 2.03vw), 3.11rem);
+  --fs-800: clamp(2.33rem, calc(1.7rem + 3.15vw), 4.14rem);
+  --fs-900: clamp(2.8rem, calc(1.85rem + 4.74vw), 5.52rem);
+  --clr-primary-300: hsl(219, 76%, 55%);
+  --clr-primary-400: hsl(219, 76%, 40%);
+  --clr-primary-500: hsl(219, 76%, 25%);
+  --clr-secondary-300: hsl(269, 75%, 55%);
+  --clr-secondary-400: hsl(269, 75%, 40%);
+  --clr-secondary-500: hsl(269, 75%, 25%);
+  --clr-accent-300: hsl(358, 72%, 65%);
+  --clr-accent-400: hsl(358, 72%, 50%);
+  --clr-accent-500: hsl(358, 72%, 35%);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: var(--fs-400);
+  line-height: 1.6;
+}
+
+.wrapper {
+  margin-top: 3rem;
+  margin-inline: auto;
+}
+
+main .tabs__panels .container {
+  padding: 0 !important;
+}
+
+.wrapper h2 {
+  width: fit-content !important;
+  margin: 0 auto !important;
+  font-size: var(--fs-600);
+  font-weight: bold;
+}
+
+.site-title {
+  font-size: var(--fs-900);
+  line-height: 1.05;
+  text-transform: uppercase;
+}
+
+.section-title {
+  font-size: var(--fs-800);
+  line-height: 1.1;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+/* end box */
+
+.small {
+  max-width: 90%;
+  position: relative;
+  margin: 14px 4px;
+  border-radius: 5px
+}
+
+a img {
+  margin: 24px auto !important
+}
+
+@media screen and (min-width: 768px) {
+  main .container {
+    padding: 5.5em 1em !important
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .small {
+    min-height: max-content
+  }
+}
+
+.small:hover {
+  -webkit-transform: scale(1.03, 1.03);
+  transform: scale(1.03, 1.03)
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7)
+}
+
+.lightbox:target {
+  display: -webkit-box;
+  display: flex
+}
+
+footer {
+  min-height: 3rem;
+  text-align: center;
+  bottom: 0;
+  margin-top: 4rem
+}

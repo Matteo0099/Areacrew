@@ -175,6 +175,8 @@ Object.keys(containers).forEach(containerId => {
         a.href = `#img${i}`;
         let img = document.createElement('img');
         img.loading = 'lazy';
+        img.width = '800';
+        img.height = '550';
         img.src = `${folder}${i}.jpeg`;
         img.classList.add('small');
         if (i === 2) {

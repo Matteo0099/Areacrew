@@ -28,7 +28,8 @@
 
 body, html {
   font-family: 'Work Sans', sans-serif !important;
-  font-weight: 400 !important
+  font-weight: 400 !important;
+  overflow-x: hidden;
 }
 
 html {
@@ -83,66 +84,7 @@ a, button, h2, h3, h4, h5, input, option, q, select, span, textarea, title {
   }
 }
 
-@keyframes slide {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-.logos {
-  overflow: hidden;
-  padding: 60px 0;
-  background: white;
-  white-space: nowrap;
-  position: relative;
-}
-
-.logos:before,
-.logos:after {
-  position: absolute;
-  top: 0;
-  width: 250px;
-  height: 100%;
-  content: "";
-  z-index: 2;
-}
-
-.logos:before {
-  left: 0;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
-}
-
-.logos:after {
-  right: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
-}
-
-.logos:hover .logos-slide {
-  animation-play-state: paused;
-}
-
-.logos-slide {
-  mix-blend-mode: luminosity;
-  display: inline-block;
-  animation: 35s slide infinite linear;
-}
-
-.logos-slide img {
-  height: max-content;
-  max-height: 240px;
-  object-fit: cover;
-  background-size: cover;
-  padding: 0 25px;
-  aspect-ratio: 5 / 3;
-}
-
-.logos-slide.due {
-  padding-left: 50px;
-}
-
+/** scroll bar **/
 body::-webkit-scrollbar {
   width: 12px
 }
@@ -175,6 +117,74 @@ body::-webkit-scrollbar-thumb {
 * {
   scrollbar-width: thin;
   scrollbar-color: var(--txt-title) var(--txt-hover)
+}
+
+.scroll {
+  position: relative;
+  width: 100vw;
+  background-color: #fff;
+  overflow: hidden;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+}
+
+.m-scroll {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  white-space: nowrap;
+  animation: scrollText 10s infinite linear;
+  margin: 0;
+  font-size: 0;
+  display: flex;
+  justify-content: space-between;
+  width: fit-content;
+}
+
+.m-scroll span {
+  width: 100%;
+  height: 180px;
+  min-width: 250px;
+  display: block;
+  margin: 1rem 0.75rem;
+}
+
+.m-scroll span img {
+  width: 300px;
+  height: 100%;
+  aspect-ratio: 5 / 3;
+  object-fit: cover;
+}
+
+span.large-device {
+  display: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+@media screen and (min-width: 2248px) {
+  span.large-device {
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
+
+span {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  color: white;
+}
+
+@keyframes scrollText {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 nav.navbar {

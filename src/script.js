@@ -128,49 +128,99 @@ function switchTab(newTab) {
     const activePanelId = newTab.getAttribute("href");
     const activePanel = tabsContainer.querySelector(activePanelId);
 
+    const otherTab = Array.from(tabButtons).find(tab => tab !== newTab);
+    const otherPanelId = otherTab.getAttribute("href");
+    const otherPanel = tabsContainer.querySelector(otherPanelId);
+
     tabButtons.forEach((button) => {
         button.setAttribute("aria-selected", false);
         button.setAttribute("tabindex", "-1");
     });
-
     tabPanels.forEach((panel) => {
         panel.setAttribute("hidden", true);
     });
 
-    activePanel.removeAttribute("hidden", false);
-
+    // Check if activePanel is not null before removing the attribute
+    if (activePanel) {
+        activePanel.removeAttribute("hidden");
+    }
+    
     newTab.setAttribute("aria-selected", true);
+    localStorage.setItem('selectedTab', newTab.setAttribute);
     newTab.setAttribute("tabindex", "0");
     newTab.focus();
+
+    // Ensure the other tab is marked as hidden
+    otherTab.setAttribute("aria-selected", false);
+
+    // Check if otherPanel is not null before setting the attribute
+    if (otherPanel) {
+        otherPanel.setAttribute("hidden", "");
+    }
 }
 
 
-/**
- * PHOTOSSSSSSSSSSS
- * carico tutte le foto e le carico nella galleria. 
+document.addEventListener("DOMContentLoaded", function () {
+    // Get the active tab from localStorage if available
+    const activeTab = localStorage.getItem("activeTab");
+
+    // If there is an activeTab in localStorage, activate it
+    if (activeTab) {
+        const tabToActivate = document.querySelector(activeTab);
+        if (tabToActivate) {
+            // Deactivate all tabs and panels
+            const tabs = document.querySelectorAll(".tabs-container a[role='tab']");
+            tabs.forEach(tab => tab.setAttribute("aria-selected", "false"));
+
+            const panels = document.querySelectorAll(".tabs-container div[role='tabpanel']");
+            panels.forEach(panel => panel.setAttribute("hidden", "true"));
+
+            // Activate the saved tab
+            tabToActivate.setAttribute("aria-selected", "true");
+            const correspondingPanel = document.querySelector(tabToActivate.getAttribute("href"));
+            if (correspondingPanel) {
+                correspondingPanel.removeAttribute("hidden");
+            }
+        }
+    }
+
+    // Add event listeners to tabs to save the active tab
+    const tabs = document.querySelectorAll(".tabs-container a[role='tab']");
+    tabs.forEach(tab => {
+        tab.addEventListener("click", function () {
+            // Save the active tab in localStorage
+            localStorage.setItem("activeTab", `#${tab.getAttribute("id")}`);
+        });
+    });
+});
+
+
+/** 
+    * PHOTOSSSSSSSSSSS
+    * Load all the photos and display them in the gallery.
 **/
 const containers = {
     "imageContainer1": {
         "folder": "img/1th JAM/foto jam 2022 compr/",
         "year": 2022,
-        "lenght": 68
+        "length": 68
     },
     "imageContainer2": {
         "folder": "img/2nd JAM/foto jam 2023/",
         "year": 2023,
-        "lenght": 69
+        "length": 80
     }
-    /** aggiunggere altri per le iterazioni **/
+    /** Add more containers for iterations if needed **/
 };
 
-/* itera per ogni container presente ↑ */
+/* Iterate for each container ↑ */
 Object.keys(containers).forEach(containerId => {
     const container = document.querySelector(`#${containerId}`);
     const folder = containers[containerId].folder;
-    const lenghtFiles = containers[containerId].lenght
+    const lengthFiles = containers[containerId].length;
     const year = containers[containerId].year;
 
-    for (let i = 1; i <= lenghtFiles; i++) {
+    for (let i = 1; i <= lengthFiles; i++) {
         let a = document.createElement('a');
         a.href = `#img${i}`;
         let img = document.createElement('img');
@@ -179,6 +229,7 @@ Object.keys(containers).forEach(containerId => {
         img.height = '550';
         img.src = `${folder}${i}.jpeg`;
         img.classList.add('small');
+
         if (i === 2) {
             img.id = 'formato';
         }
@@ -186,6 +237,51 @@ Object.keys(containers).forEach(containerId => {
         container.appendChild(a);
     }
 });
+
+// all images
+const images = document.querySelectorAll('img');
+let overlay = null;
+let zoomedImage = null; // Store the currently zoomed image
+
+// Function to close the overlay
+function closeOverlay() {
+    if (overlay) {
+        overlay.remove();
+        overlay = null;
+        zoomedImage = null;
+    }
+}
+
+// Loop through images
+images.forEach(image => {
+    // Add click handler
+    image.addEventListener('click', () => {
+        // Close any previously opened image
+        closeOverlay();
+
+        // Create overlay
+        overlay = document.createElement('div');
+        overlay.classList.add('image-zoom-overlay');
+        overlay.style.display = 'block'; // Set display to 'block'
+        
+        // Create zoomed image 
+        zoomedImage = document.createElement('img');
+        zoomedImage.src = image.src;
+        zoomedImage.classList.add('zoom');
+        
+        // Append zoomed image to overlay
+        overlay.appendChild(zoomedImage);
+        
+        // Append overlay to document
+        document.body.appendChild(overlay);
+        
+        // Click handler to close overlay
+        overlay.addEventListener('click', () => {
+            closeOverlay();
+        });
+    });
+});
+
 
 /**new tab on click img**/
 function newtab() {

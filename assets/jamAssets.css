@@ -4,6 +4,25 @@ html, body {
   padding: 0
 }
 
+/** image zoom **/
+.image-zoom-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  margin: auto !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: rgba(0,0,0,0.8) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  z-index: 9999 !important;
+}
+
+.zoom {
+  max-width: 80%;
+  max-height: 80%;
+}
+
 .container a {
   display: block;
   max-width: 900px;

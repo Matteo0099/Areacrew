@@ -1693,6 +1693,14 @@ button, input, select, textarea {
   font: inherit
 }
 
+.fs-4 {
+  font-size: clamp(1rem, 2vw, 1.425rem);
+  text-decoration: underline;
+}
+.fs-4:hover {
+  text-decoration: none;
+}
+
 .natale {
   border-radius: 25px;
   height: 5vh;
@@ -1700,6 +1708,13 @@ button, input, select, textarea {
   display: flex;
   justify-content: center;
   align-items: center
+}
+
+.no-natale {
+  display: none;
+  visibility: hidden;
+  height: 0;
+  opacity: 0;
 }
 
 .circle {
